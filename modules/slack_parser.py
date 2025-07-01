@@ -30,11 +30,13 @@ def parse_funding_text(text: str) -> Dict[str, List[Dict]]:
             # Indented line — part of description or link
             stripped = line.strip()
 
-            # Extract all .gov links and convert to https URLs
-            gov_domains = re.findall(r'([\w.-]+\.gov)', stripped)
-            for domain in gov_domains:
-                if domain not in current_card["attachments"]:
-                    current_card["attachments"].append(f"https://{domain}")
+            # Extract all URLs/domains and convert to https if needed
+            urls = re.findall(r'(https?://[^\s]+|[\w.-]+\.[a-z]{2,})', stripped, re.IGNORECASE)
+            for url in urls:
+                if not url.startswith("http"):
+                    url = f"https://{url}"
+                if url not in current_card["attachments"]:
+                    current_card["attachments"].append(url)
 
             current_card["description_lines"].append(stripped)
 
