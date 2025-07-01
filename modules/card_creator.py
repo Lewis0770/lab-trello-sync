@@ -66,7 +66,7 @@ def fetch_latest_slack_message() -> str:
     }
     params = {
         "channel": SLACK_CHANNEL_ID,
-        "limit": 1
+        "limit": 3
     }
     res = requests.get(url, headers=headers, params=params)
     res.raise_for_status()
