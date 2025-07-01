@@ -28,4 +28,4 @@ jobs:
           pip install slack_sdk requests
 
       - name: Run sync script
-        run: python modules/slack_to_trello.py
+        run: PYTHONPATH=. python modules/slack_to_trello.py
