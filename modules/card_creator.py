@@ -1,7 +1,7 @@
 import os
 import requests
 from typing import List, Dict
-from modules.slack_funding_parser import parse_funding_text
+from modules.slack_parser import parse_funding_text
 
 # --- Environment variables / tokens
 TRELLO_API_KEY = os.getenv("TRELLO_API_KEY")
