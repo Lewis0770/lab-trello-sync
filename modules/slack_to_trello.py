@@ -8,22 +8,27 @@ from modules.trello import get_or_create_list, create_card
 
 # Load Slack token and channel ID from environment
 SLACK_BOT_TOKEN = os.getenv("SLACK_BOT_TOKEN")
-SLACK_CHANNEL_ID = os.getenv("SLACK_CHANNEL_ID")
+SLACK_CHANNEL_ID = "C093Y4SS3TN"
+
+if not SLACK_BOT_TOKEN or not SLACK_CHANNEL_ID:
+    raise EnvironmentError("Missing Slack bot token or channel ID in environment variables.")
 
 client = WebClient(token=SLACK_BOT_TOKEN)
 
 def process_slack_messages():
     try:
-        # Fetch last 5 messages from the channel
         response = client.conversations_history(channel=SLACK_CHANNEL_ID, limit=5)
-        messages = response["messages"]
+        messages = response.get("messages", [])
 
         for msg in messages:
             reactions = msg.get("reactions", [])
-            if any(r["name"] == "white_check_mark" for r in reactions):
+            if any(r.get("name") == "white_check_mark" for r in reactions):
                 continue  # Skip already processed messages
 
             text = msg.get("text", "")
+            if not text.strip():
+                continue
+
             parsed = parse_funding_text(text)
 
             list_id = get_or_create_list(parsed["list_title"])
@@ -35,7 +40,7 @@ def process_slack_messages():
                     attachments=card["attachments"]
                 )
 
-            # Mark message as processed with a ✅
+            # Mark as processed
             client.reactions_add(
                 channel=SLACK_CHANNEL_ID,
                 name="white_check_mark",
