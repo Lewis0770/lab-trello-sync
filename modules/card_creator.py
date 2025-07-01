@@ -80,17 +80,27 @@ def fetch_latest_slack_message() -> str:
 
 # --- Orchestration
 def main():
-    slack_text = fetch_latest_slack_message()
-    if not slack_text:
-        print("No message found.")
+    print("🟡 Bot is scanning Slack messages...")
+
+    messages = fetch_latest_slack_messages(limit=5)
+    if not messages:
+        print("No messages found.")
         return
 
-    parsed = parse_funding_text(slack_text)
-    list_id = get_or_create_list(parsed["list_title"])
+    for msg in messages:
+        if not msg.get("text"):
+            continue
 
-    for card in parsed["cards"]:
-        create_card(list_id, card["title"], card["description"], card["attachments"])
-        print(f"Created card: {card['title']}")
+        print(f"🔍 Checking message: {msg['text'][:60]}...")
 
-if __name__ == "__main__":
-    main()
+        try:
+            parsed = parse_funding_text(msg["text"])
+            print(f"✅ Parsed successfully: {parsed}")
+
+            list_id = get_or_create_list(parsed["list_title"])
+            for card in parsed["cards"]:
+                create_card(list_id, card["title"], card["description"], card["attachments"])
+                print(f"📌 Created card: {card['title']}")
+
+        except Exception as e:
+            print(f"⚠️ Failed to parse or create card from message: {e}")
