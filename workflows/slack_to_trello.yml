@@ -2,7 +2,7 @@ name: Slack to Trello Sync
 
 on:
   schedule:
-    - cron: "*/10 * * * *"  # Runs every 10 minutes
+    - cron: "*/5 * * * *"  # Runs every 10 minutes
   workflow_dispatch:        # Also allow manual trigger
 
 jobs:
@@ -11,7 +11,6 @@ jobs:
 
     env:
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-      SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
       TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
       TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
 
