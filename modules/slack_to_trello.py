@@ -4,7 +4,7 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 from modules.slack_parser import parse_funding_text
-from modules.trello import get_or_create_list, create_card
+from modules.card_creator import get_or_create_list, create_card
 
 # Load Slack token and channel ID from environment
 SLACK_BOT_TOKEN = os.getenv("SLACK_BOT_TOKEN")
