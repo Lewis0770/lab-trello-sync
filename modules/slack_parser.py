@@ -10,36 +10,43 @@ def parse_funding_text(text: str) -> Dict[str, List[Dict]]:
     """
     lines = text.strip().split('\n')
     lines = [line.rstrip() for line in lines if line.strip()]
+    
+    if not lines:
+        return {"list_title": "", "cards": []}
 
     list_title = lines[0].strip()
     entries = []
-
     current_card = None
 
     for line in lines[1:]:
-        # New card title (not indented)
-        if not line.startswith(" "):
+        # Check if this is a numbered list item (new card)
+        if re.match(r'^\d+\.\s+', line):
+            # Save previous card if exists
             if current_card:
                 entries.append(current_card)
+            
+            # Start new card
+            card_title = re.sub(r'^\d+\.\s+', '', line).strip()
             current_card = {
-                "title": line.strip(),
+                "title": card_title,
                 "description_lines": [],
                 "attachments": []
             }
-        elif current_card:
-            # Indented line — part of description or link
+        elif current_card and line.startswith('   '):
+            # This is a sub-item (bullet point under a numbered item)
             stripped = line.strip()
-
-            # Extract all URLs/domains and convert to https if needed
-            urls = re.findall(r'(https?://[^\s]+|[\w.-]+\.[a-z]{2,})', stripped, re.IGNORECASE)
+            
+            # Extract URLs from the line
+            urls = re.findall(r'(https?://[^\s]+|[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/[^\s]*)?)', stripped, re.IGNORECASE)
             for url in urls:
                 if not url.startswith("http"):
                     url = f"https://{url}"
                 if url not in current_card["attachments"]:
                     current_card["attachments"].append(url)
-
+            
             current_card["description_lines"].append(stripped)
 
+    # Don't forget the last card
     if current_card:
         entries.append(current_card)
 
