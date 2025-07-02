@@ -2,7 +2,7 @@ import os
 import requests
 from datetime import datetime
 
-# ENV Vars (replace with your actual secrets or .env loading logic)
+# ENV Vars
 TRELLO_API_KEY = os.getenv("TRELLO_API_KEY")
 TRELLO_TOKEN = os.getenv("TRELLO_TOKEN")
 TRELLO_BOARD_ID = os.getenv("TRELLO_BOARD_ID")
@@ -15,12 +15,25 @@ def get_list_id_by_name(list_name):
         "token": TRELLO_TOKEN
     }
     response = requests.get(url, params=params)
-    lists = response.json()
+
+    if response.status_code != 200:
+        print(f"❌ Failed to fetch Trello lists.")
+        print(f"Status Code: {response.status_code}")
+        print(f"Response: {response.text}")
+        return None
+
+    try:
+        lists = response.json()
+    except Exception as e:
+        print("❌ Could not decode JSON from Trello list fetch:")
+        print("Raw response:", response.text)
+        raise e
+
     for lst in lists:
         if lst["name"].lower() == list_name.lower():
             return lst["id"]
 
-    # Create the list if it doesn't exist
+    # If list doesn't exist, create it
     create_url = "https://api.trello.com/1/lists"
     create_params = {
         "name": list_name,
@@ -29,6 +42,13 @@ def get_list_id_by_name(list_name):
         "token": TRELLO_TOKEN
     }
     create_resp = requests.post(create_url, params=create_params)
+
+    if create_resp.status_code != 200:
+        print(f"❌ Failed to create Trello list: {list_name}")
+        print(f"Status Code: {create_resp.status_code}")
+        print(f"Response: {create_resp.text}")
+        return None
+
     return create_resp.json()["id"]
 
 def get_existing_card_titles(list_id):
@@ -40,12 +60,29 @@ def get_existing_card_titles(list_id):
         "fields": "name"
     }
     response = requests.get(url, params=params)
-    cards = response.json()
+
+    if response.status_code != 200:
+        print(f"❌ Failed to fetch cards for list {list_id}")
+        print(f"Status Code: {response.status_code}")
+        print(f"Response: {response.text}")
+        return set()
+
+    try:
+        cards = response.json()
+    except Exception as e:
+        print("❌ Could not decode JSON from Trello card fetch:")
+        print("Raw response:", response.text)
+        raise e
+
     return set(card["name"].strip().lower() for card in cards)
 
 def create_card(entry, list_name):
     """Create a Trello card with a due date if not a duplicate."""
     list_id = get_list_id_by_name(list_name)
+    if not list_id:
+        print(f"🚫 Skipping card due to list fetch failure: {entry['title']}")
+        return
+
     existing_titles = get_existing_card_titles(list_id)
 
     title = entry["title"].strip()
@@ -76,7 +113,10 @@ def create_card(entry, list_name):
     }
 
     response = requests.post(url, params=params)
+
     if response.status_code == 200:
         print(f"✅ Created card: {title}")
     else:
-        print(f"❌ Failed to create card: {title} — {response.text}")
+        print(f"❌ Failed to create card: {title}")
+        print(f"Status Code: {response.status_code}")
+        print(f"Response: {response.text}")
