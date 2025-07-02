@@ -5,7 +5,7 @@ from datetime import datetime
 # ENV Vars
 TRELLO_API_KEY = os.getenv("TRELLO_API_KEY")
 TRELLO_TOKEN = os.getenv("TRELLO_TOKEN")
-TRELLO_BOARD_ID = os.getenv("TRELLO_BOARD_ID")
+TRELLO_BOARD_ID = "68642fae07900e6d2d7d79bc"
 
 def get_list_id_by_name(list_name):
     """Find or create a Trello list by name on the board."""
