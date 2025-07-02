@@ -1,7 +1,7 @@
 from modules.funding_sync import parse_csv, filter_keywords, trello_writer
 
 def main():
-    csv_path = "data/funding_export.csv"  # <- update this as needed
+    csv_path = "CSV/grants-gov-opp-search--20250702135040.csv"
     keyword_path = "modules/funding_sync/keywords.json"
 
     # Load data
@@ -14,7 +14,7 @@ def main():
 
     for entry in funding_entries:
         if not filter_keywords.is_future_entry(entry):
-            continue  # Skip expired grants
+            continue  
 
         if filter_keywords.contains_keyword(entry, lab_keywords):
             semi_filtered.append(entry)
