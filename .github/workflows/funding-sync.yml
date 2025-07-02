@@ -1,0 +1,26 @@
+name: Funding Card Sync
+
+on:
+  workflow_dispatch:  
+jobs:
+  funding-sync:
+    runs-on: ubuntu-latest
+
+    env:
+      TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
+      TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run funding sync
+        run: python run_funding_sync.py
