@@ -76,15 +76,57 @@ class FundingSyncProcessor:
                 except ValueError:
                     continue
             print(f"⚠️ Could not parse date: {entry['close_date']} for {entry['title']}")
-            return False
+    def cleanup_existing_cards(self, processor: 'FundingSyncProcessor'):
+        """Move incorrectly categorized cards from Semi-Filtered to Dummy List."""
+        print("\n🧹 Cleaning up existing cards...")
+        
+        semi_filtered_id = self.get_list_id_by_name("Semi-Filtered")
+        dummy_list_id = self.get_list_id_by_name("Dummy List")
+        
+        if not semi_filtered_id or not dummy_list_id:
+            print("❌ Could not find required lists for cleanup")
+            return
+        
+        # Get all existing cards in Semi-Filtered
+        existing_cards = self.get_existing_cards_with_details(semi_filtered_id)
+        moved_count = 0
+        
+        for card in existing_cards:
+            # Create a mock entry to test keyword matching
+            mock_entry = {
+                "title": card["name"],
+                "description": card.get("desc", ""),
+                "close_date": "12/31/2025"  # Future date for testing
+            }
+            
+            # Check if this card should actually be in Semi-Filtered
+            if not processor.contains_keyword(mock_entry):
+                # Move to Dummy List
+                if self.move_card_to_list(card["id"], dummy_list_id):
+                    print(f"🔄 Moved incorrect card to Dummy List: {card['name']}")
+                    moved_count += 1
+                else:
+                    print(f"❌ Failed to move card: {card['name']}")
+        
+        print(f"✅ Moved {moved_count} incorrectly categorized cards to Dummy List")
     
     def contains_keyword(self, entry: Dict) -> bool:
-        """Check if entry contains any of the lab keywords."""
+        """Check if entry contains any of the lab keywords using whole-word matching."""
         if not self.keywords:
             return False
             
+        import re
+        
         text = (entry["title"] + " " + entry["description"]).lower()
-        matched_keywords = [k for k in self.keywords if k.lower() in text]
+        matched_keywords = []
+        
+        for keyword in self.keywords:
+            keyword_lower = keyword.lower()
+            # Use word boundaries to match whole words only
+            # \b ensures we match complete words, not substrings
+            pattern = r'\b' + re.escape(keyword_lower) + r'\b'
+            if re.search(pattern, text):
+                matched_keywords.append(keyword)
         
         if matched_keywords:
             print(f"🎯 Matched keywords for '{entry['title'][:50]}...': {matched_keywords[:3]}")
@@ -187,6 +229,42 @@ class TrelloManager:
             print(f"❌ Error fetching existing cards: {e}")
             return set()
     
+    def get_existing_cards_with_details(self, list_id: str) -> List[Dict]:
+        """Return detailed info about existing cards on the list."""
+        url = f"https://api.trello.com/1/lists/{list_id}/cards"
+        params = {
+            "key": self.api_key,
+            "token": self.token,
+            "fields": "id,name,desc"
+        }
+        
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            return response.json()
+            
+        except requests.RequestException as e:
+            print(f"❌ Error fetching existing cards: {e}")
+            return []
+    
+    def move_card_to_list(self, card_id: str, target_list_id: str) -> bool:
+        """Move a card to a different list."""
+        url = f"https://api.trello.com/1/cards/{card_id}"
+        params = {
+            "key": self.api_key,
+            "token": self.token,
+            "idList": target_list_id
+        }
+        
+        try:
+            response = requests.put(url, params=params)
+            response.raise_for_status()
+            return True
+            
+        except requests.RequestException as e:
+            print(f"❌ Error moving card: {e}")
+            return False
+    
     def create_card(self, entry: Dict, list_name: str) -> bool:
         """Create a Trello card with due date and description."""
         list_id = self.get_list_id_by_name(list_name)
@@ -251,6 +329,9 @@ def main():
     # Initialize processor and manager
     processor = FundingSyncProcessor(csv_path, keywords_path)
     trello_manager = TrelloManager()
+    
+    # Clean up existing incorrectly categorized cards
+    trello_manager.cleanup_existing_cards(processor)
     
     # Load and process data
     funding_entries = processor.load_funding_csv()
