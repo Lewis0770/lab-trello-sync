@@ -317,6 +317,40 @@ class TrelloManager:
         except requests.RequestException as e:
             print(f"❌ Failed to create card '{title}': {e}")
             return False
+    
+    def cleanup_existing_cards(self, processor):
+        """Move incorrectly categorized cards from Semi-Filtered to Dummy List."""
+        print("\n🧹 Cleaning up existing cards...")
+        
+        semi_filtered_id = self.get_list_id_by_name("Semi-Filtered")
+        dummy_list_id = self.get_list_id_by_name("Dummy List")
+        
+        if not semi_filtered_id or not dummy_list_id:
+            print("❌ Could not find required lists for cleanup")
+            return
+        
+        # Get all existing cards in Semi-Filtered
+        existing_cards = self.get_existing_cards_with_details(semi_filtered_id)
+        moved_count = 0
+        
+        for card in existing_cards:
+            # Create a mock entry to test keyword matching
+            mock_entry = {
+                "title": card["name"],
+                "description": card.get("desc", ""),
+                "close_date": "12/31/2025"  # Future date for testing
+            }
+            
+            # Check if this card should actually be in Semi-Filtered
+            if not processor.contains_keyword(mock_entry):
+                # Move to Dummy List
+                if self.move_card_to_list(card["id"], dummy_list_id):
+                    print(f"🔄 Moved incorrect card to Dummy List: {card['name']}")
+                    moved_count += 1
+                else:
+                    print(f"❌ Failed to move card: {card['name']}")
+        
+        print(f"✅ Moved {moved_count} incorrectly categorized cards to Dummy List")
 
 
 def main():
