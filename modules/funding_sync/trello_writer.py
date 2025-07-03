@@ -76,6 +76,84 @@ def get_existing_card_titles(list_id):
 
     return set(card["name"].strip().lower() for card in cards)
 
+def get_existing_cards_with_details(list_id):
+    """Return detailed info about existing cards on the list."""
+    url = f"https://api.trello.com/1/lists/{list_id}/cards"
+    params = {
+        "key": TRELLO_API_KEY,
+        "token": TRELLO_TOKEN,
+        "fields": "id,name,desc"
+    }
+    
+    try:
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+        return response.json()
+        
+    except requests.RequestException as e:
+        print(f"❌ Error fetching existing cards: {e}")
+        return []
+
+def move_card_to_list(card_id, target_list_id):
+    """Move a card to a different list."""
+    url = f"https://api.trello.com/1/cards/{card_id}"
+    params = {
+        "key": TRELLO_API_KEY,
+        "token": TRELLO_TOKEN,
+        "idList": target_list_id
+    }
+    
+    try:
+        response = requests.put(url, params=params)
+        response.raise_for_status()
+        return True
+        
+    except requests.RequestException as e:
+        print(f"❌ Error moving card: {e}")
+        return False
+
+def cleanup_existing_cards(keywords):
+    """Move incorrectly categorized cards from Semi-Filtered to Dummy List."""
+    print("\n🧹 Cleaning up existing cards...")
+    
+    semi_filtered_id = get_list_id_by_name("Semi-Filtered")
+    dummy_list_id = get_list_id_by_name("Dummy List")
+    
+    if not semi_filtered_id or not dummy_list_id:
+        print("❌ Could not find required lists for cleanup")
+        return
+    
+    # Get all existing cards in Semi-Filtered
+    existing_cards = get_existing_cards_with_details(semi_filtered_id)
+    moved_count = 0
+    
+    for card in existing_cards:
+        # Check if this card should actually be in Semi-Filtered
+        if not contains_keyword_whole_word(card["name"], card.get("desc", ""), keywords):
+            # Move to Dummy List
+            if move_card_to_list(card["id"], dummy_list_id):
+                print(f"🔄 Moved incorrect card to Dummy List: {card['name']}")
+                moved_count += 1
+            else:
+                print(f"❌ Failed to move card: {card['name']}")
+    
+    print(f"✅ Moved {moved_count} incorrectly categorized cards to Dummy List")
+
+def contains_keyword_whole_word(title, description, keywords):
+    """Check if entry contains any of the lab keywords using whole-word matching."""
+    import re
+    
+    text = (title + " " + description).lower()
+    
+    for keyword in keywords:
+        keyword_lower = keyword.lower()
+        # Use word boundaries to match whole words only
+        pattern = r'\b' + re.escape(keyword_lower) + r'\b'
+        if re.search(pattern, text):
+            return True
+    
+    return False
+
 def create_card(entry, list_name):
     """Create a Trello card with a due date if not a duplicate."""
     list_id = get_list_id_by_name(list_name)
