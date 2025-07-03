@@ -154,8 +154,43 @@ def contains_keyword_whole_word(title, description, keywords):
     
     return False
 
+def create_checklist_on_card(card_id, checklist_name="Checklist"):
+    """Create a checklist on a Trello card."""
+    url = "https://api.trello.com/1/checklists"
+    params = {
+        "key": TRELLO_API_KEY,
+        "token": TRELLO_TOKEN,
+        "idCard": card_id,
+        "name": checklist_name
+    }
+    
+    try:
+        response = requests.post(url, params=params)
+        response.raise_for_status()
+        return response.json()["id"]
+    except requests.RequestException as e:
+        print(f"❌ Error creating checklist: {e}")
+        return None
+
+def add_checklist_item(checklist_id, item_name):
+    """Add an item to a checklist."""
+    url = f"https://api.trello.com/1/checklists/{checklist_id}/checkItems"
+    params = {
+        "key": TRELLO_API_KEY,
+        "token": TRELLO_TOKEN,
+        "name": item_name
+    }
+    
+    try:
+        response = requests.post(url, params=params)
+        response.raise_for_status()
+        return True
+    except requests.RequestException as e:
+        print(f"❌ Error adding checklist item: {e}")
+        return False
+
 def create_card(entry, list_name):
-    """Create a Trello card with a due date if not a duplicate."""
+    """Create a Trello card with a due date and checklist if not a duplicate."""
     list_id = get_list_id_by_name(list_name)
     if not list_id:
         print(f"🚫 Skipping card due to list fetch failure: {entry['title']}")
@@ -193,7 +228,17 @@ def create_card(entry, list_name):
     response = requests.post(url, params=params)
 
     if response.status_code == 200:
-        print(f"✅ Created card: {title}")
+        card_data = response.json()
+        card_id = card_data["id"]
+        
+        # Create checklist on the card
+        checklist_id = create_checklist_on_card(card_id, "Checklist")
+        if checklist_id:
+            # Add a single checkbox item
+            add_checklist_item(checklist_id, "Review funding opportunity")
+            print(f"✅ Created card with checklist: {title}")
+        else:
+            print(f"✅ Created card (checklist failed): {title}")
     else:
         print(f"❌ Failed to create card: {title}")
         print(f"Status Code: {response.status_code}")
