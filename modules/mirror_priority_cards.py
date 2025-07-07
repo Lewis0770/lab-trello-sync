@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Hardcoded board and list info
-PROPOSALS_BOARD_ID = "6860242608fdc9ecc66f793b"
+PROPOSALS_BOARD_ID = "6862042608fdc9ecc66f793b"
 PAPERS_BOARD_ID = "6866dd4609df4573a20ba546"
 MASTER_BOARD_ID = "685c44d7f65b2a102409f67b"
 MASTER_PROPOSALS_LIST_ID = "685d5ad92a6725cdeb415f91"
