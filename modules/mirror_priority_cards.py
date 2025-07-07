@@ -1,113 +1,87 @@
-# mirror_priority_cards.py
-import os
 import requests
-from dotenv import load_dotenv
+import os
 
-load_dotenv()
+# --- HARDCODED Trello credentials ---
+API_KEY = "your_trello_api_key"
+TOKEN = "your_trello_token"
 
-# Hardcoded board and list info
+# --- HARDCODED board/list IDs ---
 PROPOSALS_BOARD_ID = "6862042608fdc9ecc66f793b"
 PAPERS_BOARD_ID = "6866dd4609df4573a20ba546"
 MASTER_BOARD_ID = "685c44d7f65b2a102409f67b"
+
 MASTER_PROPOSALS_LIST_ID = "685d5ad92a6725cdeb415f91"
 MASTER_PAPERS_LIST_ID = "685d5ad7a89f68ae6d215449"
+
 PRIORITY_LIST_NAME = "Priority IV"
 
-TRELLO_KEY = os.getenv("TRELLO_API_KEY")
-TRELLO_TOKEN = os.getenv("TRELLO_TOKEN")
-
-def get_list_id(board_id, list_name):
+# --- Trello API helpers ---
+def get_list_id(board_id, target_name):
     url = f"https://api.trello.com/1/boards/{board_id}/lists"
-    query = {"key": TRELLO_KEY, "token": TRELLO_TOKEN}
-    res = requests.get(url, params=query)
-
-    print(f"Request URL: {res.url}")
-    print(f"Status Code: {res.status_code}")
-    print(f"Raw Response:\n{res.text}\n")
-
+    res = requests.get(url, params={"key": API_KEY, "token": TOKEN})
     if res.status_code != 200:
+        print(f"Request URL: {url}")
+        print(f"Status Code: {res.status_code}")
+        print("Raw Response:", res.text)
         raise Exception("Failed to fetch lists")
+    for lst in res.json():
+        if lst["name"] == target_name:
+            return lst["id"]
+    raise Exception(f"List '{target_name}' not found on board {board_id}")
 
-    try:
-        lists = res.json()
-    except Exception as e:
-        print("[ERROR] JSON decode failed.")
-        raise e
-
-    for lst in lists:
-        if lst['name'] == list_name:
-            return lst['id']
-
-    raise ValueError(f"List '{list_name}' not found on board {board_id}")
-
-def get_cards_in_list(list_id):
+def get_cards(list_id):
     url = f"https://api.trello.com/1/lists/{list_id}/cards"
-    query = {"key": TRELLO_KEY, "token": TRELLO_TOKEN, "checklists": "all"}
-    return requests.get(url, params=query).json()
+    res = requests.get(url, params={"key": API_KEY, "token": TOKEN, "checklists": "all", "fields": "all", "customFieldItems": "true"})
+    return res.json()
+
+def get_card_checklists(card_id):
+    url = f"https://api.trello.com/1/cards/{card_id}/checklists"
+    res = requests.get(url, params={"key": API_KEY, "token": TOKEN})
+    return res.json()
 
 def mirror_card(card, dest_list_id):
     url = "https://api.trello.com/1/cards"
-    data = {
-        "idList": dest_list_id,
+    payload = {
         "name": card["name"],
         "desc": card["desc"],
-        "key": TRELLO_KEY,
-        "token": TRELLO_TOKEN,
-        "due": card.get("due")
+        "idList": dest_list_id,
+        "due": card["due"],
+        "idLabels": ",".join(label["id"] for label in card["labels"]),
+        "idMembers": ",".join(card["idMembers"]),
+        "key": API_KEY,
+        "token": TOKEN
     }
-    new_card = requests.post(url, data=data).json()
+    res = requests.post(url, params=payload)
+    if res.status_code == 200:
+        card_id = res.json()["id"]
+        requests.post(f"https://api.trello.com/1/cards/{card_id}/actions/comments", params={
+            "key": API_KEY,
+            "token": TOKEN,
+            "text": f"Mirrored from card {card['shortUrl']}"
+        })
+    else:
+        print("Failed to mirror card:", card["name"], res.text)
 
-    if "id" not in new_card:
-        print(f"Failed to create card: {new_card}")
-        return
-
-    # Mirror members
-    for member_id in card.get("idMembers", []):
-        requests.post(f"https://api.trello.com/1/cards/{new_card['id']}/idMembers",
-                      data={"value": member_id, "key": TRELLO_KEY, "token": TRELLO_TOKEN})
-
-    # Mirror labels
-    for label_id in card.get("idLabels", []):
-        requests.post(f"https://api.trello.com/1/cards/{new_card['id']}/idLabels",
-                      data={"value": label_id, "key": TRELLO_KEY, "token": TRELLO_TOKEN})
-
-    # Mirror attachments
-    for attachment in card.get("attachments", []):
-        requests.post(f"https://api.trello.com/1/cards/{new_card['id']}/attachments",
-                      data={"url": attachment['url'], "key": TRELLO_KEY, "token": TRELLO_TOKEN})
-
-    # Mirror checklist if present
-    for checklist in card.get("checklists", []):
-        checklist_res = requests.post(f"https://api.trello.com/1/cards/{new_card['id']}/checklists",
-            data={"name": checklist['name'], "key": TRELLO_KEY, "token": TRELLO_TOKEN})
-
-        checklist_id = checklist_res.json().get("id")
-        for item in checklist["checkItems"]:
-            requests.post(f"https://api.trello.com/1/checklists/{checklist_id}/checkItems",
-                data={"name": item['name'], "checked": str(item['state'] == 'complete').lower(),
-                      "key": TRELLO_KEY, "token": TRELLO_TOKEN})
-
-    # Add comment noting the card was mirrored
-    requests.post(f"https://api.trello.com/1/cards/{new_card['id']}/actions/comments",
-                  data={"text": "[Bot] Mirrored from source board.", "key": TRELLO_KEY, "token": TRELLO_TOKEN})
-
-def mirror_board(board_id, master_list_id):
+def mirror_board(board_id, dest_list_id):
     list_id = get_list_id(board_id, PRIORITY_LIST_NAME)
-    cards = get_cards_in_list(list_id)
+    cards = get_cards(list_id)
     for card in cards:
-        checklist_completion = [
-            (item['state'] == 'complete')
-            for checklist in card.get('checklists', [])
-            for item in checklist.get('checkItems', [])
-        ]
-        if checklist_completion:
-            percent_complete = sum(checklist_completion) / len(checklist_completion)
-        else:
-            percent_complete = 0
+        # Skip if card has 'Completed' label
+        has_completed_label = any(label.get("name", "").lower() == "completed" for label in card.get("labels", []))
+        if has_completed_label:
+            continue
 
-        if percent_complete >= 0.75:
-            mirror_card(card, master_list_id)
+        # Calculate checklist completion
+        checklists = get_card_checklists(card["id"])
+        total_items = sum(len(cl["checkItems"]) for cl in checklists)
+        checked_items = sum(
+            sum(1 for item in cl["checkItems"] if item["state"] == "complete")
+            for cl in checklists
+        )
+        checklist_percent = (checked_items / total_items * 100) if total_items else 0
 
+        if checklist_percent >= 75 or card["idList"] == list_id:
+            mirror_card(card, dest_list_id)
 
 def main():
     mirror_board(PROPOSALS_BOARD_ID, MASTER_PROPOSALS_LIST_ID)
