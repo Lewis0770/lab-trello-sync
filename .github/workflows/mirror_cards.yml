@@ -1,0 +1,26 @@
+name: Mirror Priority Cards to Master Board
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'  # 8AM Eastern on Mondays
+  workflow_dispatch:  # manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run mirror script
+        env:
+          TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
+          TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+        run: python run_mirror_sync.py
