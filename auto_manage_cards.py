@@ -8,18 +8,10 @@ Auto-manage Trello cards for Papers and Proposals board.
 import os
 import sys
 import logging
+import requests
+import json
 from datetime import datetime, timedelta
-from typing import List, Optional
-
-# Add the modules directory to the path
-sys.path.append(os.path.join(os.path.dirname(__file__), 'modules'))
-
-try:
-    from trello import TrelloApi
-    from trello.exceptions import TrelloError
-except ImportError:
-    print("Error: trello module not found. Install with: pip install py-trello")
-    sys.exit(1)
+from typing import List, Optional, Dict, Any
 
 # Configure logging
 logging.basicConfig(
@@ -28,10 +20,71 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+class TrelloClient:
+    """Simple Trello API client."""
+    
+    def __init__(self, api_key: str, token: str):
+        self.api_key = api_key
+        self.token = token
+        self.base_url = "https://api.trello.com/1"
+        
+    def _make_request(self, method: str, endpoint: str, params: Dict = None, data: Dict = None) -> Dict:
+        """Make a request to the Trello API."""
+        url = f"{self.base_url}/{endpoint}"
+        
+        # Add authentication to all requests
+        if params is None:
+            params = {}
+        params.update({
+            'key': self.api_key,
+            'token': self.token
+        })
+        
+        try:
+            if method.upper() == 'GET':
+                response = requests.get(url, params=params)
+            elif method.upper() == 'PUT':
+                response = requests.put(url, params=params, json=data)
+            elif method.upper() == 'POST':
+                response = requests.post(url, params=params, json=data)
+            else:
+                raise ValueError(f"Unsupported HTTP method: {method}")
+                
+            response.raise_for_status()
+            return response.json()
+            
+        except requests.exceptions.RequestException as e:
+            logger.error(f"API request failed: {e}")
+            raise
+    
+    def get_boards(self) -> List[Dict]:
+        """Get all boards for the authenticated user."""
+        return self._make_request('GET', 'members/me/boards')
+    
+    def get_board_cards(self, board_id: str) -> List[Dict]:
+        """Get all cards from a board."""
+        return self._make_request('GET', f'boards/{board_id}/cards')
+    
+    def get_board_lists(self, board_id: str) -> List[Dict]:
+        """Get all lists from a board."""
+        return self._make_request('GET', f'boards/{board_id}/lists')
+    
+    def update_card_due_date(self, card_id: str, due_date: str) -> Dict:
+        """Update a card's due date."""
+        return self._make_request('PUT', f'cards/{card_id}', data={'due': due_date})
+    
+    def update_card_closed(self, card_id: str, closed: bool) -> Dict:
+        """Update a card's closed status."""
+        return self._make_request('PUT', f'cards/{card_id}', data={'closed': closed})
+    
+    def move_card_to_list(self, card_id: str, list_id: str) -> Dict:
+        """Move a card to a different list."""
+        return self._make_request('PUT', f'cards/{card_id}', data={'idList': list_id})
+
 class CardAutoManager:
     def __init__(self, api_key: str, token: str, board_name: str = "Papers and Proposals", dry_run: bool = False):
         """Initialize the card auto-manager."""
-        self.trello = TrelloApi(api_key, token)
+        self.trello = TrelloClient(api_key, token)
         self.board_name = board_name
         self.board = None
         self.dry_run = dry_run
@@ -48,7 +101,7 @@ class CardAutoManager:
     def get_board(self):
         """Get the Papers and Proposals board."""
         try:
-            boards = self.trello.members.get_board('me')
+            boards = self.trello.get_boards()
             for board in boards:
                 if board['name'] == self.board_name:
                     self.board = board
@@ -58,7 +111,7 @@ class CardAutoManager:
             logger.error(f"Board '{self.board_name}' not found")
             return False
             
-        except TrelloError as e:
+        except Exception as e:
             logger.error(f"Error getting board: {e}")
             return False
     
@@ -96,19 +149,19 @@ class CardAutoManager:
         """Move card's due date to next Monday."""
         try:
             next_monday = self.get_next_monday()
-            due_date_str = next_monday.strftime('%Y-%m-%d')
+            due_date_str = next_monday.isoformat()
             
             if self.dry_run:
                 logger.info(f"[DRY-RUN] Would move card '{card['name']}' due date to {due_date_str}")
                 return True
             
             # Update card due date
-            self.trello.cards.update_due(card['id'], due_date_str)
+            self.trello.update_card_due_date(card['id'], due_date_str)
             
             logger.info(f"Moved card '{card['name']}' due date to {due_date_str}")
             return True
             
-        except TrelloError as e:
+        except Exception as e:
             logger.error(f"Error updating due date for card '{card['name']}': {e}")
             return False
     
@@ -120,7 +173,7 @@ class CardAutoManager:
                 return True
             
             # Get all lists on the board
-            lists = self.trello.boards.get_list(self.board['id'])
+            lists = self.trello.get_board_lists(self.board['id'])
             
             # Find the "Completed" list or create logic to determine target list
             completed_list = None
@@ -139,10 +192,10 @@ class CardAutoManager:
             
             if completed_list:
                 # Move card to completed list
-                self.trello.cards.update_list(card['id'], completed_list['id'])
+                self.trello.move_card_to_list(card['id'], completed_list['id'])
                 
                 # Mark as completed (close the card)
-                self.trello.cards.update_closed(card['id'], True)
+                self.trello.update_card_closed(card['id'], True)
                 
                 logger.info(f"Marked card '{card['name']}' as completed")
                 return True
@@ -150,7 +203,7 @@ class CardAutoManager:
                 logger.warning(f"No suitable completed list found for card '{card['name']}'")
                 return False
                 
-        except TrelloError as e:
+        except Exception as e:
             logger.error(f"Error marking card '{card['name']}' as completed: {e}")
             return False
     
@@ -158,7 +211,7 @@ class CardAutoManager:
         """Process all cards on the board."""
         try:
             # Get all cards from the board
-            cards = self.trello.boards.get_card(self.board['id'])
+            cards = self.trello.get_board_cards(self.board['id'])
             
             logger.info(f"Processing {len(cards)} cards...")
             
@@ -185,7 +238,7 @@ class CardAutoManager:
                     else:
                         self.stats['errors'] += 1
                         
-        except TrelloError as e:
+        except Exception as e:
             logger.error(f"Error processing cards: {e}")
             self.stats['errors'] += 1
     
