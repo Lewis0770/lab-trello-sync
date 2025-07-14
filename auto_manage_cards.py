@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Auto-manage Trello cards for Papers and Proposals board.
+Auto-manage Trello cards for Papers and Proposals boards.
 - Moves overdue cards (>=3 days) to next Monday
 - Marks cards with "Completed:" tag as completed
+- Handles multiple boards: Papers and Proposals
 """
 
 import os
@@ -82,37 +83,48 @@ class TrelloClient:
         return self._make_request('PUT', f'cards/{card_id}', data={'idList': list_id})
 
 class CardAutoManager:
-    def __init__(self, api_key: str, token: str, board_name: str = "Papers and Proposals", dry_run: bool = False):
+    def __init__(self, api_key: str, token: str, board_names: List[str] = ["Papers", "Proposals"], dry_run: bool = False):
         """Initialize the card auto-manager."""
         self.trello = TrelloClient(api_key, token)
-        self.board_name = board_name
-        self.board = None
+        self.board_names = board_names
+        self.boards = {}
         self.dry_run = dry_run
         self.stats = {
             'cards_processed': 0,
             'cards_moved_to_monday': 0,
             'cards_marked_completed': 0,
-            'errors': 0
+            'errors': 0,
+            'boards_processed': 0
         }
         
         if self.dry_run:
             logger.info("Running in DRY-RUN mode - no changes will be made")
         
-    def get_board(self):
-        """Get the Papers and Proposals board."""
+    def get_boards(self):
+        """Get the target boards."""
         try:
-            boards = self.trello.get_boards()
-            for board in boards:
-                if board['name'] == self.board_name:
-                    self.board = board
-                    logger.info(f"Found board: {self.board_name}")
-                    return True
+            all_boards = self.trello.get_boards()
+            found_boards = []
             
-            logger.error(f"Board '{self.board_name}' not found")
-            return False
+            for board in all_boards:
+                if board['name'] in self.board_names:
+                    self.boards[board['name']] = board
+                    found_boards.append(board['name'])
+                    logger.info(f"Found board: {board['name']}")
+            
+            missing_boards = set(self.board_names) - set(found_boards)
+            if missing_boards:
+                logger.warning(f"Could not find boards: {', '.join(missing_boards)}")
+            
+            if not found_boards:
+                logger.error("No target boards found")
+                return False
+                
+            logger.info(f"Will process {len(found_boards)} boards: {', '.join(found_boards)}")
+            return True
             
         except Exception as e:
-            logger.error(f"Error getting board: {e}")
+            logger.error(f"Error getting boards: {e}")
             return False
     
     def get_next_monday(self) -> datetime:
@@ -145,35 +157,36 @@ class CardAutoManager:
                 return True
         return False
     
-    def move_card_to_monday(self, card: dict) -> bool:
+    def move_card_to_monday(self, card: dict, board_name: str) -> bool:
         """Move card's due date to next Monday."""
         try:
             next_monday = self.get_next_monday()
             due_date_str = next_monday.isoformat()
             
             if self.dry_run:
-                logger.info(f"[DRY-RUN] Would move card '{card['name']}' due date to {due_date_str}")
+                logger.info(f"[DRY-RUN] Would move card '{card['name']}' in board '{board_name}' due date to {due_date_str}")
                 return True
             
             # Update card due date
             self.trello.update_card_due_date(card['id'], due_date_str)
             
-            logger.info(f"Moved card '{card['name']}' due date to {due_date_str}")
+            logger.info(f"Moved card '{card['name']}' in board '{board_name}' due date to {due_date_str}")
             return True
             
         except Exception as e:
-            logger.error(f"Error updating due date for card '{card['name']}': {e}")
+            logger.error(f"Error updating due date for card '{card['name']}' in board '{board_name}': {e}")
             return False
     
-    def mark_card_completed(self, card: dict) -> bool:
+    def mark_card_completed(self, card: dict, board_name: str) -> bool:
         """Mark card as completed by moving to appropriate list."""
         try:
             if self.dry_run:
-                logger.info(f"[DRY-RUN] Would mark card '{card['name']}' as completed")
+                logger.info(f"[DRY-RUN] Would mark card '{card['name']}' in board '{board_name}' as completed")
                 return True
             
             # Get all lists on the board
-            lists = self.trello.get_board_lists(self.board['id'])
+            board = self.boards[board_name]
+            lists = self.trello.get_board_lists(board['id'])
             
             # Find the "Completed" list or create logic to determine target list
             completed_list = None
@@ -197,23 +210,25 @@ class CardAutoManager:
                 # Mark as completed (close the card)
                 self.trello.update_card_closed(card['id'], True)
                 
-                logger.info(f"Marked card '{card['name']}' as completed")
+                logger.info(f"Marked card '{card['name']}' in board '{board_name}' as completed")
                 return True
             else:
-                logger.warning(f"No suitable completed list found for card '{card['name']}'")
+                logger.warning(f"No suitable completed list found for card '{card['name']}' in board '{board_name}'")
                 return False
                 
         except Exception as e:
-            logger.error(f"Error marking card '{card['name']}' as completed: {e}")
+            logger.error(f"Error marking card '{card['name']}' in board '{board_name}' as completed: {e}")
             return False
     
-    def process_cards(self):
-        """Process all cards on the board."""
+    def process_board_cards(self, board_name: str):
+        """Process all cards on a specific board."""
         try:
-            # Get all cards from the board
-            cards = self.trello.get_board_cards(self.board['id'])
+            board = self.boards[board_name]
             
-            logger.info(f"Processing {len(cards)} cards...")
+            # Get all cards from the board
+            cards = self.trello.get_board_cards(board['id'])
+            
+            logger.info(f"Processing {len(cards)} cards in board '{board_name}'...")
             
             for card in cards:
                 self.stats['cards_processed'] += 1
@@ -224,7 +239,7 @@ class CardAutoManager:
                 
                 # Check if card has completed tag
                 if self.has_completed_tag(card):
-                    if self.mark_card_completed(card):
+                    if self.mark_card_completed(card, board_name):
                         self.stats['cards_marked_completed'] += 1
                     else:
                         self.stats['errors'] += 1
@@ -233,29 +248,34 @@ class CardAutoManager:
                 # Check if card is overdue by 3+ days
                 due_date = card.get('due')
                 if due_date and self.is_overdue_by_days(due_date):
-                    if self.move_card_to_monday(card):
+                    if self.move_card_to_monday(card, board_name):
                         self.stats['cards_moved_to_monday'] += 1
                     else:
                         self.stats['errors'] += 1
                         
         except Exception as e:
-            logger.error(f"Error processing cards: {e}")
+            logger.error(f"Error processing cards in board '{board_name}': {e}")
             self.stats['errors'] += 1
     
     def run(self):
         """Run the card auto-management process."""
         logger.info("Starting card auto-management...")
         
-        if not self.get_board():
-            logger.error("Failed to get board. Exiting.")
+        if not self.get_boards():
+            logger.error("Failed to get boards. Exiting.")
             return False
         
-        self.process_cards()
+        # Process each board
+        for board_name in self.boards.keys():
+            logger.info(f"\n--- Processing board: {board_name} ---")
+            self.process_board_cards(board_name)
+            self.stats['boards_processed'] += 1
         
         # Log summary
-        logger.info("Card auto-management completed!")
+        logger.info("\n=== Card auto-management completed! ===")
         logger.info(f"Summary:")
-        logger.info(f"  Cards processed: {self.stats['cards_processed']}")
+        logger.info(f"  Boards processed: {self.stats['boards_processed']}")
+        logger.info(f"  Total cards processed: {self.stats['cards_processed']}")
         logger.info(f"  Cards moved to Monday: {self.stats['cards_moved_to_monday']}")
         logger.info(f"  Cards marked completed: {self.stats['cards_marked_completed']}")
         logger.info(f"  Errors: {self.stats['errors']}")
@@ -269,12 +289,16 @@ def main():
     token = os.getenv('TRELLO_TOKEN')
     dry_run = os.getenv('DRY_RUN', 'false').lower() == 'true'
     
+    # Allow custom board names via environment variable
+    board_names_env = os.getenv('TRELLO_BOARD_NAMES', 'Papers,Proposals')
+    board_names = [name.strip() for name in board_names_env.split(',')]
+    
     if not api_key or not token:
         logger.error("Missing required environment variables: TRELLO_API_KEY and TRELLO_TOKEN")
         sys.exit(1)
     
     # Create and run the auto-manager
-    manager = CardAutoManager(api_key, token, dry_run=dry_run)
+    manager = CardAutoManager(api_key, token, board_names=board_names, dry_run=dry_run)
     
     try:
         success = manager.run()
