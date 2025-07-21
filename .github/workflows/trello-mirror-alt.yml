@@ -1,0 +1,49 @@
+name: Trello Priority Mirror - Alternative
+
+on:
+  # Run every other Monday at 8 AM Eastern (12 PM UTC / 1 PM UTC depending on DST)
+  schedule:
+    - cron: '0 12 * * 1'  # Every Monday at 12 PM UTC (8 AM EST)
+  
+  # Allow manual triggering for testing
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in dry-run mode (test only)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  mirror-cards:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    
+    - name: Run Trello Mirror Script
+      env:
+        TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
+        TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+      run: |
+        python run_mirror_sync_priority_alt.py
+    
+    - name: Upload logs (if needed)
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: mirror-logs
+        path: |
+          *.log
+        retention-days: 30
