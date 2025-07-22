@@ -145,35 +145,23 @@ class CardAutoManager:
         try:
             # Parse the due date string properly handling timezone
             if due_date_str.endswith('Z'):
-                # UTC timezone
-                due_date = datetime.fromisoformat(due_date_str.replace('Z', '+00:00'))
-            elif '+' in due_date_str or due_date_str.endswith('00'):
-                # Already has timezone info
-                due_date = datetime.fromisoformat(due_date_str)
+                # UTC timezone - remove Z and parse
+                due_date = datetime.fromisoformat(due_date_str[:-1])
+            elif '+' in due_date_str:
+                # Has timezone info
+                due_date = datetime.fromisoformat(due_date_str.replace('Z', ''))
             else:
-                # Assume UTC if no timezone
-                due_date = datetime.fromisoformat(due_date_str + '+00:00')
+                # Assume local time if no timezone
+                due_date = datetime.fromisoformat(due_date_str)
             
-            # Convert to local timezone for comparison
-            local_tz = pytz.timezone('US/Eastern')  # Adjust to your timezone
-            try:
-                due_date_local = due_date.astimezone(local_tz)
-            except:
-                # If timezone conversion fails, use naive datetime
-                due_date_local = due_date.replace(tzinfo=None)
-            
-            # Get current time in same format
-            now = datetime.now(local_tz) if due_date_local.tzinfo else datetime.now()
-            
-            # Check if due date is today or in the past
-            # We'll move anything that's due today or overdue
-            due_date_only = due_date_local.date() if hasattr(due_date_local, 'date') else due_date_local.date()
-            today_only = now.date() if hasattr(now, 'date') else now.date()
+            # Compare just the dates (ignore time)
+            due_date_only = due_date.date()
+            today_only = datetime.now().date()
             
             is_due = due_date_only <= today_only
             
             if is_due:
-                logger.debug(f"Card is due/overdue: due={due_date_local}, now={now}")
+                logger.debug(f"Card is due/overdue: due={due_date_only}, today={today_only}")
             
             return is_due
             
@@ -194,8 +182,8 @@ class CardAutoManager:
         """Move card's due date to next Monday."""
         try:
             next_monday = self.get_next_monday()
-            # Format for Trello API (ISO format)
-            due_date_str = next_monday.isoformat()
+            # Format for Trello API - they expect UTC timezone format
+            due_date_str = next_monday.strftime('%Y-%m-%dT%H:%M:%S.000Z')
             
             current_due = card.get('due', 'No due date')
             
@@ -203,11 +191,17 @@ class CardAutoManager:
                 logger.info(f"[DRY-RUN] Would move card '{card['name']}' in board '{board_name}' from '{current_due}' to next Monday: {due_date_str}")
                 return True
             
-            # Update card due date
-            self.trello.update_card_due_date(card['id'], due_date_str)
+            # Update card due date using PUT request with proper format
+            response = self.trello.update_card_due_date(card['id'], due_date_str)
             
-            logger.info(f"Moved card '{card['name']}' in board '{board_name}' from '{current_due}' to next Monday: {due_date_str}")
-            return True
+            # Verify the update worked
+            if 'due' in response:
+                logger.info(f"✓ Successfully moved card '{card['name']}' in board '{board_name}' from '{current_due}' to next Monday: {due_date_str}")
+                return True
+            else:
+                logger.error(f"✗ Failed to update due date for card '{card['name']}' - API response missing 'due' field")
+                logger.debug(f"API Response: {response}")
+                return False
             
         except Exception as e:
             logger.error(f"Error updating due date for card '{card['name']}' in board '{board_name}': {e}")
