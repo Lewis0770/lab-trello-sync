@@ -64,8 +64,14 @@ class TrelloClient:
         return self._make_request('GET', 'members/me/boards')
     
     def get_board_cards(self, board_id: str) -> List[Dict]:
-        """Get all cards from a board."""
-        return self._make_request('GET', f'boards/{board_id}/cards')
+        """Get all cards from a board with fresh data."""
+        # Add parameters to get fresh data and include all card details
+        params = {
+            'fields': 'all',  # Get all card fields
+            'filter': 'open',  # Only open cards
+            '_': str(int(datetime.now().timestamp()))  # Cache busting
+        }
+        return self._make_request('GET', f'boards/{board_id}/cards', params=params)
     
     def get_board_lists(self, board_id: str) -> List[Dict]:
         """Get all lists from a board."""
@@ -142,6 +148,10 @@ class CardAutoManager:
     
     def is_overdue_or_due_today(self, due_date_str: str) -> bool:
         """Check if a card is overdue or due today (including past due)."""
+        if not due_date_str or not due_date_str.strip():
+            logger.debug(f"No due date provided or empty string")
+            return False
+            
         try:
             # Parse the due date string properly handling timezone
             if due_date_str.endswith('Z'):
@@ -162,13 +172,15 @@ class CardAutoManager:
             
             if is_due:
                 logger.debug(f"Card is due/overdue: due={due_date_only}, today={today_only}")
+            else:
+                logger.debug(f"Card is not due yet: due={due_date_only}, today={today_only}")
             
             return is_due
             
         except (ValueError, AttributeError) as e:
             logger.warning(f"Error parsing due date '{due_date_str}': {e}")
-            # If we can't parse the date, assume it needs to be moved to be safe
-            return True
+            # If we can't parse the date, don't assume it needs to be moved
+            return False
     
     def has_completed_tag(self, card: dict) -> bool:
         """Check if card has a 'Completed:' tag."""
@@ -255,23 +267,26 @@ class CardAutoManager:
         try:
             board = self.boards[board_name]
             
-            # Get all cards from the board
+            # Get all cards from the board with fresh data
             cards = self.trello.get_board_cards(board['id'])
             
             logger.info(f"Processing {len(cards)} cards in board '{board_name}'...")
             
             cards_with_due_dates = []
             cards_without_due_dates = []
+            cards_completed = []
             
             for card in cards:
                 self.stats['cards_processed'] += 1
                 
                 # Skip already closed cards
                 if card.get('closed', False):
+                    logger.debug(f"Skipping closed card: {card['name']}")
                     continue
                 
                 # Check if card has completed tag first
                 if self.has_completed_tag(card):
+                    cards_completed.append(card)
                     if self.mark_card_completed(card, board_name):
                         self.stats['cards_marked_completed'] += 1
                     else:
@@ -280,17 +295,21 @@ class CardAutoManager:
                 
                 # Categorize cards by due date presence
                 due_date = card.get('due')
-                if due_date:
+                if due_date and due_date.strip():  # Make sure due date is not empty or just whitespace
                     cards_with_due_dates.append(card)
+                    logger.debug(f"Card '{card['name']}' has due date: {due_date}")
                 else:
                     cards_without_due_dates.append(card)
+                    logger.debug(f"Card '{card['name']}' has no due date")
             
-            logger.info(f"Found {len(cards_with_due_dates)} cards with due dates and {len(cards_without_due_dates)} cards without due dates")
+            logger.info(f"Found {len(cards_with_due_dates)} cards with due dates, {len(cards_without_due_dates)} cards without due dates, {len(cards_completed)} completed cards")
             
             # Process cards with due dates - move overdue ones to Monday
+            overdue_count = 0
             for card in cards_with_due_dates:
                 due_date = card.get('due')
                 if self.is_overdue_or_due_today(due_date):
+                    overdue_count += 1
                     logger.info(f"Card '{card['name']}' is overdue/due today: {due_date}")
                     if self.move_card_to_monday(card, board_name):
                         self.stats['cards_moved_to_monday'] += 1
@@ -298,6 +317,9 @@ class CardAutoManager:
                         self.stats['errors'] += 1
                 else:
                     logger.debug(f"Card '{card['name']}' is not overdue: {due_date}")
+            
+            if overdue_count == 0:
+                logger.info(f"No overdue cards found in board '{board_name}'")
                         
         except Exception as e:
             logger.error(f"Error processing cards in board '{board_name}': {e}")
