@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Auto-manage Trello cards for Papers and Proposals boards.
-- Moves overdue cards (>=3 days) to next Monday
+- Moves overdue cards (>=1 days) to next Monday
 - Marks cards with "Completed:" tag as completed
 - Handles multiple boards: Papers and Proposals
 """
