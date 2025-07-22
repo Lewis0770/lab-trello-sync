@@ -135,7 +135,7 @@ class CardAutoManager:
             days_ahead += 7
         return today + timedelta(days=days_ahead)
     
-    def is_overdue_by_days(self, due_date_str: str, days: int = 3) -> bool:
+    def is_overdue_by_days(self, due_date_str: str, days: int = 1) -> bool:
         """Check if a card is overdue by the specified number of days."""
         try:
             due_date = datetime.fromisoformat(due_date_str.replace('Z', '+00:00'))
