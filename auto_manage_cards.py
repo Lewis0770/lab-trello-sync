@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Auto-manage Trello cards for Papers and Proposals boards.
-- Moves overdue cards (>=1 days) to next Monday
+- Moves overdue cards (>=0 days, including today) to next Monday
 - Marks cards with "Completed:" tag as completed
 - Handles multiple boards: Papers and Proposals
 """
@@ -13,6 +13,7 @@ import requests
 import json
 from datetime import datetime, timedelta
 from typing import List, Optional, Dict, Any
+import pytz
 
 # Configure logging
 logging.basicConfig(
@@ -128,26 +129,58 @@ class CardAutoManager:
             return False
     
     def get_next_monday(self) -> datetime:
-        """Get the date of the next Monday."""
+        """Get the date of the next Monday at 9 AM."""
         today = datetime.now()
         days_ahead = 0 - today.weekday()  # Monday is 0
         if days_ahead <= 0:  # Target day already happened this week
             days_ahead += 7
-        return today + timedelta(days=days_ahead)
+        
+        next_monday = today + timedelta(days=days_ahead)
+        # Set to 9 AM on Monday
+        next_monday = next_monday.replace(hour=9, minute=0, second=0, microsecond=0)
+        return next_monday
     
-    def is_overdue_by_days(self, due_date_str: str, days: int = 1) -> bool:
-        """Check if a card is overdue by the specified number of days."""
+    def is_overdue_or_due_today(self, due_date_str: str) -> bool:
+        """Check if a card is overdue or due today (including past due)."""
         try:
-            due_date = datetime.fromisoformat(due_date_str.replace('Z', '+00:00'))
-            # Convert to local time for comparison
-            due_date = due_date.replace(tzinfo=None)
-            now = datetime.now()
+            # Parse the due date string properly handling timezone
+            if due_date_str.endswith('Z'):
+                # UTC timezone
+                due_date = datetime.fromisoformat(due_date_str.replace('Z', '+00:00'))
+            elif '+' in due_date_str or due_date_str.endswith('00'):
+                # Already has timezone info
+                due_date = datetime.fromisoformat(due_date_str)
+            else:
+                # Assume UTC if no timezone
+                due_date = datetime.fromisoformat(due_date_str + '+00:00')
             
-            return (now - due_date).days >= days
+            # Convert to local timezone for comparison
+            local_tz = pytz.timezone('US/Eastern')  # Adjust to your timezone
+            try:
+                due_date_local = due_date.astimezone(local_tz)
+            except:
+                # If timezone conversion fails, use naive datetime
+                due_date_local = due_date.replace(tzinfo=None)
+            
+            # Get current time in same format
+            now = datetime.now(local_tz) if due_date_local.tzinfo else datetime.now()
+            
+            # Check if due date is today or in the past
+            # We'll move anything that's due today or overdue
+            due_date_only = due_date_local.date() if hasattr(due_date_local, 'date') else due_date_local.date()
+            today_only = now.date() if hasattr(now, 'date') else now.date()
+            
+            is_due = due_date_only <= today_only
+            
+            if is_due:
+                logger.debug(f"Card is due/overdue: due={due_date_local}, now={now}")
+            
+            return is_due
             
         except (ValueError, AttributeError) as e:
             logger.warning(f"Error parsing due date '{due_date_str}': {e}")
-            return False
+            # If we can't parse the date, assume it needs to be moved to be safe
+            return True
     
     def has_completed_tag(self, card: dict) -> bool:
         """Check if card has a 'Completed:' tag."""
@@ -161,16 +194,19 @@ class CardAutoManager:
         """Move card's due date to next Monday."""
         try:
             next_monday = self.get_next_monday()
+            # Format for Trello API (ISO format)
             due_date_str = next_monday.isoformat()
             
+            current_due = card.get('due', 'No due date')
+            
             if self.dry_run:
-                logger.info(f"[DRY-RUN] Would move card '{card['name']}' in board '{board_name}' due date to {due_date_str}")
+                logger.info(f"[DRY-RUN] Would move card '{card['name']}' in board '{board_name}' from '{current_due}' to next Monday: {due_date_str}")
                 return True
             
             # Update card due date
             self.trello.update_card_due_date(card['id'], due_date_str)
             
-            logger.info(f"Moved card '{card['name']}' in board '{board_name}' due date to {due_date_str}")
+            logger.info(f"Moved card '{card['name']}' in board '{board_name}' from '{current_due}' to next Monday: {due_date_str}")
             return True
             
         except Exception as e:
@@ -230,6 +266,9 @@ class CardAutoManager:
             
             logger.info(f"Processing {len(cards)} cards in board '{board_name}'...")
             
+            cards_with_due_dates = []
+            cards_without_due_dates = []
+            
             for card in cards:
                 self.stats['cards_processed'] += 1
                 
@@ -237,7 +276,7 @@ class CardAutoManager:
                 if card.get('closed', False):
                     continue
                 
-                # Check if card has completed tag
+                # Check if card has completed tag first
                 if self.has_completed_tag(card):
                     if self.mark_card_completed(card, board_name):
                         self.stats['cards_marked_completed'] += 1
@@ -245,13 +284,26 @@ class CardAutoManager:
                         self.stats['errors'] += 1
                     continue
                 
-                # Check if card is overdue by 3+ days
+                # Categorize cards by due date presence
                 due_date = card.get('due')
-                if due_date and self.is_overdue_by_days(due_date):
+                if due_date:
+                    cards_with_due_dates.append(card)
+                else:
+                    cards_without_due_dates.append(card)
+            
+            logger.info(f"Found {len(cards_with_due_dates)} cards with due dates and {len(cards_without_due_dates)} cards without due dates")
+            
+            # Process cards with due dates - move overdue ones to Monday
+            for card in cards_with_due_dates:
+                due_date = card.get('due')
+                if self.is_overdue_or_due_today(due_date):
+                    logger.info(f"Card '{card['name']}' is overdue/due today: {due_date}")
                     if self.move_card_to_monday(card, board_name):
                         self.stats['cards_moved_to_monday'] += 1
                     else:
                         self.stats['errors'] += 1
+                else:
+                    logger.debug(f"Card '{card['name']}' is not overdue: {due_date}")
                         
         except Exception as e:
             logger.error(f"Error processing cards in board '{board_name}': {e}")
