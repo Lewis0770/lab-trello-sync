@@ -1,7 +1,6 @@
 slack_sdk>=3.21.0
+requests>=2.31.0
 python-dotenv>=1.0.0
 pandas
 requests>=2.31.0
 py-trello
-requests>=2.25.1
-smtplib2>=0.2.1
