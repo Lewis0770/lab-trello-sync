@@ -43,7 +43,7 @@ class TrelloMonitor:
         
         # Option 2: Default mapping (customize as needed)
         return {
-            'John Doe': ['john.doe@example.com'],
+            'Brandon': ['brandonlewis0405@gmail.com'],
             'Jane Smith': ['jane.smith@example.com'],
             'Team Lead': ['lead@example.com'],
             'Developer': ['dev@example.com']
