@@ -28,7 +28,7 @@ jobs:
       env:
         TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
         TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
-        TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
+        TRELLO_BOARD_IDS: ${{ secrets.TRELLO_BOARD_IDS }}
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
