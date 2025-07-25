@@ -4,8 +4,8 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from datetime import datetime
 import time
+import datetime 
 
 class TrelloMonitor:
     def __init__(self):
@@ -248,11 +248,16 @@ class TrelloMonitor:
             print("Error reading state file, starting fresh")
             return {}
 
+   
     def save_current_state(self, state):
-        """Save current state to file"""
+        def default_serializer(obj):
+            if isinstance(obj, datetime.datetime):
+                return obj.isoformat()
+            return str(obj)
+    
         try:
             with open(self.state_file, 'w') as f:
-                json.dump(state, f, indent=2)
+                json.dump(state, f, indent=2, default=default_serializer)
             print("State saved successfully")
         except Exception as e:
             print(f"Error saving state: {e}")
