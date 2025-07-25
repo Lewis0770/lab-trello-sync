@@ -1,5 +1,4 @@
 name: Trello Monitor
-
 on:
   schedule:
     # Run every hour at minute 0
@@ -41,8 +40,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add trello_state.json
-        git diff --staged --quiet || git commit -m "Update Trello state [skip ci]"
-        git push
+        git add trello_state.json || true
+        git diff --staged --quiet || git commit -m "Update Trello state [skip ci]" || true
+        git push || true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
