@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-07-27T20:22:45.741722",
-  "total_cards": 113,
+  "last_updated": "2025-07-27T21:20:09.064213",
+  "total_cards": 115,
   "boards_monitored": [
     "6866dd4609df4573a20ba546",
     "6862042608fdc9ecc66f793b"
@@ -6172,6 +6172,65 @@
           ]
         }
       ],
+      "attachments": []
+    },
+    "6886902e185e28c5bda8a026": {
+      "id": "6886902e185e28c5bda8a026",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Test2",
+      "desc": "",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488420864,
+      "due": null,
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-27T20:46:53.834Z",
+      "labels": [
+        {
+          "id": "6883a9071f55f380fa835ae3",
+          "name": "Brandon",
+          "color": "purple"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "6886903d335ab5413fee5b71",
+          "text": "Created",
+          "date": "2025-07-27T20:46:53.817Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [],
+      "attachments": []
+    },
+    "68869030a81c79e0cc29ff49": {
+      "id": "68869030a81c79e0cc29ff49",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "1",
+      "desc": "",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488437248,
+      "due": null,
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-27T20:46:40.690Z",
+      "labels": [],
+      "members": [],
+      "comments": [],
+      "checklists": [],
       "attachments": []
     },
     "68627f854c4ca8108630e06c": {
