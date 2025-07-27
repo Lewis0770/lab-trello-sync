@@ -23,9 +23,22 @@ class TrelloMonitor:
         # Email configuration from GitHub secrets
         self.smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
         self.smtp_port = int(os.environ.get('SMTP_PORT', '587'))
-        self.email_user = os.environ['EMAIL_USER']
-        self.email_pass = os.environ['EMAIL_PASS']
+        self.email_user = os.environ.get('EMAIL_USER', '')
+        self.email_pass = os.environ.get('EMAIL_PASS', '')
         self.from_email = os.environ.get('FROM_EMAIL', self.email_user)
+        
+        # Debug email configuration (without sensitive data)
+        print(f"Email configuration loaded:")
+        print(f"  SMTP Host: {self.smtp_host}")
+        print(f"  SMTP Port: {self.smtp_port}")
+        print(f"  Email User: {self.email_user[:3]}***@{self.email_user.split('@')[-1] if '@' in self.email_user else 'unknown'}")
+        print(f"  From Email: {self.from_email[:3]}***@{self.from_email.split('@')[-1] if '@' in self.from_email else 'unknown'}")
+        print(f"  Email Pass: {'***set***' if self.email_pass else '***NOT SET***'}")
+        
+        # Validate email configuration
+        if not self.email_user or not self.email_pass:
+            print("WARNING: Email credentials not properly configured!")
+            print("Make sure EMAIL_USER and EMAIL_PASS secrets are set in GitHub")
         
         # State file to track changes
         self.state_file = 'trello_state.json'
@@ -460,6 +473,11 @@ class TrelloMonitor:
         if not emails:
             print(f"No email addresses found for card: {card['name']}")
             return
+            
+        # Check if email is configured
+        if not self.email_user or not self.email_pass:
+            print("Email not configured - skipping notification")
+            return
 
         try:
             # Create email content
@@ -509,20 +527,31 @@ class TrelloMonitor:
             print(f"Attempting to send email to: {', '.join(emails)}")
             print(f"Using SMTP server: {self.smtp_host}:{self.smtp_port}")
             
-            server = smtplib.SMTP(self.smtp_host, self.smtp_port)
+            # Create SMTP connection with timeout
+            server = None
             try:
+                print("Creating SMTP connection...")
+                server = smtplib.SMTP(timeout=30)
+                
+                print(f"Connecting to {self.smtp_host}:{self.smtp_port}...")
+                server.connect(self.smtp_host, self.smtp_port)
+                
+                print("Starting TLS...")
                 server.starttls()
                 print("TLS started successfully")
                 
+                print("Logging in...")
                 server.login(self.email_user, self.email_pass)
                 print("SMTP login successful")
                 
+                print("Sending message...")
                 server.send_message(msg)
                 print(f"Email sent successfully to: {', '.join(emails)} for card: {card['name']}")
                 
             except smtplib.SMTPAuthenticationError as e:
                 print(f"SMTP Authentication failed: {e}")
                 print("Please check your EMAIL_USER and EMAIL_PASS credentials")
+                print("For Gmail, make sure you're using an App Password, not your regular password")
                 
             except smtplib.SMTPRecipientsRefused as e:
                 print(f"Recipients refused: {e}")
@@ -532,15 +561,22 @@ class TrelloMonitor:
                 print(f"SMTP server disconnected: {e}")
                 print("Connection to SMTP server was lost")
                 
+            except smtplib.SMTPConnectError as e:
+                print(f"SMTP connection error: {e}")
+                print("Could not connect to SMTP server")
+                
             except Exception as e:
                 print(f"Error during email sending: {e}")
+                import traceback
+                traceback.print_exc()
                 
             finally:
-                try:
-                    server.quit()
-                    print("SMTP connection closed")
-                except:
-                    pass
+                if server:
+                    try:
+                        server.quit()
+                        print("SMTP connection closed")
+                    except:
+                        pass
 
         except Exception as e:
             print(f"Error creating email: {e}")
