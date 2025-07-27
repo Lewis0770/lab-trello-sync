@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-27T18:09:31.978526",
+  "last_updated": "2025-07-27T18:16:28.663984",
   "total_cards": 113,
   "boards_monitored": [
     "6866dd4609df4573a20ba546",
@@ -4529,7 +4529,39 @@
           }
         }
       ],
-      "checklists": [],
+      "checklists": [
+        {
+          "id": "686704da68a223ecef298ae0",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704da68a223ecef298ae1",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704da68a223ecef298ae2",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704da68a223ecef298ae3",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704da68a223ecef298ae4",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d63fd4b61e1e3ce940d": {
@@ -4563,8 +4595,59 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
+      "comments": [
+        {
+          "id": "687536049ca1afe8786064c1",
+          "text": "Journal Covers were submitted",
+          "date": "2025-07-14T16:53:24.817Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        },
+        {
+          "id": "6867109aa53673a897ea8303",
+          "text": "[Daniel Maldonado](mailto:danimaldonadolopez@gmail.com \"\u200c\")\n[buliyami@msu.edu](mailto:buliyami@msu.edu \"\u200c\")",
+          "date": "2025-07-03T23:22:02.256Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "686704dde451aba84fe56ade",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704dde451aba84fe56adf",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704dde451aba84fe56ae0",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704dde451aba84fe56ae1",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704dde451aba84fe56ae2",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d65eaca6ce074681c6b": {
@@ -4593,8 +4676,50 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
+      "comments": [
+        {
+          "id": "686710b99afe2ac9b5104c17",
+          "text": "[Daniel Maldonado](mailto:danimaldonadolopez@gmail.com \"\u200c\")",
+          "date": "2025-07-03T23:22:33.760Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "686704e0f0b9839971b5e36d",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704e0f0b9839971b5e36e",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704e0f0b9839971b5e36f",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704e0f0b9839971b5e370",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704e0f0b9839971b5e371",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d688c7759cd4cf49298": {
@@ -4623,9 +4748,76 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "6883f1031fd04b2125c7a059",
+          "text": "I emailed the editor.\nThe rebuttal was accepted and they sent the paper to other reviewers!\n\n---\n\nThank you, Dr. Mendoza for the email. Your manuscript is under review.\n\nIf you have any questions, please let me know.\n\nSincerely,\n\n\u200c\n\nAngie Ly\n\nFor Prof. Dr. Kristina Tschulik\n\nAssociate Editor\n\nACS Catalysis\n\nEmail: [Tschulik-office@catalysis.acs.org](mailto:Tschulik-office@catalysis.acs.org \"\u200c\")\n\n---\n\n**From:** Jose Mendoza <[jmendoza@egr.msu.edu](mailto:jmendoza@egr.msu.edu \"\u200c\")\\>\n**Sent:** Monday, July 14, 2025 4:13 PM\n**To:** Michael J. Zdilla <[michael.zdilla@temple.edu](mailto:michael.zdilla@temple.edu \"\u200c\")\\>\n**Cc:** Tschulik-office <[tschulik-office@catalysis.acs.org](mailto:tschulik-office@catalysis.acs.org \"\u200c\")\\>\n**Subject:** Re: [External] Decision on cs-2025-02788z\n\n\u200c\n\nDear Angie and Dr.\u00a0Tschulik,\n\nDitto.\n\nLet us know what are the next steps.\n\nBest,\n\n./Jose\n\n---\n\nOn Wed, Jul 2, 2025 at 4:37\u202fPM Michael J. Zdilla <[michael.zdilla@temple.edu](mailto:michael.zdilla@temple.edu \"\u200c\")\\> wrote:\n\n> Dear Angie and Dr. Tschulik,\n>\n> \u200c\n>\n> I am extremely grateful for your commitment to thoroughness and fairness, especially given the extra attention and work that it has required of you in this instance.\u00a0 Thank you very much and we look forward to seeing the revised decision.\n>\n> \u200c\n>\n> Best,\n>\n> \u200c\n>\n> Mike\n>\n> \u200c\n>\n> \u200c\n>\n> **From:**\u00a0Tschulik-office <[tschulik-office@catalysis.acs.org](mailto:tschulik-office@catalysis.acs.org \"\u200c\")\\>\n> **Sent:**\u00a0Wednesday, July 2, 2025 12:43 PM\n> **To:**\u00a0Michael J. Zdilla <[michael.zdilla@temple.edu](mailto:michael.zdilla@temple.edu \"\u200c\")\\>\n> **Cc:**\u00a0Jose Mendoza <[jmendoza@egr.msu.edu](mailto:jmendoza@egr.msu.edu \"\u200c\")\\>\n> **Subject:**\u00a0Re: [External] Decision on cs-2025-02788z\n>\n> \u200c\n>\n> Dear Dr. Zdilla,\n>\n> \u200c\n>\n> The Editor has approved of your appeal. The decision was rescinded.\n>\n> \u200c\n>\n> Sincerely,\n>\n> \u200c\n>\n> Angie Ly\n>\n> For Prof. Dr. Kristina Tschulik\n>\n> Associate Editor\n>\n> ACS Catalysis\n>\n> Email: [Tschulik-office@catalysis.acs.org](mailto:Tschulik-office@catalysis.acs.org \"\u200c\")\n>\n> \u200c\n>\n> **From:**\u00a0Tschulik-office <[tschulik-office@catalysis.acs.org](mailto:tschulik-office@catalysis.acs.org \"\u200c\")\\>\n> **Sent:**\u00a0Wednesday, June 4, 2025 9:25 AM\n> **To:**\u00a0Michael J. Zdilla <[michael.zdilla@temple.edu](mailto:michael.zdilla@temple.edu \"\u200c\")\\>\n> **Cc:**\u00a0Jose Mendoza <[jmendoza@egr.msu.edu](mailto:jmendoza@egr.msu.edu \"\u200c\")\\>\n> **Subject:**\u00a0Re: [External] Decision on cs-2025-02788z\n>\n> \u200c\n>\n> Dear Dr. Zdilla,\n>\n> \u200c\n>\n> To keep you updated on your appeal, the Editor is working on reviewing the appeal and we will be getting back to you soon.\n>\n> \u200c\n>\n> Sincerely,\n>\n> \u200c\n>\n> Angie Ly\n>\n> For Prof. Dr. Kristina Tschulik\n>\n> Associate Editor\n>\n> ACS Catalysis\n>\n> Email: [Tschulik-office@catalysis.acs.org](mailto:Tschulik-office@catalysis.acs.org \"\u200c\")\n>\n> \u200c\n>\n> **From:**\u00a0Tschulik-office <[tschulik-office@catalysis.acs.org](mailto:tschulik-office@catalysis.acs.org \"\u200c\")\\>\n> **Sent:**\u00a0Tuesday, May 6, 2025 7:57 AM\n> **To:**\u00a0Michael J. Zdilla <[michael.zdilla@temple.edu](mailto:michael.zdilla@temple.edu \"\u200c\")\\>\n> **Cc:**\u00a0Jose Mendoza <[jmendoza@egr.msu.edu](mailto:jmendoza@egr.msu.edu \"\u200c\")\\>\n> **Subject:**\u00a0Re: [External] Decision on cs-2025-02788z\n>\n> \u200c\n>\n> Dear Dr. Zdilla,\n>\n> \u200c\n>\n> Thank you for reaching out with your concerns about your submission\u2019s recent decision. Your appeal has been forwarded to the Associate Editor\u2019s attention. As appeals can occasionally take time, we thank you in advance for your patience. ACS Catalysis authors should expect a decision in a couple weeks but this may take longer if other editors are needed to weigh in.\n>\n> \u200c\n>\n> Sincerely,\n>\n> \u200c\n>\n> Angie Ly\n>\n> For Prof. Dr. Kristina Tschulik\n>\n> Associate Editor\n>\n> ACS Catalysis\n>\n> Email: [Tschulik-office@catalysis.acs.org](mailto:Tschulik-office@catalysis.acs.org \"\u200c\")\n>\n>\n> \\- Professor Jose",
+          "date": "2025-07-25T21:02:59.322Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "687919e743e5114440edac89",
+          "text": "DOE one due by Sep 30th",
+          "date": "2025-07-17T15:42:31.665Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "687909103c339769742e13fd",
+          "text": "[https://www.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory?utm_source=chatgpt.com](https://www.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory?utm_source=chatgpt.com \"smartCard-inline\")",
+          "date": "2025-07-17T14:30:40.254Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "686704e28caf6bc550be156e",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704e28caf6bc550be156f",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704e28caf6bc550be1570",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704e28caf6bc550be1571",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704e28caf6bc550be1572",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "687919db650bc7f8d1effd18",
+          "name": "https://www.grants.gov/search-results-detail/356590",
+          "url": "https://www.grants.gov/search-results-detail/356590",
+          "date": "2025-07-17T15:42:19.541Z"
+        }
+      ]
     },
     "68628d6df0cbfbce6dae0bf4": {
       "id": "68628d6df0cbfbce6dae0bf4",
@@ -4654,7 +4846,39 @@
       ],
       "members": [],
       "comments": [],
-      "checklists": [],
+      "checklists": [
+        {
+          "id": "686704e45d56fb317eaaf0ef",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704e45d56fb317eaaf0f0",
+              "name": "25%",
+              "state": "incomplete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704e45d56fb317eaaf0f1",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704e45d56fb317eaaf0f2",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704e45d56fb317eaaf0f3",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d70d71d03c9448a3947": {
@@ -4689,7 +4913,39 @@
       ],
       "members": [],
       "comments": [],
-      "checklists": [],
+      "checklists": [
+        {
+          "id": "686704e7532699369c63705d",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704e7532699369c63705e",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704e7532699369c63705f",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704e7532699369c637060",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704e7532699369c637061",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d75bf32ef1124cf5f61": {
@@ -4718,8 +4974,50 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
+      "comments": [
+        {
+          "id": "687551eef97fe609f31fdde5",
+          "text": "For now, RSC:JMC-A\n[https://www.rsc.org/publishing/journals/journal-of-materials-chemistry-a](https://www.rsc.org/publishing/journals/journal-of-materials-chemistry-a \"\u200c\")\nThe paper is transfer to this template.\n\nFor ArXiv,\nwe should leave the papers on Rev-Tex-4-2 template (or similar) since it has an open access license)",
+          "date": "2025-07-14T18:52:30.607Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "686704e93c26aed6457857da",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704e93c26aed6457857db",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704e93c26aed6457857dc",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704e93c26aed6457857dd",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704e93c26aed6457857de",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d7944934ae236bd6ab8": {
@@ -4754,7 +5052,39 @@
       ],
       "members": [],
       "comments": [],
-      "checklists": [],
+      "checklists": [
+        {
+          "id": "686704ece85b30c3cf4e5cf1",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686704ece85b30c3cf4e5cf2",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686704ece85b30c3cf4e5cf3",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686704ece85b30c3cf4e5cf4",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686704ece85b30c3cf4e5cf5",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68628d80de806a82aecb847a": {
@@ -7146,9 +7476,58 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "6862876555f8bea192e03a81",
+          "text": "[ehsan gowdini](mailto:ehsangowdini@gmail.com \"\u200c\")\n\n[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:47:33.642Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dadebc34da2a7b4239a4",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dadebc34da2a7b4239a5",
+              "name": "25%",
+              "state": "incomplete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dadebc34da2a7b4239a6",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dadebc34da2a7b4239a7",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dadebc34da2a7b4239a8",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6862876c2df1e71d2fad78ab",
+          "name": "https://www.overleaf.com/project/67d836a7fde871f988b9eaf0",
+          "url": "https://www.overleaf.com/project/67d836a7fde871f988b9eaf0",
+          "date": "2025-06-30T12:47:40.775Z"
+        }
+      ]
     },
     "68627f9739bc54276c734fe8": {
       "id": "68627f9739bc54276c734fe8",
@@ -7176,9 +7555,67 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "68756570d7f0816290e26b70",
+          "text": "Reach out to the previous institute interested on this from ClimateWorks",
+          "date": "2025-07-14T20:15:44.577Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        },
+        {
+          "id": "686287f33736afd40ed1693d",
+          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:49:55.674Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db0d83963291cecfa1d6",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db0d83963291cecfa1d7",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db0d83963291cecfa1d8",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db0d83963291cecfa1d9",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db0d83963291cecfa1da",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686287e45589c6c27ee1a016",
+          "name": "https://www.dropbox.com/scl/fo/b75u2eyf8s2x7n97wc6fo/AJtOhIhKkglOBSoswwtSTqc?rlkey=nlsqx3vy6hc9qw0cgva2tfz3b&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/b75u2eyf8s2x7n97wc6fo/AJtOhIhKkglOBSoswwtSTqc?rlkey=nlsqx3vy6hc9qw0cgva2tfz3b&dl=0",
+          "date": "2025-06-30T12:49:40.507Z"
+        }
+      ]
     },
     "68627f9f44b76a943078428e": {
       "id": "68627f9f44b76a943078428e",
@@ -7206,9 +7643,58 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "686288878b8463f0be2bdc54",
+          "text": "[Marcus Djokic](mailto:marcus.djokic@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:52:23.280Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db388f8a07d21a22394e",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db388f8a07d21a22394f",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db388f8a07d21a223950",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db388f8a07d21a223951",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db388f8a07d21a223952",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6862888f1484532c540b9e62",
+          "name": "https://www.dropbox.com/scl/fo/xudgagpfk2l7o4fnw8s4e/ANsXjeSMMreJmdt5WivVhI8?rlkey=z3yhwdafwhc0cgxjr6t79wv9p&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/xudgagpfk2l7o4fnw8s4e/ANsXjeSMMreJmdt5WivVhI8?rlkey=z3yhwdafwhc0cgxjr6t79wv9p&dl=0",
+          "date": "2025-06-30T12:52:31.446Z"
+        }
+      ]
     },
     "68627fa631df377162d83af2": {
       "id": "68627fa631df377162d83af2",
@@ -7236,9 +7722,82 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "687566c726ef6b523d43874e",
+          "text": "The full latex proposal is here:\n[https://www.dropbox.com/home/Props/2017\\_10\\_20\\_ACS\\_PRF\\_Polymers\\_Crystallization/2017/Proposal](https://www.dropbox.com/home/Props/2017_10_20_ACS_PRF_Polymers_Crystallization/2017/Proposal \"\u200c\")\n\nThis was submitted to ACS-PRF so it needs to be updated/modified to be resubmitted to PRF-New or find another funding agency home.\nAlso, we can add the new results on quantum calculations for the co-crystallization of other polymers.",
+          "date": "2025-07-14T20:21:27.364Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        },
+        {
+          "id": "6866db6104960196b1cc9dbc",
+          "text": "Submitted",
+          "date": "2025-07-03T19:34:57.042Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "68628a08be67baabfeec13db",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:58:48.313Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db47f3bca0b1a050267d",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db47f3bca0b1a050267e",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db47f3bca0b1a050267f",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db47f3bca0b1a0502680",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db47f3bca0b1a0502681",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628a1186de74a982b87660",
+          "name": "https://www.dropbox.com/scl/fo/39xtjovqosux587okvr0p/AMagVDI8E_6mYV_okmBwTtI?rlkey=i03oq9d3zp1guh7xv16v4a429&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/39xtjovqosux587okvr0p/AMagVDI8E_6mYV_okmBwTtI?rlkey=i03oq9d3zp1guh7xv16v4a429&dl=0",
+          "date": "2025-06-30T12:58:57.031Z"
+        },
+        {
+          "id": "687566610f7175e22f58827c",
+          "name": "This is the original proposal for ACS-PRF (pdf version)",
+          "url": "https://www.dropbox.com/scl/fi/x3k9fvrfceu4sx9x19v0w/Mendoz1020FSU.v2017_10_20_full.pdf?rlkey=69xuugcozsvt2pa3k4yan9dj4&st=1mtzwfon&dl=0",
+          "date": "2025-07-14T20:19:45.434Z"
+        }
+      ]
     },
     "68627f7581814a2cf8438b5b": {
       "id": "68627f7581814a2cf8438b5b",
@@ -7266,8 +7825,59 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
+      "comments": [
+        {
+          "id": "686281d07156e852b16d44a1",
+          "text": "CAT ([https://new.nsf.gov/funding/opportunities/che-drp-division-chemistry-disciplinary-research-programs/nsf22-605/solicitation](https://new.nsf.gov/funding/opportunities/che-drp-division-chemistry-disciplinary-research-programs/nsf22-605/solicitation \"\u200c\"))",
+          "date": "2025-06-30T12:23:44.314Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "686281c18b9b97971fe4c209",
+          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:23:29.159Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db6f97285f50f49575a1",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db6f97285f50f49575a2",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db6f97285f50f49575a3",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db6f97285f50f49575a4",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db6f97285f50f49575a5",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
       "attachments": []
     },
     "68627f761e519d97f55e0412": {
@@ -7296,9 +7906,64 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "686281ed52cbbef38b266943",
+          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:24:13.365Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db756fd4e3aaaf29bb07",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db756fd4e3aaaf29bb08",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db756fd4e3aaaf29bb09",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db756fd4e3aaaf29bb0a",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db756fd4e3aaaf29bb0b",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686281feb1760d2729139f04",
+          "name": "https://www.overleaf.com/project/65c54f5118cda0c34fbde8de",
+          "url": "https://www.overleaf.com/project/65c54f5118cda0c34fbde8de",
+          "date": "2025-06-30T12:24:30.978Z"
+        },
+        {
+          "id": "68628206e888ca1ab0d59047",
+          "name": "https://www.acs.org/funding/grants/petroleum-research-fund/programs/new-directions-grants.html",
+          "url": "https://www.acs.org/funding/grants/petroleum-research-fund/programs/new-directions-grants.html",
+          "date": "2025-06-30T12:24:38.761Z"
+        }
+      ]
     },
     "68627f80c8b2b86aec7eccad": {
       "id": "68627f80c8b2b86aec7eccad",
@@ -7327,8 +7992,53 @@
       ],
       "members": [],
       "comments": [],
-      "checklists": [],
-      "attachments": []
+      "checklists": [
+        {
+          "id": "6866dbd84e60ea2a1f063040",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dbd84e60ea2a1f063041",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dbd84e60ea2a1f063042",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dbd84e60ea2a1f063043",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dbd84e60ea2a1f063044",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628463898cb5db2eb4cc6e",
+          "name": "https://www.overleaf.com/project/63e25efd152764b5b6088355",
+          "url": "https://www.overleaf.com/project/63e25efd152764b5b6088355",
+          "date": "2025-06-30T12:34:43.962Z"
+        },
+        {
+          "id": "6862846ee7bdb64524452eac",
+          "name": "https://new.nsf.gov/funding/opportunities/fuse2-future-semiconductors/nsf24-521/solicitation",
+          "url": "https://new.nsf.gov/funding/opportunities/fuse2-future-semiconductors/nsf24-521/solicitation",
+          "date": "2025-06-30T12:34:54.506Z"
+        }
+      ]
     },
     "68627f85771b8a62d9fde0cd": {
       "id": "68627f85771b8a62d9fde0cd",
@@ -7356,9 +8066,58 @@
         }
       ],
       "members": [],
-      "comments": [],
-      "checklists": [],
-      "attachments": []
+      "comments": [
+        {
+          "id": "6862852f5e20dfa87fe9624b",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:38:07.951Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dc1562815e284738ffae",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dc1562815e284738ffaf",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dc1562815e284738ffb0",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dc1562815e284738ffb1",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dc1562815e284738ffb2",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6862857e3a4949a3ad39ee11",
+          "name": "https://www.dropbox.com/scl/fo/swpzqmzjzzwljvktq2d2r/APHKUnH037KQfeZfyx8Bfys?rlkey=gua9achhuvblxhpfswyz0sbgi&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/swpzqmzjzzwljvktq2d2r/APHKUnH037KQfeZfyx8Bfys?rlkey=gua9achhuvblxhpfswyz0sbgi&dl=0",
+          "date": "2025-06-30T12:39:26.743Z"
+        }
+      ]
     },
     "68627f86282942029420c640": {
       "id": "68627f86282942029420c640",
@@ -7386,7 +8145,17 @@
         }
       ],
       "members": [],
-      "comments": [],
+      "comments": [
+        {
+          "id": "686285ed474dcfa9ef7f472c",
+          "text": "[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:41:17.216Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
       "checklists": [
         {
           "id": "6866dc2a35e0c1f37b90a4af",
