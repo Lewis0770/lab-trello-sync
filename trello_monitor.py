@@ -5,7 +5,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import time
-import datetime 
+import datetime
+from typing import Optional, Dict, Any 
 
 class TrelloMonitor:
     def __init__(self):
@@ -34,6 +35,13 @@ class TrelloMonitor:
         
         # Flag to track if this is the first run
         self.is_first_run = False
+        
+        # Rate limiting settings
+        self.api_calls_made = 0
+        self.last_api_call_time = 0
+        self.min_delay_between_calls = 0.1  # 100ms between calls
+        self.rate_limit_delay = 2.0  # 2 seconds when we hit rate limit
+        self.max_retries = 3
 
     def load_label_email_mapping(self):
         """
@@ -51,10 +59,17 @@ class TrelloMonitor:
             'Developer': ['dev@example.com']
         }
 
-    def make_trello_request(self, endpoint, params=None):
-        """Make authenticated request to Trello API"""
+    def make_trello_request(self, endpoint, params=None, retries=0):
+        """Make authenticated request to Trello API with rate limiting"""
         if params is None:
             params = {}
+        
+        # Rate limiting: ensure minimum delay between API calls
+        current_time = time.time()
+        time_since_last_call = current_time - self.last_api_call_time
+        if time_since_last_call < self.min_delay_between_calls:
+            sleep_time = self.min_delay_between_calls - time_since_last_call
+            time.sleep(sleep_time)
         
         params.update({
             'key': self.api_key,
@@ -62,12 +77,41 @@ class TrelloMonitor:
         })
         
         url = f"{self.base_url}/{endpoint}"
-        response = requests.get(url, params=params)
         
-        if response.status_code != 200:
-            raise Exception(f"Trello API error: {response.status_code} - {response.text}")
-        
-        return response.json()
+        try:
+            self.last_api_call_time = time.time()
+            self.api_calls_made += 1
+            response = requests.get(url, params=params, timeout=30)
+            
+            if response.status_code == 429:  # Rate limit exceeded
+                if retries < self.max_retries:
+                    wait_time = self.rate_limit_delay * (2 ** retries)  # Exponential backoff
+                    print(f"Rate limit hit. Waiting {wait_time} seconds before retry {retries + 1}/{self.max_retries}")
+                    time.sleep(wait_time)
+                    return self.make_trello_request(endpoint, params, retries + 1)
+                else:
+                    print(f"Max retries exceeded for endpoint: {endpoint}")
+                    raise Exception(f"Rate limit exceeded after {self.max_retries} retries")
+            
+            if response.status_code != 200:
+                raise Exception(f"Trello API error: {response.status_code} - {response.text}")
+            
+            return response.json()
+            
+        except requests.exceptions.Timeout:
+            if retries < self.max_retries:
+                print(f"Request timeout. Retrying {retries + 1}/{self.max_retries}")
+                time.sleep(1)
+                return self.make_trello_request(endpoint, params, retries + 1)
+            else:
+                raise Exception(f"Request timeout after {self.max_retries} retries")
+        except requests.exceptions.RequestException as e:
+            if retries < self.max_retries:
+                print(f"Request error: {e}. Retrying {retries + 1}/{self.max_retries}")
+                time.sleep(1)
+                return self.make_trello_request(endpoint, params, retries + 1)
+            else:
+                raise Exception(f"Request failed after {self.max_retries} retries: {e}")
 
     def get_board_name(self, board_id):
         """Get the name of a board"""
@@ -81,6 +125,7 @@ class TrelloMonitor:
     def fetch_all_cards(self):
         """Fetch all cards from all boards with comprehensive metadata"""
         print("Fetching all cards from all Trello boards...")
+        print(f"Rate limiting: {self.min_delay_between_calls}s between calls, {self.rate_limit_delay}s on rate limit")
         
         all_processed_cards = {}
         
@@ -91,15 +136,16 @@ class TrelloMonitor:
             
             try:
                 # Get all cards with detailed information for this board
+                # Use a more efficient single call to get cards with all needed data
                 cards_data = self.make_trello_request(
                     f'boards/{board_id}/cards',
                     {
                         'fields': 'all',
                         'members': 'true',
-                        'member_fields': 'all',
+                        'member_fields': 'fullName,username',
                         'labels': 'true',
-                        'actions': 'commentCard',
-                        'actions_limit': '1000'
+                        # Note: We'll fetch comments, checklists, and attachments separately
+                        # to avoid overwhelming the single request
                     }
                 )
                 
@@ -111,10 +157,17 @@ class TrelloMonitor:
                 
                 list_map = {lst['id']: lst['name'] for lst in lists_data}
                 
+                print(f"Found {len(cards_data)} cards in board {board_name}")
+                
                 # Process each card in this board
-                for card in cards_data:
+                for i, card in enumerate(cards_data):
                     card_id = card['id']
-                    print(f"Processing card: {card['name']} (Board: {board_name})")
+                    print(f"Processing card {i+1}/{len(cards_data)}: {card['name']} (API calls made: {self.api_calls_made})")
+                    
+                    # Get additional card data with rate limiting
+                    comments = self.get_card_comments(card_id)
+                    checklists = self.get_card_checklists(card_id)
+                    attachments = self.get_card_attachments(card_id)
                     
                     all_processed_cards[card_id] = {
                         'id': card_id,
@@ -145,15 +198,19 @@ class TrelloMonitor:
                             }
                             for member in card['members']
                         ],
-                        'comments': self.get_card_comments(card_id),
-                        'checklists': self.get_card_checklists(card_id),
-                        'attachments': self.get_card_attachments(card_id)
+                        'comments': comments,
+                        'checklists': checklists,
+                        'attachments': attachments
                     }
+                    
+                    # Add a small delay between cards to be extra cautious
+                    time.sleep(0.05)
                     
             except Exception as e:
                 print(f"Error processing board {board_id} ({board_name}): {e}")
                 continue
         
+        print(f"Completed fetching all cards. Total API calls made: {self.api_calls_made}")
         return all_processed_cards
 
     def get_card_comments(self, card_id):
