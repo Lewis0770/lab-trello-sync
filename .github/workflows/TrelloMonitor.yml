@@ -86,7 +86,7 @@ jobs:
         
     - name: Upload state file as artifact (backup)
       if: env.STATE_FILE_EXISTS == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: trello-state-backup
         path: trello_state.json
