@@ -214,14 +214,15 @@ class TrelloMonitor:
         return all_processed_cards
 
     def get_card_comments(self, card_id):
-        """Get all comments for a specific card"""
+        """Get all comments for a specific card with error handling"""
         try:
             comments_data = self.make_trello_request(
                 f'cards/{card_id}/actions',
                 {
                     'filter': 'commentCard',
                     'fields': 'data,date,memberCreator',
-                    'member_fields': 'fullName,username'
+                    'member_fields': 'fullName,username',
+                    'limit': '50'  # Limit to reduce API load
                 }
             )
             
@@ -239,10 +240,10 @@ class TrelloMonitor:
             ]
         except Exception as e:
             print(f"Error fetching comments for card {card_id}: {e}")
-            return []
+            return []  # Return empty list on error instead of failing
 
     def get_card_checklists(self, card_id):
-        """Get all checklists for a specific card"""
+        """Get all checklists for a specific card with error handling"""
         try:
             checklists_data = self.make_trello_request(
                 f'cards/{card_id}/checklists',
@@ -272,10 +273,10 @@ class TrelloMonitor:
             ]
         except Exception as e:
             print(f"Error fetching checklists for card {card_id}: {e}")
-            return []
+            return []  # Return empty list on error instead of failing
 
     def get_card_attachments(self, card_id):
-        """Get all attachments for a specific card"""
+        """Get all attachments for a specific card with error handling"""
         try:
             attachments_data = self.make_trello_request(
                 f'cards/{card_id}/attachments',
@@ -293,7 +294,7 @@ class TrelloMonitor:
             ]
         except Exception as e:
             print(f"Error fetching attachments for card {card_id}: {e}")
-            return []
+            return []  # Return empty list on error instead of failing
 
     def load_previous_state(self):
         """Load the previous state from file"""
@@ -504,16 +505,47 @@ class TrelloMonitor:
             html_part = MIMEText(body, 'html')
             msg.attach(html_part)
 
-            # Send email
-            with smtplib.SMTP(self.smtp_host, self.smtp_port) as server:
+            # Send email with proper connection handling
+            print(f"Attempting to send email to: {', '.join(emails)}")
+            print(f"Using SMTP server: {self.smtp_host}:{self.smtp_port}")
+            
+            server = smtplib.SMTP(self.smtp_host, self.smtp_port)
+            try:
                 server.starttls()
+                print("TLS started successfully")
+                
                 server.login(self.email_user, self.email_pass)
+                print("SMTP login successful")
+                
                 server.send_message(msg)
-
-            print(f"Email sent to: {', '.join(emails)} for card: {card['name']}")
+                print(f"Email sent successfully to: {', '.join(emails)} for card: {card['name']}")
+                
+            except smtplib.SMTPAuthenticationError as e:
+                print(f"SMTP Authentication failed: {e}")
+                print("Please check your EMAIL_USER and EMAIL_PASS credentials")
+                
+            except smtplib.SMTPRecipientsRefused as e:
+                print(f"Recipients refused: {e}")
+                print("Please check the recipient email addresses")
+                
+            except smtplib.SMTPServerDisconnected as e:
+                print(f"SMTP server disconnected: {e}")
+                print("Connection to SMTP server was lost")
+                
+            except Exception as e:
+                print(f"Error during email sending: {e}")
+                
+            finally:
+                try:
+                    server.quit()
+                    print("SMTP connection closed")
+                except:
+                    pass
 
         except Exception as e:
-            print(f"Error sending email: {e}")
+            print(f"Error creating email: {e}")
+            import traceback
+            traceback.print_exc()
 
     def run_monitoring_cycle(self):
         """Run one complete monitoring cycle"""
