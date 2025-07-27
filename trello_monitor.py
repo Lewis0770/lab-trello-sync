@@ -545,14 +545,11 @@ class TrelloMonitor:
             print(f"Attempting to send email to: {', '.join(emails)}")
             print(f"Using SMTP server: {self.smtp_host}:{self.smtp_port}")
             
-            # Create SMTP connection with timeout
+            # Create SMTP connection - use the more standard approach
             server = None
             try:
                 print("Creating SMTP connection...")
-                server = smtplib.SMTP(timeout=30)
-                
-                print(f"Connecting to {self.smtp_host}:{self.smtp_port}...")
-                server.connect(self.smtp_host, self.smtp_port)
+                server = smtplib.SMTP(self.smtp_host, self.smtp_port, timeout=30)
                 
                 print("Starting TLS...")
                 server.starttls()
