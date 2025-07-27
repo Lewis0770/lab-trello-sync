@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-27T19:21:40.135018",
+  "last_updated": "2025-07-27T19:24:38.362535",
   "total_cards": 113,
   "boards_monitored": [
     "6866dd4609df4573a20ba546",
@@ -6014,7 +6014,7 @@
       "due": "2025-07-29T03:59:59.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-27T19:20:06.348Z",
+      "date_last_activity": "2025-07-27T19:23:35.705Z",
       "labels": [
         {
           "id": "6883a9071f55f380fa835ae3",
@@ -6029,6 +6029,15 @@
       ],
       "members": [],
       "comments": [
+        {
+          "id": "68867cb7f349e4b7e27b424f",
+          "text": "dsadasdasdas",
+          "date": "2025-07-27T19:23:35.690Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
         {
           "id": "68867be611a65a13c6469fa5",
           "text": "adsdsadasd",
