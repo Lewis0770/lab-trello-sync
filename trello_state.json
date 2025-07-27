@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-27T18:19:00.446604",
+  "last_updated": "2025-07-27T18:24:24.008755",
   "total_cards": 113,
   "boards_monitored": [
     "6866dd4609df4573a20ba546",
@@ -6007,14 +6007,14 @@
       "board_id": "6862042608fdc9ecc66f793b",
       "board_name": "Proposals",
       "name": "Testing",
-      "desc": "This is my first change to test this card\n\nOk hopefully this should work this time #2",
+      "desc": "This is my first change to test this card\n\nOk hopefully this should work this time #2\n\nHopefully this work the #3 time",
       "list_id": "6866a99bc5eacaba360b36ae",
       "list_name": "Priority IV",
       "pos": 140737488404480,
       "due": "2025-07-29T03:59:59.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-27T18:17:53.638Z",
+      "date_last_activity": "2025-07-27T18:22:03.836Z",
       "labels": [
         {
           "id": "6883a9071f55f380fa835ae3",
@@ -6029,6 +6029,15 @@
       ],
       "members": [],
       "comments": [
+        {
+          "id": "68866e4baa101b3418a8f3a7",
+          "text": "Second comment to be safe",
+          "date": "2025-07-27T18:22:03.817Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
         {
           "id": "68866d511c28ebc4f1dbca48",
           "text": "Comment just to be safe",
