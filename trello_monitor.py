@@ -29,13 +29,15 @@ class TrelloMonitor:
         # State file to track changes
         self.state_file = 'trello_state.json'
         
-        # Label to email mapping (you'll need to set this up)
+        # Label to email mapping
         self.label_to_emails = self.load_label_email_mapping()
+        
+        # Flag to track if this is the first run
+        self.is_first_run = False
 
     def load_label_email_mapping(self):
         """
         Load mapping of label names to email addresses
-        You can either hardcode this or load from environment variables
         """
         # Option 1: From environment variable (JSON string)
         if 'LABEL_EMAIL_MAPPING' in os.environ:
@@ -239,28 +241,47 @@ class TrelloMonitor:
     def load_previous_state(self):
         """Load the previous state from file"""
         try:
-            with open(self.state_file, 'r') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            print("No previous state found, starting fresh")
+            if os.path.exists(self.state_file):
+                with open(self.state_file, 'r') as f:
+                    state_data = json.load(f)
+                    print(f"Loaded previous state with {len(state_data.get('cards', {}))} cards")
+                    return state_data.get('cards', {})
+            else:
+                print("State file does not exist, this is the first run")
+                self.is_first_run = True
+                return {}
+        except json.JSONDecodeError as e:
+            print(f"Error reading state file (corrupted JSON): {e}")
+            print("Starting fresh with empty state")
+            self.is_first_run = True
             return {}
-        except json.JSONDecodeError:
-            print("Error reading state file, starting fresh")
+        except Exception as e:
+            print(f"Error loading state file: {e}")
+            print("Starting fresh with empty state")
+            self.is_first_run = True
             return {}
 
-   
-    def save_current_state(self, state):
+    def save_current_state(self, cards_state):
+        """Save the current state to file with metadata"""
         def default_serializer(obj):
             if isinstance(obj, datetime.datetime):
                 return obj.isoformat()
             return str(obj)
     
         try:
+            state_data = {
+                'last_updated': datetime.datetime.now().isoformat(),
+                'total_cards': len(cards_state),
+                'boards_monitored': self.board_ids,
+                'cards': cards_state
+            }
+            
             with open(self.state_file, 'w') as f:
-                json.dump(state, f, indent=2, default=default_serializer)
-            print("State saved successfully")
+                json.dump(state_data, f, indent=2, default=default_serializer)
+            print(f"State saved successfully with {len(cards_state)} cards")
         except Exception as e:
             print(f"Error saving state: {e}")
+            raise
 
     def compare_cards(self, old_card, new_card):
         """Compare two card states and detect changes"""
@@ -306,8 +327,8 @@ class TrelloMonitor:
             })
 
         if old_card['due'] != new_card['due']:
-            old_due = datetime.fromisoformat(old_card['due'].replace('Z', '+00:00')).strftime('%Y-%m-%d') if old_card['due'] else 'None'
-            new_due = datetime.fromisoformat(new_card['due'].replace('Z', '+00:00')).strftime('%Y-%m-%d') if new_card['due'] else 'None'
+            old_due = datetime.datetime.fromisoformat(old_card['due'].replace('Z', '+00:00')).strftime('%Y-%m-%d') if old_card['due'] else 'None'
+            new_due = datetime.datetime.fromisoformat(new_card['due'].replace('Z', '+00:00')).strftime('%Y-%m-%d') if new_card['due'] else 'None'
             changes.append({
                 'type': 'due_date_changed',
                 'description': f'Due date changed from {old_due} to {new_due}'
@@ -374,9 +395,6 @@ class TrelloMonitor:
             if label_name in self.label_to_emails:
                 emails.update(self.label_to_emails[label_name])
         
-        # If no label-based emails found, you might want to use card members
-        # (though Trello API doesn't always provide member emails)
-        
         return list(emails)
 
     def send_notification_email(self, emails, card, changes):
@@ -442,7 +460,7 @@ class TrelloMonitor:
 
     def run_monitoring_cycle(self):
         """Run one complete monitoring cycle"""
-        print(f"Starting monitoring cycle at {datetime.now()}")
+        print(f"Starting monitoring cycle at {datetime.datetime.now()}")
         
         try:
             # Load previous state
@@ -451,12 +469,25 @@ class TrelloMonitor:
             # Fetch current state
             current_state = self.fetch_all_cards()
             
+            if self.is_first_run:
+                print("This is the first run - initializing state file")
+                print(f"Found {len(current_state)} cards across {len(self.board_ids)} boards")
+                print("No change detection will be performed on this run")
+                # Save the initial state and exit
+                self.save_current_state(current_state)
+                print("Initial state saved. Future runs will detect changes.")
+                return
+            
             # Compare states and detect changes
+            changes_detected = 0
+            notifications_sent = 0
+            
             for card_id, current_card in current_state.items():
                 previous_card = previous_state.get(card_id)
                 changes = self.compare_cards(previous_card, current_card)
                 
                 if changes:
+                    changes_detected += 1
                     print(f"Changes detected for card: {current_card['name']}")
                     for change in changes:
                         print(f"  - {change['description']}")
@@ -467,20 +498,29 @@ class TrelloMonitor:
                     # Send notification
                     if emails:
                         self.send_notification_email(emails, current_card, changes)
+                        notifications_sent += 1
                     else:
                         print(f"No email recipients configured for card: {current_card['name']}")
 
             # Check for deleted cards
+            deleted_cards = 0
             for card_id in previous_state:
                 if card_id not in current_state:
                     deleted_card = previous_state[card_id]
-                    print(f"Card deleted: {deleted_card['name']}")
-                    # You might want to send deletion notifications too
+                    deleted_cards += 1
+                    print(f"Card deleted: {deleted_card['name']} from board {deleted_card['board_name']}")
+                    # You could send deletion notifications here too if needed
 
             # Save current state for next run
             self.save_current_state(current_state)
             
-            print(f"Monitoring cycle completed at {datetime.now()}")
+            # Print summary
+            print(f"\nMonitoring cycle completed at {datetime.datetime.now()}")
+            print(f"Summary:")
+            print(f"  - Total cards monitored: {len(current_state)}")
+            print(f"  - Cards with changes: {changes_detected}")
+            print(f"  - Notifications sent: {notifications_sent}")
+            print(f"  - Cards deleted: {deleted_cards}")
             
         except Exception as e:
             print(f"Error during monitoring cycle: {e}")
