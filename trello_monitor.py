@@ -20,12 +20,12 @@ class TrelloMonitor:
         
         self.base_url = 'https://api.trello.com/1'
         
-        # Email configuration from GitHub secrets
-        self.smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
+        # Email configuration from GitHub secrets with robust fallbacks
+        self.smtp_host = os.environ.get('SMTP_HOST', '').strip() or 'smtp.gmail.com'
         self.smtp_port = int(os.environ.get('SMTP_PORT', '587'))
-        self.email_user = os.environ.get('EMAIL_USER', '')
-        self.email_pass = os.environ.get('EMAIL_PASS', '')
-        self.from_email = os.environ.get('FROM_EMAIL', self.email_user)
+        self.email_user = os.environ.get('EMAIL_USER', '').strip()
+        self.email_pass = os.environ.get('EMAIL_PASS', '').strip()
+        self.from_email = os.environ.get('FROM_EMAIL', '').strip() or self.email_user
         
         # Debug email configuration (without sensitive data)
         print(f"Email configuration loaded:")
@@ -39,6 +39,10 @@ class TrelloMonitor:
         if not self.email_user or not self.email_pass:
             print("WARNING: Email credentials not properly configured!")
             print("Make sure EMAIL_USER and EMAIL_PASS secrets are set in GitHub")
+        
+        if not self.smtp_host or self.smtp_host.startswith('.'):
+            print(f"WARNING: Invalid SMTP host '{self.smtp_host}', using default 'smtp.gmail.com'")
+            self.smtp_host = 'smtp.gmail.com'
         
         # State file to track changes
         self.state_file = 'trello_state.json'
