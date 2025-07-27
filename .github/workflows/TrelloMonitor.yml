@@ -52,10 +52,22 @@ jobs:
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
-        SMTP_HOST: ${{ secrets.SMTP_HOST }}
-        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        SMTP_HOST: ${{ secrets.SMTP_HOST || 'smtp.gmail.com' }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
         LABEL_EMAIL_MAPPING: ${{ secrets.LABEL_EMAIL_MAPPING }}
-      run: python trello_monitor.py
+      run: |
+        echo "Environment variables check:"
+        echo "TRELLO_API_KEY: $([[ -n "$TRELLO_API_KEY" ]] && echo "SET" || echo "NOT SET")"
+        echo "TRELLO_TOKEN: $([[ -n "$TRELLO_TOKEN" ]] && echo "SET" || echo "NOT SET")"
+        echo "TRELLO_BOARD_IDS: $([[ -n "$TRELLO_BOARD_IDS" ]] && echo "SET" || echo "NOT SET")"
+        echo "EMAIL_USER: $([[ -n "$EMAIL_USER" ]] && echo "SET" || echo "NOT SET")"
+        echo "EMAIL_PASS: $([[ -n "$EMAIL_PASS" ]] && echo "SET" || echo "NOT SET")"
+        echo "SMTP_HOST: $([[ -n "$SMTP_HOST" ]] && echo "$SMTP_HOST" || echo "NOT SET")"
+        echo "SMTP_PORT: $([[ -n "$SMTP_PORT" ]] && echo "$SMTP_PORT" || echo "NOT SET")"
+        echo "LABEL_EMAIL_MAPPING: $([[ -n "$LABEL_EMAIL_MAPPING" ]] && echo "SET" || echo "NOT SET")"
+        echo ""
+        echo "Starting Trello Monitor..."
+        python trello_monitor.py
       
     - name: Check if state file was created/updated
       run: |
