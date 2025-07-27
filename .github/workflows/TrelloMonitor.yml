@@ -44,11 +44,6 @@ jobs:
           echo "STATE_EXISTS=false" >> $GITHUB_ENV
         fi
         
-    - name: Set email defaults if secrets not provided
-      run: |
-        echo "SMTP_HOST_DEFAULT=smtp.gmail.com" >> $GITHUB_ENV
-        echo "SMTP_PORT_DEFAULT=587" >> $GITHUB_ENV
-        
     - name: Run Trello Monitor
       env:
         TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
@@ -57,8 +52,8 @@ jobs:
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
-        SMTP_HOST: ${{ secrets.SMTP_HOST || env.SMTP_HOST_DEFAULT }}
-        SMTP_PORT: ${{ secrets.SMTP_PORT || env.SMTP_PORT_DEFAULT }}
+        # Note: Not setting SMTP_HOST and SMTP_PORT as env vars since GitHub masks them
+        # The Python script will use gmail defaults
         LABEL_EMAIL_MAPPING: ${{ secrets.LABEL_EMAIL_MAPPING }}
       run: |
         echo "Environment variables check:"
@@ -67,8 +62,8 @@ jobs:
         echo "TRELLO_BOARD_IDS: $([[ -n "$TRELLO_BOARD_IDS" ]] && echo "SET" || echo "NOT SET")"
         echo "EMAIL_USER: $([[ -n "$EMAIL_USER" ]] && echo "SET" || echo "NOT SET")"
         echo "EMAIL_PASS: $([[ -n "$EMAIL_PASS" ]] && echo "SET" || echo "NOT SET")"
-        echo "SMTP_HOST: $([[ -n "$SMTP_HOST" ]] && echo "$SMTP_HOST" || echo "NOT SET")"
-        echo "SMTP_PORT: $([[ -n "$SMTP_PORT" ]] && echo "$SMTP_PORT" || echo "NOT SET")"
+        echo "SMTP_HOST: Will use gmail defaults (smtp.gmail.com)"
+        echo "SMTP_PORT: Will use gmail defaults (587)"
         echo "LABEL_EMAIL_MAPPING: $([[ -n "$LABEL_EMAIL_MAPPING" ]] && echo "SET" || echo "NOT SET")"
         echo ""
         echo "Starting Trello Monitor..."
