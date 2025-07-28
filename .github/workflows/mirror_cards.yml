@@ -1,8 +1,6 @@
 name: Mirror Priority Cards to Master Board
 
 on:
-  schedule:
-    - cron: '0 12 * * 1'  # 8AM Eastern on Mondays
   workflow_dispatch:  # manual trigger
 
 jobs:
