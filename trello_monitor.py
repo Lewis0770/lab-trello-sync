@@ -6,7 +6,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import time
 import datetime
-from typing import Optional, Dict, Any 
+from typing import Optional, Dict, Any, List
+from collections import defaultdict
 
 class TrelloMonitor:
     def __init__(self):
@@ -45,6 +46,9 @@ class TrelloMonitor:
         self.email_pass = os.environ.get('EMAIL_PASS', '').strip()
         self.from_email = os.environ.get('FROM_EMAIL', '').strip() or self.email_user
         
+        # Exemption label configuration
+        self.exempt_label = os.environ.get('EXEMPT_LABEL', 'EXEMPT').strip()
+        
         # Debug email configuration (without sensitive data)
         print(f"Email configuration loaded:")
         print(f"  SMTP Host: {self.smtp_host}")
@@ -52,6 +56,7 @@ class TrelloMonitor:
         print(f"  Email User: {self.email_user[:3]}***@{self.email_user.split('@')[-1] if '@' in self.email_user else 'unknown'}")
         print(f"  From Email: {self.from_email[:3]}***@{self.from_email.split('@')[-1] if '@' in self.from_email else 'unknown'}")
         print(f"  Email Pass: {'***set***' if self.email_pass else '***NOT SET***'}")
+        print(f"  Exempt Label: '{self.exempt_label}'")
         
         # Validate email configuration
         if not self.email_user or not self.email_pass:
@@ -89,6 +94,14 @@ class TrelloMonitor:
             'Team Lead': ['lead@example.com'],
             'Developer': ['dev@example.com']
         }
+
+    def is_card_exempt(self, card):
+        """Check if a card has the exempt label"""
+        label_names = {label['name'].upper() for label in card['labels']}
+        is_exempt = self.exempt_label.upper() in label_names
+        if is_exempt:
+            print(f"Card '{card['name']}' is exempt from notifications (has '{self.exempt_label}' label)")
+        return is_exempt
 
     def make_trello_request(self, endpoint, params=None, retries=0):
         """Make authenticated request to Trello API with rate limiting"""
@@ -486,10 +499,9 @@ class TrelloMonitor:
         
         return list(emails)
 
-    def send_notification_email(self, emails, card, changes):
-        """Send email notification about card changes"""
-        if not emails:
-            print(f"No email addresses found for card: {card['name']}")
+    def send_bulk_notification_email(self, recipient_email: str, card_changes: List[Dict]):
+        """Send a bulk email notification with all card changes for a specific recipient"""
+        if not card_changes:
             return
             
         # Check if email is configured
@@ -498,35 +510,110 @@ class TrelloMonitor:
             return
 
         try:
-            # Create email content
-            subject = f"Trello Card Update: {card['name']}"
+            # Create subject line
+            card_count = len(card_changes)
+            total_changes = sum(len(card_data['changes']) for card_data in card_changes)
+            subject = f"Trello Updates: {total_changes} changes across {card_count} card{'s' if card_count > 1 else ''}"
             
+            # Create HTML body
             body = f"""
             <html>
-            <body>
-                <h2>Card Update Notification</h2>
-                <p><strong>Card:</strong> {card['name']}</p>
-                <p><strong>Board:</strong> {card['board_name']}</p>
-                <p><strong>List:</strong> {card['list_name']}</p>
-                <p><strong>Last Activity:</strong> {card['date_last_activity']}</p>
-                
-                <h3>Changes Detected:</h3>
-                <ul>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+                    <h2 style="color: #0079bf; border-bottom: 2px solid #0079bf; padding-bottom: 10px;">
+                        📋 Trello Updates Summary
+                    </h2>
+                    
+                    <div style="background-color: #f4f5f7; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+                        <strong>Summary:</strong> {total_changes} changes detected across {card_count} card{'s' if card_count > 1 else ''}
+                        <br><strong>Generated:</strong> {datetime.datetime.now().strftime('%Y-%m-%d at %H:%M:%S')}
+                    </div>
             """
             
-            for change in changes:
-                body += f"<li>{change['description']}</li>"
+            # Group cards by board for better organization
+            boards = defaultdict(list)
+            for card_data in card_changes:
+                card = card_data['card']
+                boards[card['board_name']].append(card_data)
             
+            # Add cards organized by board
+            for board_name, board_cards in boards.items():
+                body += f"""
+                    <h3 style="color: #0079bf; margin-top: 30px; margin-bottom: 15px;">
+                        📌 Board: {board_name}
+                    </h3>
+                """
+                
+                for card_data in board_cards:
+                    card = card_data['card']
+                    changes = card_data['changes']
+                    
+                    # Card header
+                    body += f"""
+                        <div style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+                            <div style="background-color: #0079bf; color: white; padding: 12px; font-weight: bold;">
+                                🗂️ {card['name']}
+                            </div>
+                            <div style="padding: 15px;">
+                                <div style="margin-bottom: 10px;">
+                                    <strong>List:</strong> {card['list_name']} | 
+                                    <strong>Last Activity:</strong> {card['date_last_activity'][:10]}
+                                </div>
+                    """
+                    
+                    # Add labels if any
+                    if card['labels']:
+                        labels_html = ' '.join([
+                            f"<span style='background-color: #{label.get('color', 'gray')}; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; margin-right: 5px;'>{label['name']}</span>"
+                            for label in card['labels'] if label['name']
+                        ])
+                        body += f"<div style='margin-bottom: 10px;'><strong>Labels:</strong> {labels_html}</div>"
+                    
+                    # Add description preview if exists
+                    if card['desc']:
+                        desc_preview = card['desc'][:150] + ('...' if len(card['desc']) > 150 else '')
+                        body += f"<div style='margin-bottom: 15px; font-style: italic; color: #666;'>Description: {desc_preview}</div>"
+                    
+                    # Add changes
+                    body += f"""
+                                <h4 style="color: #d04437; margin-bottom: 8px;">
+                                    ⚡ Changes ({len(changes)}):
+                                </h4>
+                                <ul style="margin: 0; padding-left: 20px;">
+                    """
+                    
+                    for change in changes:
+                        # Add emoji based on change type
+                        emoji = {
+                            'card_created': '✨',
+                            'name_changed': '📝',
+                            'description_changed': '📄',
+                            'moved': '↔️',
+                            'moved_between_boards': '🔄',
+                            'due_date_changed': '📅',
+                            'comment_added': '💬',
+                            'label_added': '🏷️',
+                            'label_removed': '🏷️',
+                            'checklist_changed': '✅',
+                            'attachment_added': '📎'
+                        }.get(change['type'], '•')
+                        
+                        body += f"<li style='margin-bottom: 5px;'>{emoji} {change['description']}</li>"
+                    
+                    body += """
+                                </ul>
+                            </div>
+                        </div>
+                    """
+            
+            # Footer
             body += f"""
-                </ul>
-                
-                <p><strong>Card Description:</strong></p>
-                <p>{card['desc'] if card['desc'] else 'No description'}</p>
-                
-                <p><strong>Labels:</strong> {', '.join([label['name'] for label in card['labels']]) if card['labels'] else 'None'}</p>
-                
-                <hr>
-                <p><em>This is an automated notification from your Trello monitoring system.</em></p>
+                    <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
+                    <div style="text-align: center; color: #666; font-size: 12px;">
+                        <p>🤖 This is an automated notification from your Trello monitoring system.</p>
+                        <p>You're receiving this because you're subscribed to updates for cards with specific labels.</p>
+                    </div>
+                </div>
             </body>
             </html>
             """
@@ -535,17 +622,17 @@ class TrelloMonitor:
             msg = MIMEMultipart('alternative')
             msg['Subject'] = subject
             msg['From'] = self.from_email
-            msg['To'] = ', '.join(emails)
+            msg['To'] = recipient_email
 
             # Add HTML body
             html_part = MIMEText(body, 'html')
             msg.attach(html_part)
 
             # Send email with proper connection handling
-            print(f"Attempting to send email to: {', '.join(emails)}")
+            print(f"Attempting to send bulk email to: {recipient_email}")
             print(f"Using SMTP server: {self.smtp_host}:{self.smtp_port}")
             
-            # Create SMTP connection - use the more standard approach
+            # Create SMTP connection
             server = None
             try:
                 print("Creating SMTP connection...")
@@ -561,7 +648,7 @@ class TrelloMonitor:
                 
                 print("Sending message...")
                 server.send_message(msg)
-                print(f"Email sent successfully to: {', '.join(emails)} for card: {card['name']}")
+                print(f"Bulk email sent successfully to: {recipient_email} (contained {total_changes} changes across {card_count} cards)")
                 
             except smtplib.SMTPAuthenticationError as e:
                 print(f"SMTP Authentication failed: {e}")
@@ -594,12 +681,12 @@ class TrelloMonitor:
                         pass
 
         except Exception as e:
-            print(f"Error creating email: {e}")
+            print(f"Error creating bulk email: {e}")
             import traceback
             traceback.print_exc()
 
     def run_monitoring_cycle(self):
-        """Run one complete monitoring cycle"""
+        """Run one complete monitoring cycle with bulk email notifications"""
         print(f"Starting monitoring cycle at {datetime.datetime.now()}")
         
         try:
@@ -620,9 +707,17 @@ class TrelloMonitor:
             
             # Compare states and detect changes
             changes_detected = 0
-            notifications_sent = 0
+            exempt_cards_skipped = 0
+            
+            # Group changes by recipient email for bulk notifications
+            email_to_changes = defaultdict(list)
             
             for card_id, current_card in current_state.items():
+                # Skip exempt cards
+                if self.is_card_exempt(current_card):
+                    exempt_cards_skipped += 1
+                    continue
+                
                 previous_card = previous_state.get(card_id)
                 changes = self.compare_cards(previous_card, current_card)
                 
@@ -635,12 +730,18 @@ class TrelloMonitor:
                     # Get email addresses for this card
                     emails = self.get_emails_for_card(current_card)
                     
-                    # Send notification
-                    if emails:
-                        self.send_notification_email(emails, current_card, changes)
-                        notifications_sent += 1
-                    else:
-                        print(f"No email recipients configured for card: {current_card['name']}")
+                    # Group changes by recipient email
+                    for email in emails:
+                        email_to_changes[email].append({
+                            'card': current_card,
+                            'changes': changes
+                        })
+
+            # Send bulk notification emails
+            notifications_sent = 0
+            for recipient_email, card_changes in email_to_changes.items():
+                self.send_bulk_notification_email(recipient_email, card_changes)
+                notifications_sent += 1
 
             # Check for deleted cards
             deleted_cards = 0
@@ -659,8 +760,10 @@ class TrelloMonitor:
             print(f"Summary:")
             print(f"  - Total cards monitored: {len(current_state)}")
             print(f"  - Cards with changes: {changes_detected}")
-            print(f"  - Notifications sent: {notifications_sent}")
+            print(f"  - Cards skipped (exempt): {exempt_cards_skipped}")
+            print(f"  - Bulk notifications sent: {notifications_sent}")
             print(f"  - Cards deleted: {deleted_cards}")
+            print(f"  - Exempt label: '{self.exempt_label}'")
             
         except Exception as e:
             print(f"Error during monitoring cycle: {e}")
