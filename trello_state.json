@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-28T08:32:07.610651",
+  "last_updated": "2025-07-28T09:30:18.114674",
   "total_cards": 115,
   "boards_monitored": [
     "6866dd4609df4573a20ba546",
@@ -85,10 +85,10 @@
       "list_id": "68628d4b55c2a9088c6da981",
       "list_name": "Priority IV",
       "pos": 140737488388096,
-      "due": "2025-07-28T21:52:28.691Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-23T18:32:00.723Z",
+      "date_last_activity": "2025-07-28T09:22:06.192Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba708",
@@ -244,10 +244,10 @@
       "list_id": "68628d4b55c2a9088c6da981",
       "list_name": "Priority IV",
       "pos": 140737488617472,
-      "due": "2025-07-28T09:00:00.000Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:57:57.840Z",
+      "date_last_activity": "2025-07-28T09:22:06.524Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -323,10 +323,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488355328,
-      "due": "2025-07-28T21:52:28.997Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:29.128Z",
+      "date_last_activity": "2025-07-28T09:22:06.815Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -407,10 +407,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488371712,
-      "due": "2025-07-28T21:52:29.280Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:29.422Z",
+      "date_last_activity": "2025-07-28T09:22:07.142Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -479,10 +479,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488404480,
-      "due": "2025-07-28T21:52:29.580Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:29.797Z",
+      "date_last_activity": "2025-07-28T09:22:07.478Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -551,10 +551,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488412672,
-      "due": "2025-07-28T21:52:29.944Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:30.072Z",
+      "date_last_activity": "2025-07-28T09:22:07.761Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -623,10 +623,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488420864,
-      "due": "2025-07-28T21:52:30.229Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:30.430Z",
+      "date_last_activity": "2025-07-28T09:22:08.039Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -702,10 +702,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488437248,
-      "due": "2025-07-28T21:52:30.579Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:30.744Z",
+      "date_last_activity": "2025-07-28T09:22:08.286Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -774,10 +774,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488453632,
-      "due": "2025-07-28T21:52:30.909Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:31.044Z",
+      "date_last_activity": "2025-07-28T09:22:08.540Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -856,10 +856,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488470016,
-      "due": "2025-07-28T21:52:31.208Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:31.446Z",
+      "date_last_activity": "2025-07-28T09:22:08.817Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -933,10 +933,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488486400,
-      "due": "2025-07-28T21:52:31.583Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:31.725Z",
+      "date_last_activity": "2025-07-28T09:22:09.088Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1005,10 +1005,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488502784,
-      "due": "2025-07-28T21:52:31.895Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:32.143Z",
+      "date_last_activity": "2025-07-28T09:22:09.341Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1077,10 +1077,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488519168,
-      "due": "2025-07-28T21:52:32.325Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:32.620Z",
+      "date_last_activity": "2025-07-28T09:22:09.660Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1154,10 +1154,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488535552,
-      "due": "2025-07-28T21:52:32.798Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:32.936Z",
+      "date_last_activity": "2025-07-28T09:22:09.925Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1226,10 +1226,10 @@
       "list_id": "68628d4920f9d57ced707ecd",
       "list_name": "Priority III",
       "pos": 140737488551936,
-      "due": "2025-07-28T21:52:33.096Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:33.238Z",
+      "date_last_activity": "2025-07-28T09:22:10.219Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1298,10 +1298,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488355328,
-      "due": "2025-07-28T09:19:18.544Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:18.764Z",
+      "date_last_activity": "2025-07-28T09:22:10.548Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1397,10 +1397,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488371712,
-      "due": "2025-07-28T21:52:33.414Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:33.557Z",
+      "date_last_activity": "2025-07-28T09:22:10.894Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1487,10 +1487,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488375808,
-      "due": "2025-07-28T21:52:33.706Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:33.845Z",
+      "date_last_activity": "2025-07-28T09:22:11.272Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70b",
@@ -1580,10 +1580,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488379904,
-      "due": "2025-07-28T09:19:18.954Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:19.128Z",
+      "date_last_activity": "2025-07-28T09:22:11.609Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1677,10 +1677,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488388096,
-      "due": "2025-07-28T21:52:34.012Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:34.154Z",
+      "date_last_activity": "2025-07-28T09:22:11.998Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1761,10 +1761,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488404480,
-      "due": "2025-07-28T21:52:34.318Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:34.511Z",
+      "date_last_activity": "2025-07-28T09:22:12.293Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1860,10 +1860,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488437248,
-      "due": "2025-07-28T21:52:34.737Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:34.878Z",
+      "date_last_activity": "2025-07-28T09:22:12.664Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -1939,10 +1939,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488453632,
-      "due": "2025-07-28T21:52:35.051Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:35.199Z",
+      "date_last_activity": "2025-07-28T09:22:13.022Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2018,10 +2018,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488470016,
-      "due": "2025-07-28T21:52:35.424Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:35.567Z",
+      "date_last_activity": "2025-07-28T09:22:13.279Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2100,10 +2100,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488486400,
-      "due": "2025-07-28T21:52:35.726Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:35.872Z",
+      "date_last_activity": "2025-07-28T09:22:13.586Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2179,10 +2179,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488502784,
-      "due": "2025-07-28T21:52:36.030Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:36.184Z",
+      "date_last_activity": "2025-07-28T09:22:13.857Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2264,10 +2264,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488519168,
-      "due": "2025-07-28T21:52:36.337Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:36.468Z",
+      "date_last_activity": "2025-07-28T09:22:14.114Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba706",
@@ -2348,10 +2348,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488535552,
-      "due": "2025-07-28T21:52:36.637Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:36.788Z",
+      "date_last_activity": "2025-07-28T09:22:14.395Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2425,10 +2425,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488551936,
-      "due": "2025-07-28T21:52:36.949Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:37.084Z",
+      "date_last_activity": "2025-07-28T09:22:14.665Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2502,10 +2502,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488568320,
-      "due": "2025-07-28T21:52:37.232Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:37.367Z",
+      "date_last_activity": "2025-07-28T09:22:14.934Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2579,10 +2579,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488584704,
-      "due": "2025-07-28T21:52:37.529Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:37.725Z",
+      "date_last_activity": "2025-07-28T09:22:15.247Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2656,10 +2656,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488601088,
-      "due": "2025-07-28T09:19:19.357Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:19.559Z",
+      "date_last_activity": "2025-07-28T09:22:15.573Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2749,10 +2749,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488617472,
-      "due": "2025-07-28T21:52:37.878Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:38.097Z",
+      "date_last_activity": "2025-07-28T09:22:15.853Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2821,10 +2821,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488633856,
-      "due": "2025-07-28T21:52:38.240Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:38.379Z",
+      "date_last_activity": "2025-07-28T09:22:16.137Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2893,10 +2893,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488650240,
-      "due": "2025-07-28T09:19:19.697Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:19.825Z",
+      "date_last_activity": "2025-07-28T09:22:16.413Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -2987,10 +2987,10 @@
       "list_id": "68628d4652275d70371e6f97",
       "list_name": "Priority II",
       "pos": 140737488666624,
-      "due": "2025-07-28T21:52:38.541Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:38.699Z",
+      "date_last_activity": "2025-07-28T09:22:16.691Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3059,10 +3059,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488355328,
-      "due": "2025-07-28T21:52:38.846Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:38.982Z",
+      "date_last_activity": "2025-07-28T09:22:17.005Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3149,10 +3149,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488371712,
-      "due": "2025-07-28T09:19:19.977Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:20.099Z",
+      "date_last_activity": "2025-07-28T09:22:17.286Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3242,10 +3242,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488379904,
-      "due": "2025-07-28T21:52:39.149Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:39.283Z",
+      "date_last_activity": "2025-07-28T09:22:17.556Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3321,10 +3321,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488388096,
-      "due": "2025-07-28T21:52:39.444Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:39.589Z",
+      "date_last_activity": "2025-07-28T09:22:17.832Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3419,10 +3419,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488404480,
-      "due": "2025-07-28T21:52:39.775Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:39.904Z",
+      "date_last_activity": "2025-07-28T09:22:18.151Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3507,10 +3507,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488420864,
-      "due": "2025-07-28T21:52:40.104Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:40.237Z",
+      "date_last_activity": "2025-07-28T09:22:18.460Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3586,10 +3586,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488437248,
-      "due": "2025-07-28T21:52:40.417Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:40.664Z",
+      "date_last_activity": "2025-07-28T09:22:18.737Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3665,10 +3665,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488453632,
-      "due": "2025-07-28T21:52:40.809Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:40.945Z",
+      "date_last_activity": "2025-07-28T09:22:19.007Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3749,10 +3749,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488470016,
-      "due": "2025-07-28T09:19:20.259Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:20.392Z",
+      "date_last_activity": "2025-07-28T09:22:19.299Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3846,10 +3846,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488486400,
-      "due": "2025-07-28T21:52:41.101Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:41.245Z",
+      "date_last_activity": "2025-07-28T09:22:19.575Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3918,10 +3918,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488502784,
-      "due": "2025-07-28T21:52:41.404Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:41.534Z",
+      "date_last_activity": "2025-07-28T09:22:19.836Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -3990,10 +3990,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488519168,
-      "due": "2025-07-28T21:52:41.698Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:41.835Z",
+      "date_last_activity": "2025-07-28T09:22:20.107Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4062,10 +4062,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488535552,
-      "due": "2025-07-28T21:52:41.975Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:42.118Z",
+      "date_last_activity": "2025-07-28T09:22:20.381Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4134,10 +4134,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488551936,
-      "due": "2025-07-28T21:52:42.264Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:42.421Z",
+      "date_last_activity": "2025-07-28T09:22:20.667Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4206,10 +4206,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488568320,
-      "due": "2025-07-28T21:52:42.597Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:42.739Z",
+      "date_last_activity": "2025-07-28T09:22:20.941Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4278,10 +4278,10 @@
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488584704,
-      "due": "2025-07-28T21:52:42.889Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:43.023Z",
+      "date_last_activity": "2025-07-28T09:22:21.228Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4350,10 +4350,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488371712,
-      "due": "2025-07-28T09:19:20.594Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:20.741Z",
+      "date_last_activity": "2025-07-28T09:22:21.549Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4422,10 +4422,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488388096,
-      "due": "2025-07-28T09:19:20.931Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:21.080Z",
+      "date_last_activity": "2025-07-28T09:22:21.937Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4501,10 +4501,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488404480,
-      "due": "2025-07-28T09:19:21.295Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:21.425Z",
+      "date_last_activity": "2025-07-28T09:22:22.301Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4573,10 +4573,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488420864,
-      "due": "2025-07-28T09:19:21.583Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:21.751Z",
+      "date_last_activity": "2025-07-28T09:22:22.567Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4659,10 +4659,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488437248,
-      "due": "2025-07-28T09:19:21.930Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-25T20:07:01.906Z",
+      "date_last_activity": "2025-07-28T09:22:22.874Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4731,10 +4731,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488453632,
-      "due": "2025-07-28T09:19:22.651Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-25T21:02:59.351Z",
+      "date_last_activity": "2025-07-28T09:22:23.154Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4828,10 +4828,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488470016,
-      "due": "2025-07-28T21:52:43.167Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:43.305Z",
+      "date_last_activity": "2025-07-28T09:22:23.436Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4890,10 +4890,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488486400,
-      "due": "2025-07-28T21:52:43.461Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:43.606Z",
+      "date_last_activity": "2025-07-28T09:22:23.727Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4957,10 +4957,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488502784,
-      "due": "2025-07-28T21:52:43.768Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:43.909Z",
+      "date_last_activity": "2025-07-28T09:22:24.058Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5029,10 +5029,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488519168,
-      "due": "2025-07-28T21:52:44.118Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:44.254Z",
+      "date_last_activity": "2025-07-28T09:22:24.442Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5096,10 +5096,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488535552,
-      "due": "2025-07-28T21:52:44.419Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:44.552Z",
+      "date_last_activity": "2025-07-28T09:22:24.730Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5158,10 +5158,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488568320,
-      "due": "2025-07-28T21:52:44.689Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:44.832Z",
+      "date_last_activity": "2025-07-28T09:22:24.995Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5220,10 +5220,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488584704,
-      "due": "2025-07-28T09:19:22.962Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-25T21:06:13.752Z",
+      "date_last_activity": "2025-07-28T09:22:25.254Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5297,10 +5297,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488601088,
-      "due": "2025-07-28T21:52:44.978Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:45.110Z",
+      "date_last_activity": "2025-07-28T09:22:25.522Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5359,10 +5359,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488617472,
-      "due": "2025-07-28T09:19:23.245Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:23.366Z",
+      "date_last_activity": "2025-07-28T09:22:25.792Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5426,10 +5426,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488650240,
-      "due": "2025-07-28T21:52:45.257Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:45.390Z",
+      "date_last_activity": "2025-07-28T09:22:26.056Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5493,10 +5493,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488683008,
-      "due": "2025-07-28T09:19:23.505Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:23.666Z",
+      "date_last_activity": "2025-07-28T09:22:26.321Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5560,10 +5560,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488699392,
-      "due": "2025-07-28T09:19:23.813Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:23.946Z",
+      "date_last_activity": "2025-07-28T09:22:26.602Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -5627,10 +5627,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488715776,
-      "due": "2025-07-28T09:00:00.000Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:57:58.170Z",
+      "date_last_activity": "2025-07-28T09:22:26.874Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba703",
@@ -5696,10 +5696,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488732160,
-      "due": "2025-07-28T09:00:00.000Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:57:58.442Z",
+      "date_last_activity": "2025-07-28T09:22:27.168Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba703",
@@ -5765,10 +5765,10 @@
       "list_id": "68628d3fd59cfd56a5d4f8f9",
       "list_name": "Priority 0",
       "pos": 140737488748544,
-      "due": "2025-07-28T09:19:24.099Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:24.235Z",
+      "date_last_activity": "2025-07-28T09:22:27.448Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba703",
@@ -5923,10 +5923,10 @@
       "list_id": "6866a99bc5eacaba360b36ae",
       "list_name": "Priority IV",
       "pos": 140737488388096,
-      "due": "2025-07-28T09:19:24.635Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:24.773Z",
+      "date_last_activity": "2025-07-28T09:22:27.998Z",
       "labels": [
         {
           "id": "6862042608fdc9ecc66f797d",
@@ -6242,10 +6242,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488355328,
-      "due": "2025-07-28T21:52:45.826Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-27T19:43:51.066Z",
+      "date_last_activity": "2025-07-28T09:22:28.351Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6330,10 +6330,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488371712,
-      "due": "2025-07-28T21:52:46.111Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:46.283Z",
+      "date_last_activity": "2025-07-28T09:22:28.632Z",
       "labels": [
         {
           "id": "6862042608fdc9ecc66f797d",
@@ -6409,10 +6409,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488470016,
-      "due": "2025-07-28T21:52:46.452Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:46.621Z",
+      "date_last_activity": "2025-07-28T09:22:28.916Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6488,10 +6488,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488502784,
-      "due": "2025-07-28T21:52:46.767Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:46.901Z",
+      "date_last_activity": "2025-07-28T09:22:29.199Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6573,10 +6573,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488519168,
-      "due": "2025-07-28T21:52:47.044Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:47.187Z",
+      "date_last_activity": "2025-07-28T09:22:29.492Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6658,10 +6658,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488535552,
-      "due": "2025-07-28T21:52:47.334Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:47.581Z",
+      "date_last_activity": "2025-07-28T09:22:29.764Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6737,10 +6737,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488551936,
-      "due": "2025-07-28T21:52:47.741Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:47.878Z",
+      "date_last_activity": "2025-07-28T09:22:30.037Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6816,10 +6816,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488568320,
-      "due": "2025-07-28T21:52:48.027Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:48.169Z",
+      "date_last_activity": "2025-07-28T09:22:30.416Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6895,10 +6895,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488584704,
-      "due": "2025-07-28T21:52:48.321Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:48.479Z",
+      "date_last_activity": "2025-07-28T09:22:30.725Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6974,10 +6974,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488601088,
-      "due": "2025-07-28T21:52:48.675Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:48.807Z",
+      "date_last_activity": "2025-07-28T09:22:31.069Z",
       "labels": [
         {
           "id": "6866acf4a1aa5785f595c2fd",
@@ -7053,10 +7053,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488617472,
-      "due": "2025-07-28T21:52:48.956Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:49.132Z",
+      "date_last_activity": "2025-07-28T09:22:31.500Z",
       "labels": [
         {
           "id": "6866affc37aa108fd8390e0d",
@@ -7141,10 +7141,10 @@
       "list_id": "6866a9987d4466975e2c0842",
       "list_name": "Priority III",
       "pos": 140737488633856,
-      "due": "2025-07-28T21:52:49.343Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:49.483Z",
+      "date_last_activity": "2025-07-28T09:22:31.970Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7205,10 +7205,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488355328,
-      "due": "2025-07-28T21:52:49.637Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-27T19:43:58.620Z",
+      "date_last_activity": "2025-07-28T09:22:32.652Z",
       "labels": [
         {
           "id": "6862042608fdc9ecc66f797f",
@@ -7293,10 +7293,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488371712,
-      "due": "2025-07-28T21:52:49.945Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:50.096Z",
+      "date_last_activity": "2025-07-28T09:22:33.151Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7380,10 +7380,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488388096,
-      "due": "2025-07-28T21:52:50.264Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:50.414Z",
+      "date_last_activity": "2025-07-28T09:22:33.500Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -7459,10 +7459,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488404480,
-      "due": "2025-07-28T21:52:50.594Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:50.730Z",
+      "date_last_activity": "2025-07-28T09:22:33.783Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -7544,10 +7544,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488420864,
-      "due": "2025-07-28T09:19:24.972Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:25.098Z",
+      "date_last_activity": "2025-07-28T09:22:34.072Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -7641,10 +7641,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488437248,
-      "due": "2025-07-28T21:52:50.879Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:51.008Z",
+      "date_last_activity": "2025-07-28T09:22:34.393Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7725,10 +7725,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488453632,
-      "due": "2025-07-28T09:19:25.307Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:25.437Z",
+      "date_last_activity": "2025-07-28T09:22:34.674Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7813,10 +7813,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488551936,
-      "due": "2025-07-28T21:52:51.173Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:51.306Z",
+      "date_last_activity": "2025-07-28T09:22:35.022Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7892,10 +7892,10 @@
       "list_id": "6866a992d2b00120e1ce6c61",
       "list_name": "Priority II",
       "pos": 140737488568320,
-      "due": "2025-07-28T09:19:25.628Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:25.956Z",
+      "date_last_activity": "2025-07-28T09:22:35.379Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7995,10 +7995,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488355328,
-      "due": "2025-07-28T21:52:51.473Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:51.611Z",
+      "date_last_activity": "2025-07-28T09:22:35.725Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8076,10 +8076,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488371712,
-      "due": "2025-07-28T09:19:26.206Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:26.331Z",
+      "date_last_activity": "2025-07-28T09:22:36.021Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8161,10 +8161,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488388096,
-      "due": "2025-07-28T21:52:51.778Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:51.937Z",
+      "date_last_activity": "2025-07-28T09:22:36.307Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8236,10 +8236,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488404480,
-      "due": "2025-07-28T09:19:26.497Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:26.621Z",
+      "date_last_activity": "2025-07-28T09:22:36.598Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -8315,10 +8315,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488420864,
-      "due": "2025-07-28T09:19:26.760Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:26.881Z",
+      "date_last_activity": "2025-07-28T09:22:36.895Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8406,10 +8406,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488437248,
-      "due": "2025-07-28T21:52:52.106Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:52.296Z",
+      "date_last_activity": "2025-07-28T09:22:37.178Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -8491,10 +8491,10 @@
       "list_id": "6866a98c6c7b510fa7b04767",
       "list_name": "Priority I",
       "pos": 140737488453632,
-      "due": "2025-07-28T21:52:52.482Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:52.623Z",
+      "date_last_activity": "2025-07-28T09:22:37.457Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8570,10 +8570,10 @@
       "list_id": "6866a9904ae6d53f5ccbfe1d",
       "list_name": "Priority 0",
       "pos": 140737488306176,
-      "due": "2025-07-28T21:52:52.780Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:52.931Z",
+      "date_last_activity": "2025-07-28T09:22:37.753Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8682,10 +8682,10 @@
       "list_id": "6866a9904ae6d53f5ccbfe1d",
       "list_name": "Priority 0",
       "pos": 140737488322560,
-      "due": "2025-07-28T09:19:27.026Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:27.159Z",
+      "date_last_activity": "2025-07-28T09:22:38.022Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8791,10 +8791,10 @@
       "list_id": "6866a9904ae6d53f5ccbfe1d",
       "list_name": "Priority 0",
       "pos": 140737488338944,
-      "due": "2025-07-28T21:52:53.086Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T21:52:53.218Z",
+      "date_last_activity": "2025-07-28T09:22:38.295Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8870,10 +8870,10 @@
       "list_id": "6866a9904ae6d53f5ccbfe1d",
       "list_name": "Priority 0",
       "pos": 140737488355328,
-      "due": "2025-07-28T09:19:27.318Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:27.480Z",
+      "date_last_activity": "2025-07-28T09:22:38.577Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8955,10 +8955,10 @@
       "list_id": "6866a9904ae6d53f5ccbfe1d",
       "list_name": "Priority 0",
       "pos": 140737488371712,
-      "due": "2025-07-28T09:19:27.626Z",
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-22T09:19:27.778Z",
+      "date_last_activity": "2025-07-28T09:22:38.956Z",
       "labels": [
         {
           "id": "6866daf3c3f892d57b8a5caa",
