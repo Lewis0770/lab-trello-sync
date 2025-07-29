@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-07-28T16:19:12.750328",
-  "total_cards": 111,
+  "last_updated": "2025-07-29T13:17:10.602072",
+  "total_cards": 114,
   "boards_monitored": [
     "6866dd4609df4573a20ba546",
     "6862042608fdc9ecc66f793b"
@@ -380,6 +380,190 @@
         }
       ],
       "attachments": []
+    },
+    "68628e5705c7f37a67ac8b89": {
+      "id": "68628e5705c7f37a67ac8b89",
+      "board_id": "6866dd4609df4573a20ba546",
+      "board_name": "Papers",
+      "name": "Relativistic Actinide-catecholates and Actinide-catecholamides (An=Th-Cf)",
+      "desc": "Just need to polish the draft, and improve the method, and introduce more relativisitic calculations higher than ZORA\n\nGroup's Dropbox\n\n# **Some source files.**\n\nNBO:\n/research/mendozagroup/users\\_backup/sfm13/workstation/adf/hd\\_examples_actinides/NBO\n\nAll source files /research/mendozagroup/users\\_backup/sfm13/workstation/adf/hd\\_examples_actinides\n\n# Preliminary results\n\nWe need the NBO section to finish a paper:\n[https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/actinides_paper2/Paper2_81718/main.tex](https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/actinides_paper2/Paper2_81718/main.tex \"smartCard-inline\")\n[https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/actinides_paper2/Paper2_81718/main_AG_comments.pdf](https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/actinides_paper2/Paper2_81718/main_AG_comments.pdf \"smartCard-inline\")\n\nSome of the structures are here:\n[https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/amide_noamide_xyz](https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/amide_noamide_xyz \"smartCard-inline\")\n[https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/marvin_files](https://www.dropbox.com/home/Papers/2018_Complexation_Actinides/marvin_files \"smartCard-inline\")\n\nThe summary of the results (including preliminary NBO calculations) are here:\n[https://www.dropbox.com/home/Papers/2018_Complexation_Actinides?preview=actinide_4_catechols.ods](https://www.dropbox.com/home/Papers/2018_Complexation_Actinides?preview=actinide_4_catechols.ods \"smartCard-inline\")\nand more specifically in the sheet called \"NBO Analysis amide\" which is a sheet of the file above.\n\nThe other summary of results for the paper related are here:\n[https://www.dropbox.com/home/Papers/2018_Complexation_Actinides?preview=catecholamide_hostdesigner.ods](https://www.dropbox.com/home/Papers/2018_Complexation_Actinides?preview=catecholamide_hostdesigner.ods \"smartCard-inline\")",
+      "list_id": "68628d4b55c2a9088c6da981",
+      "list_name": "Priority IV",
+      "pos": 140737488699392,
+      "due": "2025-07-08T03:59:59.000Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:24:21.605Z",
+      "labels": [
+        {
+          "id": "6866dd4609df4573a20ba703",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6866dd4609df4573a20ba704",
+          "name": "Completed",
+          "color": "green_light"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "6862a003aeffe4013e6bf5d8",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T14:32:35.093Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "686700703fb66aa373a6fee2",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "686700703fb66aa373a6fee3",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "686700703fb66aa373a6fee4",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "686700703fb66aa373a6fee5",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "686700703fb66aa373a6fee6",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6887cb394ec7106d1e63bafe",
+          "name": "https://www.dropbox.com/scl/fi/xj8152j4jdt6cmwktdqf7/20211015_Actinides_Catecholates.pdf?rlkey=inw0537wfl6e2no8j4ygmf3f2&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/xj8152j4jdt6cmwktdqf7/20211015_Actinides_Catecholates.pdf?rlkey=inw0537wfl6e2no8j4ygmf3f2&dl=0",
+          "date": "2025-07-28T19:10:49.744Z"
+        },
+        {
+          "id": "6887cb41b67bc98147fbea8c",
+          "name": "https://www.dropbox.com/scl/fi/jfoolfmeril3sw8i1qzpc/20200527_HighThroughput_Actinides.pdf?rlkey=jvul4dwip9isqkfbfpl3imzmy&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/jfoolfmeril3sw8i1qzpc/20200527_HighThroughput_Actinides.pdf?rlkey=jvul4dwip9isqkfbfpl3imzmy&dl=0",
+          "date": "2025-07-28T19:10:57.666Z"
+        }
+      ]
+    },
+    "68628e141eb75fe55843659d": {
+      "id": "68628e141eb75fe55843659d",
+      "board_id": "6866dd4609df4573a20ba546",
+      "board_name": "Papers",
+      "name": "Birnessite for Water Desalination collab ITESM",
+      "desc": "Finish manuscript\n\n25/01/16: Updated manuscript & Dr. Videa reviewed",
+      "list_id": "68628d4920f9d57ced707ecd",
+      "list_name": "Priority III",
+      "pos": 140737488338944,
+      "due": "2025-07-28T21:52:33.414Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:47:08.123Z",
+      "labels": [
+        {
+          "id": "6866dd4609df4573a20ba70e",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6866dd4609df4573a20ba701",
+          "name": "Daniel",
+          "color": "blue"
+        },
+        {
+          "id": "6866fed39ee7542ececb5721",
+          "name": "Adriana",
+          "color": "blue"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "6887ce777b57888d9dcf4eff",
+          "text": "\u201c hemos estado trabajando en el escrito, en particular la secci\u00f3n de Raman y Densidad de Estados, y tambi\u00e9n en los c\u00e1lculos pendientes (litio y difusi\u00f3n).\u201c",
+          "date": "2025-07-28T19:24:39.763Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        },
+        {
+          "id": "68629ba487bb344fb941c8df",
+          "text": "[Daniel Maldonado](mailto:danimaldonadolopez@gmail.com \"\u200c\")\n\n [aleepunaro@gmail.com](mailto:aleepunaro@gmail.com \"\u200c\")",
+          "date": "2025-06-30T14:13:56.479Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6867003d077680b4e7150c78",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6867003d077680b4e7150c79",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6867003d077680b4e7150c7a",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6867003d077680b4e7150c7b",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6867003d077680b4e7150c7c",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68629b9d3a1eb946bbfdeb1e",
+          "name": "https://www.dropbox.com/scl/fo/uvrnqn7cx60l73gpa2kbl/AHphbbX4sRSSO0DpjG4CyeY?rlkey=xmzq5j5kn6vtyvhhssbtcyekb&st=u5ncdcmp&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/uvrnqn7cx60l73gpa2kbl/AHphbbX4sRSSO0DpjG4CyeY?rlkey=xmzq5j5kn6vtyvhhssbtcyekb&st=u5ncdcmp&dl=0",
+          "date": "2025-06-30T14:13:49.416Z"
+        },
+        {
+          "id": "68629ba3f69443d075d337bc",
+          "name": "https://www.overleaf.com/project/6520332b88e9952cfa9b9943",
+          "url": "https://www.overleaf.com/project/6520332b88e9952cfa9b9943",
+          "date": "2025-06-30T14:13:55.463Z"
+        }
+      ]
     },
     "68628e62876b37275331eae6": {
       "id": "68628e62876b37275331eae6",
@@ -1457,96 +1641,6 @@
           "name": "https://www.dropbox.com/scl/fi/q73jlmxw39gwazgn5u6yi/Manuscript_v4.docx?rlkey=p25kjttubhnhyx4fyx417d8ta&dl=0",
           "url": "https://www.dropbox.com/scl/fi/q73jlmxw39gwazgn5u6yi/Manuscript_v4.docx?rlkey=p25kjttubhnhyx4fyx417d8ta&dl=0",
           "date": "2025-06-30T14:13:11.383Z"
-        }
-      ]
-    },
-    "68628e141eb75fe55843659d": {
-      "id": "68628e141eb75fe55843659d",
-      "board_id": "6866dd4609df4573a20ba546",
-      "board_name": "Papers",
-      "name": "Birnessite for Water Desalination collab ITESM",
-      "desc": "Finish manuscript\n\n25/01/16: Updated manuscript & Dr. Videa reviewed",
-      "list_id": "68628d4652275d70371e6f97",
-      "list_name": "Priority II",
-      "pos": 140737488371712,
-      "due": "2025-07-28T21:52:33.414Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:21:19.794Z",
-      "labels": [
-        {
-          "id": "6866dd4609df4573a20ba70e",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6866dd4609df4573a20ba701",
-          "name": "Daniel",
-          "color": "blue"
-        },
-        {
-          "id": "6866fed39ee7542ececb5721",
-          "name": "Alee",
-          "color": "blue"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "68629ba487bb344fb941c8df",
-          "text": "[Daniel Maldonado](mailto:danimaldonadolopez@gmail.com \"\u200c\")\n\n [aleepunaro@gmail.com](mailto:aleepunaro@gmail.com \"\u200c\")",
-          "date": "2025-06-30T14:13:56.479Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6867003d077680b4e7150c78",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6867003d077680b4e7150c79",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6867003d077680b4e7150c7a",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6867003d077680b4e7150c7b",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6867003d077680b4e7150c7c",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "68629b9d3a1eb946bbfdeb1e",
-          "name": "https://www.dropbox.com/scl/fo/uvrnqn7cx60l73gpa2kbl/AHphbbX4sRSSO0DpjG4CyeY?rlkey=xmzq5j5kn6vtyvhhssbtcyekb&st=u5ncdcmp&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/uvrnqn7cx60l73gpa2kbl/AHphbbX4sRSSO0DpjG4CyeY?rlkey=xmzq5j5kn6vtyvhhssbtcyekb&st=u5ncdcmp&dl=0",
-          "date": "2025-06-30T14:13:49.416Z"
-        },
-        {
-          "id": "68629ba3f69443d075d337bc",
-          "name": "https://www.overleaf.com/project/6520332b88e9952cfa9b9943",
-          "url": "https://www.overleaf.com/project/6520332b88e9952cfa9b9943",
-          "date": "2025-06-30T14:13:55.463Z"
         }
       ]
     },
@@ -4289,14 +4383,14 @@
       "board_id": "6866dd4609df4573a20ba546",
       "board_name": "Papers",
       "name": "Muscle MOFs",
-      "desc": "Writing in progress",
+      "desc": "This is an earlier project, where I have designed a MOF that can expand and contract as a muscle\n\n`\\Dropbox\\Papers\\2016_molecular_machines\\Simulations\\Molecular_Machines\\MOF-Muscle_Long`\n`\\Dropbox\\Papers\\2016_molecular_machines\\Simulations\\Molecular_Machines\\BMOF`\n\nIn **HPC** (inputs, outputs, structures, MD simulations, QM simulations):\n/panfs/storage.local/engineering/mendozagroup/users\\_backup/m\\_worku/MuscleMOF",
       "list_id": "68628d431c309f74aca07c21",
       "list_name": "Prioritiy I",
       "pos": 140737488568320,
       "due": "2025-07-28T21:52:42.597Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T14:41:35.771Z",
+      "date_last_activity": "2025-07-28T19:09:51.950Z",
       "labels": [
         {
           "id": "6866dd4609df4573a20ba70e",
@@ -4359,7 +4453,26 @@
           ]
         }
       ],
-      "attachments": []
+      "attachments": [
+        {
+          "id": "6887caf541b2b9eafda68015",
+          "name": "BMOF.jpg",
+          "url": "https://trello.com/1/cards/68628dff6c8be7fe34c7bc69/attachments/6887caf541b2b9eafda68015/download/BMOF.jpg",
+          "date": "2025-07-28T19:09:41.221Z"
+        },
+        {
+          "id": "6887caf35482b5159dec5e54",
+          "name": "BMOF-with-ball.jpg",
+          "url": "https://trello.com/1/cards/68628dff6c8be7fe34c7bc69/attachments/6887caf35482b5159dec5e54/download/BMOF-with-ball.jpg",
+          "date": "2025-07-28T19:09:39.331Z"
+        },
+        {
+          "id": "6887caf7a43c731219f74bd1",
+          "name": "BMOF-BuildingUnit.jpg",
+          "url": "https://trello.com/1/cards/68628dff6c8be7fe34c7bc69/attachments/6887caf7a43c731219f74bd1/download/BMOF-BuildingUnit.jpg",
+          "date": "2025-07-28T19:09:43.305Z"
+        }
+      ]
     },
     "68628e053eca0d2eb5059337": {
       "id": "68628e053eca0d2eb5059337",
@@ -5807,6 +5920,80 @@
         }
       ]
     },
+    "6888c8d6db988d982b035d75": {
+      "id": "6888c8d6db988d982b035d75",
+      "board_id": "6866dd4609df4573a20ba546",
+      "board_name": "Papers",
+      "name": "Update the website to hand the databse and Jmol to visualize the structures",
+      "desc": "JSMol\n==============\n\nThe (old) version of the website is on:\nDropbox\\Papers\\2015_PFGP\\Website\\pfgp_update_2015\n\nThe idea was to use this website to grab the .cifs or .bgfs structures and then show them with the Jsmol (or Jmol) so that the user can play with it\nJSmol: https://chemapps.stolaf.edu/jmol/jsmol/jsmol.htm\nJmol: http://wiki.jmol.org/index.php/JSmol\n\nVisualize the .bgf (or .cif) into the website:\n=============\nVisualize the structures from: \nDropbox\\Papers\\2015_PFGP\\Website\\20180323_Group_website\\structures\nInto: /Dropbox/Papers/2015_PFGP/Website/20180323_Group_website/index.html\n\n\n\nIf bgf can not be read into JSMol, we transform to .cif\n-------------\nWe can use:\nhttps://openbabel.org/wiki/Babel\n\nor perhaps:\nhttps://wiki.fysik.dtu.dk/ase/\n\n\nP.S.\n---------------\nIf you want to quickly visualize the structures, you can use:\nhttp://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD\nhttps://www.ccdc.cam.ac.uk/Community/csd-community/freemercury/\nhttps://avogadro.cc/\n\n\n",
+      "list_id": "68628d3fd59cfd56a5d4f8f9",
+      "list_name": "Priority 0",
+      "pos": 140737488764928,
+      "due": "2018-04-20T20:00:00.000Z",
+      "due_complete": true,
+      "closed": false,
+      "date_last_activity": "2025-07-29T13:13:44.356Z",
+      "labels": [
+        {
+          "id": "6866dd4609df4573a20ba70e",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6866dd4609df4573a20ba707",
+          "name": "Marcus",
+          "color": "purple"
+        },
+        {
+          "id": "6888c9081c55ad1a17081c1b",
+          "name": "Mariano",
+          "color": "yellow"
+        }
+      ],
+      "members": [
+        {
+          "id": "58d4f9c48a7a02519502e6b7",
+          "username": "lewis0770",
+          "full_name": "Mr_Lewis16"
+        }
+      ],
+      "comments": [],
+      "checklists": [
+        {
+          "id": "6888c8d7db988d982b035dda",
+          "name": "Checklist",
+          "pos": 16384,
+          "items": [
+            {
+              "id": "6888c8d7db988d982b035ddb",
+              "name": "Learn php?",
+              "state": "incomplete",
+              "pos": 16586
+            },
+            {
+              "id": "6888c8d7db988d982b035ddc",
+              "name": "Write html?",
+              "state": "incomplete",
+              "pos": 33869
+            },
+            {
+              "id": "6888c8d7db988d982b035ddd",
+              "name": "Visualize the structures from: Dropbox\\Papers\\2015_PFGP\\Website\\20180323_Group_website\\structures INTO the WEBSITE: /Dropbox/Papers/2015_PFGP/Website/20180323_Group_website/index.html",
+              "state": "incomplete",
+              "pos": 50753
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6888c8d6db988d982b035dc3",
+          "name": "Jsmol.jpg",
+          "url": "https://trello.com/1/cards/6888c8d6db988d982b035d75/attachments/6888c8d6db988d982b035dc3/download/Jsmol.jpg",
+          "date": "2018-02-10T18:35:46.088Z"
+        }
+      ]
+    },
     "6862831b632bc8890ecb0e1d": {
       "id": "6862831b632bc8890ecb0e1d",
       "board_id": "6862042608fdc9ecc66f793b",
@@ -5876,6 +6063,161 @@
         }
       ],
       "attachments": []
+    },
+    "6887c53ea77e356837173eed": {
+      "id": "6887c53ea77e356837173eed",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "DMREF: Digital Twin for Ultrafast Material Dynamics",
+      "desc": "",
+      "list_id": "6866ac51f3447059757151e7",
+      "list_name": "In-Review",
+      "pos": 140737488355328,
+      "due": null,
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:23:27.632Z",
+      "labels": [
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797b",
+          "name": "Completed",
+          "color": "green_light"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "6887c624186e53153b967b83",
+          "text": "This paper was submitted in February 4th, 2025.\n\nI just contacted colleagues to see if there is an update on this. Hopefulle it got reviewed and it got reviewed well.",
+          "date": "2025-07-28T18:49:08.550Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        }
+      ],
+      "checklists": [],
+      "attachments": [
+        {
+          "id": "6887c57bea8c3de32a789563",
+          "name": "Submitted proposal",
+          "url": "https://www.overleaf.com/project/6792b96a51f56f3a82130728",
+          "date": "2025-07-28T18:46:19.853Z"
+        }
+      ]
+    },
+    "68627f77766038b473d59079": {
+      "id": "68627f77766038b473d59079",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "2D-Genome (2D-HUB)",
+      "desc": "",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488322560,
+      "due": "2025-07-28T09:19:27.026Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T21:00:56.336Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6866acf4a1aa5785f595c2fd",
+          "name": "Daniel",
+          "color": "blue"
+        },
+        {
+          "id": "68878a35c721e1c14c95ec2c",
+          "name": "Axel",
+          "color": "orange"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686282254bb0e5601bf14124",
+          "text": "[danimaldonadolopez@gmail.com](mailto:danimaldonadolopez@gmail.com \"\u200c\")\n\n[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")\n\n [linyuhs7@msu.edu](mailto:linyuhs7@msu.edu \"\u200c\")",
+          "date": "2025-06-30T12:25:09.628Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dc82c9787b3c79c1b141",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dc82c9787b3c79c1b142",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dc82c9787b3c79c1b143",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dc82c9787b3c79c1b144",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dc82c9787b3c79c1b145",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628238a75c0d98cf7aefb9",
+          "name": "https://www.overleaf.com/project/63e25c5221be677380e31bc4",
+          "url": "https://www.overleaf.com/project/63e25c5221be677380e31bc4",
+          "date": "2025-06-30T12:25:28.903Z"
+        },
+        {
+          "id": "68628241245d3d03feddae75",
+          "name": "https://grants.gov/search-results-detail/356730",
+          "url": "https://grants.gov/search-results-detail/356730",
+          "date": "2025-06-30T12:25:37.393Z"
+        },
+        {
+          "id": "686282706c0200d569e4fdec",
+          "name": "https://grants.gov/search-results-detail/347326",
+          "url": "https://grants.gov/search-results-detail/347326",
+          "date": "2025-06-30T12:26:24.342Z"
+        },
+        {
+          "id": "686282750a678231e3fddcfa",
+          "name": "https://grants.gov/search-results-detail/349655",
+          "url": "https://grants.gov/search-results-detail/349655",
+          "date": "2025-06-30T12:26:29.872Z"
+        },
+        {
+          "id": "6862827c63dd622398e87a4b",
+          "name": "https://new.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory/nsf23-611/solicitation",
+          "url": "https://new.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory/nsf23-611/solicitation",
+          "date": "2025-06-30T12:26:36.391Z"
+        }
+      ]
     },
     "68627f90fc34f265ffdf1067": {
       "id": "68627f90fc34f265ffdf1067",
@@ -5965,19 +6307,386 @@
         }
       ]
     },
-    "68627f854c4ca8108630e06c": {
-      "id": "68627f854c4ca8108630e06c",
+    "68627f7a24bd62e9b167fc29": {
+      "id": "68627f7a24bd62e9b167fc29",
       "board_id": "6862042608fdc9ecc66f793b",
       "board_name": "Proposals",
-      "name": "Solar Radiation Absorption from First Principles",
-      "desc": "LOI, Find a Call",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488355328,
-      "due": "2025-07-28T21:52:45.826Z",
+      "name": "PFGP for Separation",
+      "desc": "Resubmit beyond LOI",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488396288,
+      "due": "2025-08-04T09:00:00.000Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T15:03:22.974Z",
+      "date_last_activity": "2025-07-28T20:23:46.104Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797f",
+          "name": "Marcus",
+          "color": "purple"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686283e47af27cdf391fadb1",
+          "text": "[Marcus Djokic](mailto:marcus.djokic@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:32:36.857Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dc9e9ee7542ecea36240",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dc9e9ee7542ecea36241",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dc9e9ee7542ecea36242",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dc9e9ee7542ecea36243",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dc9e9ee7542ecea36244",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686283f6d4b702647945c1e4",
+          "name": "https://www.overleaf.com/project/63e25faaa3daf5653d865b64",
+          "url": "https://www.overleaf.com/project/63e25faaa3daf5653d865b64",
+          "date": "2025-06-30T12:32:54.077Z"
+        }
+      ]
+    },
+    "68627f80c8b2b86aec7eccad": {
+      "id": "68627f80c8b2b86aec7eccad",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Semiconductors",
+      "desc": "Find a Call",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488404480,
+      "due": "2025-08-04T09:00:00.000Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:22:37.629Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797f",
+          "name": "Marcus",
+          "color": "purple"
+        },
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "68878a35c721e1c14c95ec2c",
+          "name": "Axel",
+          "color": "orange"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "6887dbe5bf5f10affd2ba0ca",
+          "text": "@marcusdjokic1 @axelmelchorgaona\nwe should circle back to this and (re)submit it now with the new results that we are getting",
+          "date": "2025-07-28T20:21:57.572Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dbd84e60ea2a1f063040",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dbd84e60ea2a1f063041",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dbd84e60ea2a1f063042",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dbd84e60ea2a1f063043",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dbd84e60ea2a1f063044",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628463898cb5db2eb4cc6e",
+          "name": "https://www.overleaf.com/project/63e25efd152764b5b6088355",
+          "url": "https://www.overleaf.com/project/63e25efd152764b5b6088355",
+          "date": "2025-06-30T12:34:43.962Z"
+        },
+        {
+          "id": "6862846ee7bdb64524452eac",
+          "name": "https://new.nsf.gov/funding/opportunities/fuse2-future-semiconductors/nsf24-521/solicitation",
+          "url": "https://new.nsf.gov/funding/opportunities/fuse2-future-semiconductors/nsf24-521/solicitation",
+          "date": "2025-06-30T12:34:54.506Z"
+        }
+      ]
+    },
+    "68627f7225f14115007534cc": {
+      "id": "68627f7225f14115007534cc",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "MLFF",
+      "desc": "Resubmit. Update with new preliminary results (MD, NEB)",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488412672,
+      "due": "2025-08-04T09:00:00.000Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:23:41.354Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797d",
+          "name": "Austin",
+          "color": "orange"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "68791a0abdd5fa7283dce40e",
+          "text": "Ideal window is early in the academic semester and avoid holidays and holiday seasons i.e December",
+          "date": "2025-07-17T15:43:06.438Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "68790b22d952ae8325cca586",
+          "text": "[https://www.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation](https://www.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation \"smartCard-inline\")",
+          "date": "2025-07-17T14:39:30.073Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "686281a9dcad2716768a21e7",
+          "text": "CTMC no deadline",
+          "date": "2025-06-30T12:23:05.721Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "6862817cea872ded0b0f8f19",
+          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:22:20.252Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dc68b5403b7e28f148f9",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dc68b5403b7e28f148fa",
+              "name": "25%",
+              "state": "incomplete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dc68b5403b7e28f148fb",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dc68b5403b7e28f148fc",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dc68b5403b7e28f148fd",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628191ac2baf1b9626b5b1",
+          "name": "https://www.overleaf.com/project/63e3f40938e3891c12e7f374",
+          "url": "https://www.overleaf.com/project/63e3f40938e3891c12e7f374",
+          "date": "2025-06-30T12:22:41.185Z"
+        },
+        {
+          "id": "686281a3d07181a6e8f90a80",
+          "name": "https://new.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation",
+          "url": "https://new.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation",
+          "date": "2025-06-30T12:22:59.122Z"
+        }
+      ]
+    },
+    "68627f7581814a2cf8438b5b": {
+      "id": "68627f7581814a2cf8438b5b",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Reaction Database",
+      "desc": "Polish, Update with new dataset of new elements and maybe reactions, Submit",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488420864,
+      "due": "2025-07-28T21:52:51.473Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:23:16.943Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797d",
+          "name": "Austin",
+          "color": "orange"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686281d07156e852b16d44a1",
+          "text": "CAT ([https://new.nsf.gov/funding/opportunities/che-drp-division-chemistry-disciplinary-research-programs/nsf22-605/solicitation](https://new.nsf.gov/funding/opportunities/che-drp-division-chemistry-disciplinary-research-programs/nsf22-605/solicitation \"\u200c\"))",
+          "date": "2025-06-30T12:23:44.314Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "686281c18b9b97971fe4c209",
+          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:23:29.159Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db6f97285f50f49575a1",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db6f97285f50f49575a2",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db6f97285f50f49575a3",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db6f97285f50f49575a4",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db6f97285f50f49575a5",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": []
+    },
+    "68627f85771b8a62d9fde0cd": {
+      "id": "68627f85771b8a62d9fde0cd",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Electrified Interfaces",
+      "desc": "",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488437248,
+      "due": "2025-07-28T09:19:26.497Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:23:34.210Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -5993,9 +6702,9 @@
       "members": [],
       "comments": [
         {
-          "id": "686285386490cad9a45f3789",
+          "id": "6862852f5e20dfa87fe9624b",
           "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:38:16.349Z",
+          "date": "2025-06-30T12:38:07.951Z",
           "author": {
             "full_name": "Mr_Lewis16",
             "username": "lewis0770"
@@ -6004,30 +6713,30 @@
       ],
       "checklists": [
         {
-          "id": "6866b655ec055bd57368048e",
+          "id": "6866dc1562815e284738ffae",
           "name": "In-Progress",
           "pos": 140737488355328,
           "items": [
             {
-              "id": "6866b655ec055bd57368048f",
+              "id": "6866dc1562815e284738ffaf",
               "name": "25%",
               "state": "complete",
               "pos": 140737488355328
             },
             {
-              "id": "6866b655ec055bd573680490",
+              "id": "6866dc1562815e284738ffb0",
               "name": "50%",
-              "state": "incomplete",
+              "state": "complete",
               "pos": 140737488371712
             },
             {
-              "id": "6866b655ec055bd573680491",
+              "id": "6866dc1562815e284738ffb1",
               "name": "75%",
-              "state": "incomplete",
+              "state": "complete",
               "pos": 140737488388096
             },
             {
-              "id": "6866b655ec055bd573680492",
+              "id": "6866dc1562815e284738ffb2",
               "name": "100%",
               "state": "incomplete",
               "pos": 140737488404480
@@ -6037,10 +6746,401 @@
       ],
       "attachments": [
         {
-          "id": "686285968c88e1370cd9555a",
-          "name": "https://www.overleaf.com/project/66e47cab7be07f92af87ec91",
-          "url": "https://www.overleaf.com/project/66e47cab7be07f92af87ec91",
-          "date": "2025-06-30T12:39:50.335Z"
+          "id": "6862857e3a4949a3ad39ee11",
+          "name": "https://www.dropbox.com/scl/fo/swpzqmzjzzwljvktq2d2r/APHKUnH037KQfeZfyx8Bfys?rlkey=gua9achhuvblxhpfswyz0sbgi&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/swpzqmzjzzwljvktq2d2r/APHKUnH037KQfeZfyx8Bfys?rlkey=gua9achhuvblxhpfswyz0sbgi&dl=0",
+          "date": "2025-06-30T12:39:26.743Z"
+        }
+      ]
+    },
+    "68627f761e519d97f55e0412": {
+      "id": "68627f761e519d97f55e0412",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "polymerization of CO2",
+      "desc": "Resubmit",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488453632,
+      "due": "2025-07-28T09:19:26.206Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:27:30.195Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797d",
+          "name": "Austin",
+          "color": "orange"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686281ed52cbbef38b266943",
+          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:24:13.365Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866db756fd4e3aaaf29bb07",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866db756fd4e3aaaf29bb08",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866db756fd4e3aaaf29bb09",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866db756fd4e3aaaf29bb0a",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866db756fd4e3aaaf29bb0b",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686281feb1760d2729139f04",
+          "name": "https://www.overleaf.com/project/65c54f5118cda0c34fbde8de",
+          "url": "https://www.overleaf.com/project/65c54f5118cda0c34fbde8de",
+          "date": "2025-06-30T12:24:30.978Z"
+        },
+        {
+          "id": "68628206e888ca1ab0d59047",
+          "name": "https://www.acs.org/funding/grants/petroleum-research-fund/programs/new-directions-grants.html",
+          "url": "https://www.acs.org/funding/grants/petroleum-research-fund/programs/new-directions-grants.html",
+          "date": "2025-06-30T12:24:38.761Z"
+        }
+      ]
+    },
+    "68627fb1d62dc56026a7f1c3": {
+      "id": "68627fb1d62dc56026a7f1c3",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Private Sector Grants  (like BASF)",
+      "desc": "",
+      "list_id": "6866a99bc5eacaba360b36ae",
+      "list_name": "Priority IV",
+      "pos": 140737488633856,
+      "due": "2025-07-28T21:52:49.343Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:27:52.569Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [],
+      "checklists": [
+        {
+          "id": "6866b6bd148aa93a237e2d48",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b6bd148aa93a237e2d49",
+              "name": "25%",
+              "state": "incomplete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b6bd148aa93a237e2d4a",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b6bd148aa93a237e2d4b",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b6bd148aa93a237e2d4c",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628cf65ba399b6a1d43355",
+          "name": "https://www.halo.science/company/basf",
+          "url": "https://www.halo.science/company/basf",
+          "date": "2025-06-30T13:11:18.687Z"
+        }
+      ]
+    },
+    "68627faa3c0ce39786904664": {
+      "id": "68627faa3c0ce39786904664",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "2D materials defects",
+      "desc": "Write intro/organize ideas",
+      "list_id": "6866a9987d4466975e2c0842",
+      "list_name": "Priority III",
+      "pos": 140737488322560,
+      "due": "2025-07-28T21:52:48.675Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:28:21.866Z",
+      "labels": [
+        {
+          "id": "6866acf4a1aa5785f595c2fd",
+          "name": "Daniel",
+          "color": "blue"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "68628a505fa4a314b5ecb117",
+          "text": "[Daniel Maldonado](mailto:danimaldonadolopez@gmail.com \"\u200c\")",
+          "date": "2025-06-30T13:00:00.342Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866b6b60082a5fff96cde5e",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b6b60082a5fff96cde5f",
+              "name": "25%",
+              "state": "incomplete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b6b60082a5fff96cde60",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b6b60082a5fff96cde61",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b6b60082a5fff96cde62",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "68628a4a390a79d27ae94335",
+          "name": "https://www.dropbox.com/scl/fo/zha7phgyjqkqaep8zoodx/AEuKi4eOpqBS1KDyGzNvrEQ?rlkey=51rqkdxea3eqtq8srq4sjhgsl&st=aske9h94&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/zha7phgyjqkqaep8zoodx/AEuKi4eOpqBS1KDyGzNvrEQ?rlkey=51rqkdxea3eqtq8srq4sjhgsl&st=aske9h94&dl=0",
+          "date": "2025-06-30T12:59:54.618Z"
+        }
+      ]
+    },
+    "68627fa5e50602adb444cbf5": {
+      "id": "68627fa5e50602adb444cbf5",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "ML for Catalysis",
+      "desc": "Update and polish",
+      "list_id": "6866a9987d4466975e2c0842",
+      "list_name": "Priority III",
+      "pos": 140737488338944,
+      "due": "2025-07-28T21:52:48.321Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:28:19.548Z",
+      "labels": [
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686289f3386d9f6a5980d736",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:58:27.325Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866b6760aa423a1fcfcfa0e",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b6760aa423a1fcfcfa0f",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b6760aa423a1fcfcfa10",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b6760aa423a1fcfcfa11",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b6760aa423a1fcfcfa12",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686289fad5c6404d3fe119ce",
+          "name": "https://www.dropbox.com/scl/fo/rasa2itr1hyrted25w4g2/ABVUsT2-RBT4O5c_PbvDcko?rlkey=79dlp9yf13hhyhuiaywr13v1j&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/rasa2itr1hyrted25w4g2/ABVUsT2-RBT4O5c_PbvDcko?rlkey=79dlp9yf13hhyhuiaywr13v1j&dl=0",
+          "date": "2025-06-30T12:58:34.837Z"
+        }
+      ]
+    },
+    "68627fa177fc20986e85499a": {
+      "id": "68627fa177fc20986e85499a",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "ML for reaction networks",
+      "desc": "Update and polish",
+      "list_id": "6866a9987d4466975e2c0842",
+      "list_name": "Priority III",
+      "pos": 140737488355328,
+      "due": "2025-07-28T21:52:48.027Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:28:17.881Z",
+      "labels": [
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797d",
+          "name": "Austin",
+          "color": "orange"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686288c5a5bd633d9fe6f74a",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:53:25.537Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866b667751ccd9f3068416c",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b667751ccd9f3068416d",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b667751ccd9f3068416e",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b667751ccd9f3068416f",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b667751ccd9f30684170",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686288cdf43d8bcf8dcd6ed7",
+          "name": "https://www.dropbox.com/scl/fo/apk1xe3awjet5dtm77dke/AOrfkJEZuEgJAkoD5EeTCiU?rlkey=d17iy8pztryevnattgcwckz5h&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/apk1xe3awjet5dtm77dke/AOrfkJEZuEgJAkoD5EeTCiU?rlkey=d17iy8pztryevnattgcwckz5h&dl=0",
+          "date": "2025-06-30T12:53:33.162Z"
         }
       ]
     },
@@ -6135,7 +7235,7 @@
       "due": "2025-07-28T21:52:46.452Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T12:20:53.915Z",
+      "date_last_activity": "2025-07-29T07:22:41.523Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -6146,10 +7246,24 @@
           "id": "6866b18e446bb7de1ac524fe",
           "name": "IN-PROGRESS",
           "color": "yellow_dark"
+        },
+        {
+          "id": "68878a35c721e1c14c95ec2c",
+          "name": "Axel",
+          "color": "orange"
         }
       ],
       "members": [],
       "comments": [
+        {
+          "id": "6887db69499b58f2f1ae74cd",
+          "text": "We created the Overleaf doc for this proposal:\n[https://www.overleaf.com/project/6887db32509b707d74370a05](https://www.overleaf.com/project/6887db32509b707d74370a05 \"\u200c\")\n\nNext, the old Dropbox version from google doc will be transfer to the Overleaf project",
+          "date": "2025-07-28T20:19:53.116Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        },
         {
           "id": "68628806ab4d08582356d423",
           "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
@@ -6199,176 +7313,18 @@
           "name": "https://www.dropbox.com/scl/fo/uj8k1fp2ak5zpyqmiio24/ACHxXzVf36VvnIJJ3VwU3WE?rlkey=lvtf1re6z3bkhdivg7r6zmpzo&dl=0",
           "url": "https://www.dropbox.com/scl/fo/uj8k1fp2ak5zpyqmiio24/ACHxXzVf36VvnIJJ3VwU3WE?rlkey=lvtf1re6z3bkhdivg7r6zmpzo&dl=0",
           "date": "2025-06-30T12:50:12.487Z"
-        }
-      ]
-    },
-    "68627f9c4f5441cf61c0734b": {
-      "id": "68627f9c4f5441cf61c0734b",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Sustainable Cement - Experiment and Theory",
-      "desc": "Transfer to Overleaf\n\nFind the exp. collaborator.",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488502784,
-      "due": "2025-07-28T21:52:46.767Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:20:54.500Z",
-      "labels": [
-        {
-          "id": "6866aea460f32bcffdded7f9",
-          "name": "Jose",
-          "color": "blue_dark"
         },
         {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "68628826c148fadac43ca1d4",
-          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:50:46.465Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866b65e483fbce69e3a5c1e",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b65e483fbce69e3a5c1f",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b65e483fbce69e3a5c20",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b65e483fbce69e3a5c21",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b65e483fbce69e3a5c22",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "6862882dc12b27510a3cb3d4",
-          "name": "https://www.dropbox.com/scl/fi/mombtbo5d8dz03a4gklar/20231221_preproposal_biocement_ExpAndTheory.docx?rlkey=a4sjgbvxjoi9tmdpw1ri3fedc&dl=0",
-          "url": "https://www.dropbox.com/scl/fi/mombtbo5d8dz03a4gklar/20231221_preproposal_biocement_ExpAndTheory.docx?rlkey=a4sjgbvxjoi9tmdpw1ri3fedc&dl=0",
-          "date": "2025-06-30T12:50:53.882Z"
+          "id": "6887db7c2a5ab5a3bff73d03",
+          "name": "Overleaf",
+          "url": "https://www.overleaf.com/project/6887db32509b707d74370a05",
+          "date": "2025-07-28T20:20:12.723Z"
         },
         {
-          "id": "68628c12cab38c5fce969afc",
-          "name": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
-          "date": "2025-06-30T13:07:30.489Z"
-        }
-      ]
-    },
-    "68627f9b0b77dc748758dd9e": {
-      "id": "68627f9b0b77dc748758dd9e",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Sustainable Cement - Only Theory",
-      "desc": "Transfer to Overleaf\n\nFind the right call,",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488519168,
-      "due": "2025-07-28T21:52:47.044Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:20:55.226Z",
-      "labels": [
-        {
-          "id": "6866aea460f32bcffdded7f9",
-          "name": "Jose",
-          "color": "blue_dark"
-        },
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "68628813729c9e5eb83345fd",
-          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:50:27.063Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866b6606c7b510fa7bf4b7b",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b6606c7b510fa7bf4b7c",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b6606c7b510fa7bf4b7d",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b6606c7b510fa7bf4b7e",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b6606c7b510fa7bf4b7f",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "6862881a971070b3415720eb",
-          "name": "https://www.dropbox.com/scl/fi/h4pjlt95kplswac8mzdlg/20231221_preproposal_biocement_OnlyTheory.docx?rlkey=3dw6f8thonqz2ju7xp2v076sj&dl=0",
-          "url": "https://www.dropbox.com/scl/fi/h4pjlt95kplswac8mzdlg/20231221_preproposal_biocement_OnlyTheory.docx?rlkey=3dw6f8thonqz2ju7xp2v076sj&dl=0",
-          "date": "2025-06-30T12:50:34.986Z"
-        },
-        {
-          "id": "68628c22fbcee631054d9087",
-          "name": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
-          "date": "2025-06-30T13:07:46.996Z"
+          "id": "688876c1664915d9f39d0645",
+          "name": "https://trello.com/c/KkFRYtlt/1470-unleashing-american-energy-dominance-and-expediting-responsible-and-secure-us-small-modular-reactor-deployment-through-the-first",
+          "url": "https://trello.com/c/KkFRYtlt/1470-unleashing-american-energy-dominance-and-expediting-responsible-and-secure-us-small-modular-reactor-deployment-through-the-first",
+          "date": "2025-07-29T07:22:41.495Z"
         }
       ]
     },
@@ -6527,400 +7483,6 @@
           "name": "https://www.dropbox.com/scl/fo/51nvuftx20porb9xscn52/AIqxLBMIVt-6n8uB8cUyf-k?rlkey=29v645mkj48ckgtpwh302wouy&dl=0",
           "url": "https://www.dropbox.com/scl/fo/51nvuftx20porb9xscn52/AIqxLBMIVt-6n8uB8cUyf-k?rlkey=29v645mkj48ckgtpwh302wouy&dl=0",
           "date": "2025-06-30T12:52:47.812Z"
-        }
-      ]
-    },
-    "68627fa177fc20986e85499a": {
-      "id": "68627fa177fc20986e85499a",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "ML for reaction networks",
-      "desc": "Update and polish",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488568320,
-      "due": "2025-07-28T21:52:48.027Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T16:16:25.437Z",
-      "labels": [
-        {
-          "id": "6866aea460f32bcffdded7f9",
-          "name": "Jose",
-          "color": "blue_dark"
-        },
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6862042608fdc9ecc66f797d",
-          "name": "Austin",
-          "color": "orange"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "686288c5a5bd633d9fe6f74a",
-          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:53:25.537Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866b667751ccd9f3068416c",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b667751ccd9f3068416d",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b667751ccd9f3068416e",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b667751ccd9f3068416f",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b667751ccd9f30684170",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "686288cdf43d8bcf8dcd6ed7",
-          "name": "https://www.dropbox.com/scl/fo/apk1xe3awjet5dtm77dke/AOrfkJEZuEgJAkoD5EeTCiU?rlkey=d17iy8pztryevnattgcwckz5h&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/apk1xe3awjet5dtm77dke/AOrfkJEZuEgJAkoD5EeTCiU?rlkey=d17iy8pztryevnattgcwckz5h&dl=0",
-          "date": "2025-06-30T12:53:33.162Z"
-        }
-      ]
-    },
-    "68627fa5e50602adb444cbf5": {
-      "id": "68627fa5e50602adb444cbf5",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "ML for Catalysis",
-      "desc": "Update and polish",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488584704,
-      "due": "2025-07-28T21:52:48.321Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:20:57.688Z",
-      "labels": [
-        {
-          "id": "6866aea460f32bcffdded7f9",
-          "name": "Jose",
-          "color": "blue_dark"
-        },
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "686289f3386d9f6a5980d736",
-          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:58:27.325Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866b6760aa423a1fcfcfa0e",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b6760aa423a1fcfcfa0f",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b6760aa423a1fcfcfa10",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b6760aa423a1fcfcfa11",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b6760aa423a1fcfcfa12",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "686289fad5c6404d3fe119ce",
-          "name": "https://www.dropbox.com/scl/fo/rasa2itr1hyrted25w4g2/ABVUsT2-RBT4O5c_PbvDcko?rlkey=79dlp9yf13hhyhuiaywr13v1j&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/rasa2itr1hyrted25w4g2/ABVUsT2-RBT4O5c_PbvDcko?rlkey=79dlp9yf13hhyhuiaywr13v1j&dl=0",
-          "date": "2025-06-30T12:58:34.837Z"
-        }
-      ]
-    },
-    "68627faa3c0ce39786904664": {
-      "id": "68627faa3c0ce39786904664",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "2D materials defects",
-      "desc": "Write intro/organize ideas",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488601088,
-      "due": "2025-07-28T21:52:48.675Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:20:58.360Z",
-      "labels": [
-        {
-          "id": "6866acf4a1aa5785f595c2fd",
-          "name": "Daniel",
-          "color": "blue"
-        },
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "68628a505fa4a314b5ecb117",
-          "text": "[Daniel Maldonado](mailto:danimaldonadolopez@gmail.com \"\u200c\")",
-          "date": "2025-06-30T13:00:00.342Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866b6b60082a5fff96cde5e",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b6b60082a5fff96cde5f",
-              "name": "25%",
-              "state": "incomplete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b6b60082a5fff96cde60",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b6b60082a5fff96cde61",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b6b60082a5fff96cde62",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "68628a4a390a79d27ae94335",
-          "name": "https://www.dropbox.com/scl/fo/zha7phgyjqkqaep8zoodx/AEuKi4eOpqBS1KDyGzNvrEQ?rlkey=51rqkdxea3eqtq8srq4sjhgsl&st=aske9h94&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/zha7phgyjqkqaep8zoodx/AEuKi4eOpqBS1KDyGzNvrEQ?rlkey=51rqkdxea3eqtq8srq4sjhgsl&st=aske9h94&dl=0",
-          "date": "2025-06-30T12:59:54.618Z"
-        }
-      ]
-    },
-    "68627faa3f57673afa66fa89": {
-      "id": "68627faa3f57673afa66fa89",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Mathematical Foundations of Artificial Intelligence",
-      "desc": "",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488617472,
-      "due": "2025-07-28T21:52:48.956Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:20:58.927Z",
-      "labels": [
-        {
-          "id": "6866affc37aa108fd8390e0d",
-          "name": "Eric",
-          "color": "sky_dark"
-        },
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "6875538f9a2b8120eafd1fca",
-          "text": "This might a possible Call to submit this proposal:\n[https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath](https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath \"\u200c\")",
-          "date": "2025-07-14T18:59:27.877Z",
-          "author": {
-            "full_name": "Jose L. Mendoza-Cortes",
-            "username": "jlmendozacortes"
-          }
-        },
-        {
-          "id": "68628a562dff571733352e8a",
-          "text": "[Eric Dolores](mailto:eric.rubiel@u.northwestern.edu \"\u200c\")",
-          "date": "2025-06-30T13:00:06.907Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866b6b97c3126ed32cf26cf",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b6b97c3126ed32cf26d0",
-              "name": "25%",
-              "state": "incomplete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b6b97c3126ed32cf26d1",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b6b97c3126ed32cf26d2",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b6b97c3126ed32cf26d3",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "687552da9b84ca4489492037",
-          "name": "https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath",
-          "url": "https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath",
-          "date": "2025-07-14T18:56:26.425Z"
-        }
-      ]
-    },
-    "68627fb1d62dc56026a7f1c3": {
-      "id": "68627fb1d62dc56026a7f1c3",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Private Sector Grants  (like BASF)",
-      "desc": "",
-      "list_id": "6866a9987d4466975e2c0842",
-      "list_name": "Priority III",
-      "pos": 140737488633856,
-      "due": "2025-07-28T21:52:49.343Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:20:59.544Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [],
-      "checklists": [
-        {
-          "id": "6866b6bd148aa93a237e2d48",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866b6bd148aa93a237e2d49",
-              "name": "25%",
-              "state": "incomplete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866b6bd148aa93a237e2d4a",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866b6bd148aa93a237e2d4b",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866b6bd148aa93a237e2d4c",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "68628cf65ba399b6a1d43355",
-          "name": "https://www.halo.science/company/basf",
-          "url": "https://www.halo.science/company/basf",
-          "date": "2025-06-30T13:11:18.687Z"
         }
       ]
     },
@@ -7102,7 +7664,7 @@
       "due": "2025-07-28T21:52:50.264Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T12:21:01.261Z",
+      "date_last_activity": "2025-07-29T13:06:26.836Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -7113,6 +7675,16 @@
           "id": "6866b18e446bb7de1ac524fe",
           "name": "IN-PROGRESS",
           "color": "yellow_dark"
+        },
+        {
+          "id": "6866affc37aa108fd8390e0d",
+          "name": "Eric",
+          "color": "sky_dark"
+        },
+        {
+          "id": "6862042608fdc9ecc66f797d",
+          "name": "Austin",
+          "color": "orange"
         }
       ],
       "members": [],
@@ -7181,7 +7753,7 @@
       "due": "2025-07-28T21:52:50.594Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T12:21:01.810Z",
+      "date_last_activity": "2025-07-29T13:09:03.997Z",
       "labels": [
         {
           "id": "6866aea460f32bcffdded7f9",
@@ -7196,6 +7768,24 @@
       ],
       "members": [],
       "comments": [
+        {
+          "id": "6888c7ef54de0fbd1e3a7470",
+          "text": "that I included the reviews of the proposal submission on the Overleaf and I emailed collaborator to resubmit this year. Maybe this proposal could be priority 3 since it is basically ready but we need to put a deadline on it for the paperwork of resubmission\n\n\\- Jose",
+          "date": "2025-07-29T13:09:03.977Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
+        {
+          "id": "6888c7e30934bfdcbc4e437f",
+          "text": "please add that the proposal was rejected and that we will resubmit",
+          "date": "2025-07-29T13:08:51.731Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        },
         {
           "id": "6862852c10cd37eb5bde57eb",
           "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
@@ -7348,90 +7938,6 @@
           "name": "https://www.overleaf.com/project/675b57362381986d97fe4978",
           "url": "https://www.overleaf.com/project/675b57362381986d97fe4978",
           "date": "2025-06-30T12:45:47.195Z"
-        }
-      ]
-    },
-    "68627f8e1b110ec338bfdd97": {
-      "id": "68627f8e1b110ec338bfdd97",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Pressure effect on Materials / Bands",
-      "desc": "",
-      "list_id": "6866a992d2b00120e1ce6c61",
-      "list_name": "Priority II",
-      "pos": 140737488437248,
-      "due": "2025-07-28T21:52:50.879Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:21:03.369Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6866ae9cf95868e74d106cbb",
-          "name": "Ehsan",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6866daf3c3f892d57b8a5caa",
-          "name": "William",
-          "color": "purple_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "6862876555f8bea192e03a81",
-          "text": "[ehsan gowdini](mailto:ehsangowdini@gmail.com \"\u200c\")\n\n[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:47:33.642Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866dadebc34da2a7b4239a4",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866dadebc34da2a7b4239a5",
-              "name": "25%",
-              "state": "incomplete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866dadebc34da2a7b4239a6",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866dadebc34da2a7b4239a7",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866dadebc34da2a7b4239a8",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "6862876c2df1e71d2fad78ab",
-          "name": "https://www.overleaf.com/project/67d836a7fde871f988b9eaf0",
-          "url": "https://www.overleaf.com/project/67d836a7fde871f988b9eaf0",
-          "date": "2025-06-30T12:47:40.775Z"
         }
       ]
     },
@@ -7614,7 +8120,7 @@
       "due": "2025-07-28T09:19:25.628Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T12:21:04.968Z",
+      "date_last_activity": "2025-07-29T13:10:10.641Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -7625,6 +8131,11 @@
           "id": "6866aea460f32bcffdded7f9",
           "name": "Jose",
           "color": "blue_dark"
+        },
+        {
+          "id": "68878a35c721e1c14c95ec32",
+          "name": "Gourhari",
+          "color": "blue"
         }
       ],
       "members": [],
@@ -7702,417 +8213,6 @@
           "name": "This is the original proposal for ACS-PRF (pdf version)",
           "url": "https://www.dropbox.com/scl/fi/x3k9fvrfceu4sx9x19v0w/Mendoz1020FSU.v2017_10_20_full.pdf?rlkey=69xuugcozsvt2pa3k4yan9dj4&st=1mtzwfon&dl=0",
           "date": "2025-07-14T20:19:45.434Z"
-        }
-      ]
-    },
-    "68627f7581814a2cf8438b5b": {
-      "id": "68627f7581814a2cf8438b5b",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Reaction Database",
-      "desc": "Polish, Update with new dataset of new elements and maybe reactions, Submit",
-      "list_id": "6866a98c6c7b510fa7b04767",
-      "list_name": "Priority I",
-      "pos": 140737488355328,
-      "due": "2025-07-28T21:52:51.473Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:21:05.519Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6862042608fdc9ecc66f797d",
-          "name": "Austin",
-          "color": "orange"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "686281d07156e852b16d44a1",
-          "text": "CAT ([https://new.nsf.gov/funding/opportunities/che-drp-division-chemistry-disciplinary-research-programs/nsf22-605/solicitation](https://new.nsf.gov/funding/opportunities/che-drp-division-chemistry-disciplinary-research-programs/nsf22-605/solicitation \"\u200c\"))",
-          "date": "2025-06-30T12:23:44.314Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        },
-        {
-          "id": "686281c18b9b97971fe4c209",
-          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:23:29.159Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866db6f97285f50f49575a1",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866db6f97285f50f49575a2",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866db6f97285f50f49575a3",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866db6f97285f50f49575a4",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866db6f97285f50f49575a5",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": []
-    },
-    "68627f761e519d97f55e0412": {
-      "id": "68627f761e519d97f55e0412",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "polymerization of CO2",
-      "desc": "Resubmit",
-      "list_id": "6866a98c6c7b510fa7b04767",
-      "list_name": "Priority I",
-      "pos": 140737488371712,
-      "due": "2025-07-28T09:19:26.206Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:21:06.124Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6862042608fdc9ecc66f797d",
-          "name": "Austin",
-          "color": "orange"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "686281ed52cbbef38b266943",
-          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:24:13.365Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866db756fd4e3aaaf29bb07",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866db756fd4e3aaaf29bb08",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866db756fd4e3aaaf29bb09",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866db756fd4e3aaaf29bb0a",
-              "name": "75%",
-              "state": "complete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866db756fd4e3aaaf29bb0b",
-              "name": "100%",
-              "state": "complete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "686281feb1760d2729139f04",
-          "name": "https://www.overleaf.com/project/65c54f5118cda0c34fbde8de",
-          "url": "https://www.overleaf.com/project/65c54f5118cda0c34fbde8de",
-          "date": "2025-06-30T12:24:30.978Z"
-        },
-        {
-          "id": "68628206e888ca1ab0d59047",
-          "name": "https://www.acs.org/funding/grants/petroleum-research-fund/programs/new-directions-grants.html",
-          "url": "https://www.acs.org/funding/grants/petroleum-research-fund/programs/new-directions-grants.html",
-          "date": "2025-06-30T12:24:38.761Z"
-        }
-      ]
-    },
-    "68627f80c8b2b86aec7eccad": {
-      "id": "68627f80c8b2b86aec7eccad",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Semiconductors",
-      "desc": "Find a Call",
-      "list_id": "6866a98c6c7b510fa7b04767",
-      "list_name": "Priority I",
-      "pos": 140737488388096,
-      "due": "2025-08-04T09:00:00.000Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T09:22:36.307Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6862042608fdc9ecc66f797f",
-          "name": "Marcus",
-          "color": "purple"
-        }
-      ],
-      "members": [],
-      "comments": [],
-      "checklists": [
-        {
-          "id": "6866dbd84e60ea2a1f063040",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866dbd84e60ea2a1f063041",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866dbd84e60ea2a1f063042",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866dbd84e60ea2a1f063043",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866dbd84e60ea2a1f063044",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "68628463898cb5db2eb4cc6e",
-          "name": "https://www.overleaf.com/project/63e25efd152764b5b6088355",
-          "url": "https://www.overleaf.com/project/63e25efd152764b5b6088355",
-          "date": "2025-06-30T12:34:43.962Z"
-        },
-        {
-          "id": "6862846ee7bdb64524452eac",
-          "name": "https://new.nsf.gov/funding/opportunities/fuse2-future-semiconductors/nsf24-521/solicitation",
-          "url": "https://new.nsf.gov/funding/opportunities/fuse2-future-semiconductors/nsf24-521/solicitation",
-          "date": "2025-06-30T12:34:54.506Z"
-        }
-      ]
-    },
-    "68627f85771b8a62d9fde0cd": {
-      "id": "68627f85771b8a62d9fde0cd",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Electrified Interfaces",
-      "desc": "",
-      "list_id": "6866a98c6c7b510fa7b04767",
-      "list_name": "Priority I",
-      "pos": 140737488404480,
-      "due": "2025-07-28T09:19:26.497Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:21:06.692Z",
-      "labels": [
-        {
-          "id": "6866aea460f32bcffdded7f9",
-          "name": "Jose",
-          "color": "blue_dark"
-        },
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "6862852f5e20dfa87fe9624b",
-          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:38:07.951Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866dc1562815e284738ffae",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866dc1562815e284738ffaf",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866dc1562815e284738ffb0",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866dc1562815e284738ffb1",
-              "name": "75%",
-              "state": "complete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866dc1562815e284738ffb2",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "6862857e3a4949a3ad39ee11",
-          "name": "https://www.dropbox.com/scl/fo/swpzqmzjzzwljvktq2d2r/APHKUnH037KQfeZfyx8Bfys?rlkey=gua9achhuvblxhpfswyz0sbgi&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/swpzqmzjzzwljvktq2d2r/APHKUnH037KQfeZfyx8Bfys?rlkey=gua9achhuvblxhpfswyz0sbgi&dl=0",
-          "date": "2025-06-30T12:39:26.743Z"
-        }
-      ]
-    },
-    "68627f86282942029420c640": {
-      "id": "68627f86282942029420c640",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "Quantum Computing /Collab with Berkeley",
-      "desc": "Waiting Decision",
-      "list_id": "6866a98c6c7b510fa7b04767",
-      "list_name": "Priority I",
-      "pos": 140737488420864,
-      "due": "2025-07-28T09:19:26.760Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T12:21:07.234Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6866daf3c3f892d57b8a5caa",
-          "name": "William",
-          "color": "purple_dark"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "686285ed474dcfa9ef7f472c",
-          "text": "[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:41:17.216Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866dc2a35e0c1f37b90a4af",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866dc2a35e0c1f37b90a4b0",
-              "name": "25%",
-              "state": "complete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866dc2a35e0c1f37b90a4b1",
-              "name": "50%",
-              "state": "complete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866dc2a35e0c1f37b90a4b2",
-              "name": "75%",
-              "state": "complete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866dc2a35e0c1f37b90a4b3",
-              "name": "100%",
-              "state": "complete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "686285faa2a8040d777562e7",
-          "name": "https://www.overleaf.com/project/6711700b99a4d6a62e148bdf",
-          "url": "https://www.overleaf.com/project/6711700b99a4d6a62e148bdf",
-          "date": "2025-06-30T12:41:30.464Z"
-        },
-        {
-          "id": "686285ff6f9298220bfb8bc1",
-          "name": "https://www.dropbox.com/scl/fo/qw2fhepodho1ivs5szl5z/AILr9orhWoxNolf2nJ7ZoGU?rlkey=hawcl4q36hwfjuid22l0rscwp&dl=0",
-          "url": "https://www.dropbox.com/scl/fo/qw2fhepodho1ivs5szl5z/AILr9orhWoxNolf2nJ7ZoGU?rlkey=hawcl4q36hwfjuid22l0rscwp&dl=0",
-          "date": "2025-06-30T12:41:35.803Z"
-        },
-        {
-          "id": "68628607e85ed5ef1e05b701",
-          "name": "https://docs.google.com/document/u/0/d/1-IZgusMYZ2sqFJkfyzqwAxhgsef3evZjr4L4qIoes28/edit",
-          "url": "https://docs.google.com/document/u/0/d/1-IZgusMYZ2sqFJkfyzqwAxhgsef3evZjr4L4qIoes28/edit",
-          "date": "2025-06-30T12:41:43.380Z"
         }
       ]
     },
@@ -8280,131 +8380,19 @@
         }
       ]
     },
-    "68627f7225f14115007534cc": {
-      "id": "68627f7225f14115007534cc",
+    "68627f8e1b110ec338bfdd97": {
+      "id": "68627f8e1b110ec338bfdd97",
       "board_id": "6862042608fdc9ecc66f793b",
       "board_name": "Proposals",
-      "name": "MLFF",
-      "desc": "Resubmit. Update with new preliminary results (MD, NEB)",
-      "list_id": "6866a9904ae6d53f5ccbfe1d",
-      "list_name": "Priority 0",
-      "pos": 140737488306176,
-      "due": "2025-08-04T09:00:00.000Z",
-      "due_complete": false,
-      "closed": false,
-      "date_last_activity": "2025-07-28T09:22:37.753Z",
-      "labels": [
-        {
-          "id": "6866b18e446bb7de1ac524fe",
-          "name": "IN-PROGRESS",
-          "color": "yellow_dark"
-        },
-        {
-          "id": "6862042608fdc9ecc66f797d",
-          "name": "Austin",
-          "color": "orange"
-        }
-      ],
-      "members": [],
-      "comments": [
-        {
-          "id": "68791a0abdd5fa7283dce40e",
-          "text": "Ideal window is early in the academic semester and avoid holidays and holiday seasons i.e December",
-          "date": "2025-07-17T15:43:06.438Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        },
-        {
-          "id": "68790b22d952ae8325cca586",
-          "text": "[https://www.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation](https://www.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation \"smartCard-inline\")",
-          "date": "2025-07-17T14:39:30.073Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        },
-        {
-          "id": "686281a9dcad2716768a21e7",
-          "text": "CTMC no deadline",
-          "date": "2025-06-30T12:23:05.721Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        },
-        {
-          "id": "6862817cea872ded0b0f8f19",
-          "text": "[austinrg14@gmail.com](mailto:austinrg14@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:22:20.252Z",
-          "author": {
-            "full_name": "Mr_Lewis16",
-            "username": "lewis0770"
-          }
-        }
-      ],
-      "checklists": [
-        {
-          "id": "6866dc68b5403b7e28f148f9",
-          "name": "In-Progress",
-          "pos": 140737488355328,
-          "items": [
-            {
-              "id": "6866dc68b5403b7e28f148fa",
-              "name": "25%",
-              "state": "incomplete",
-              "pos": 140737488355328
-            },
-            {
-              "id": "6866dc68b5403b7e28f148fb",
-              "name": "50%",
-              "state": "incomplete",
-              "pos": 140737488371712
-            },
-            {
-              "id": "6866dc68b5403b7e28f148fc",
-              "name": "75%",
-              "state": "incomplete",
-              "pos": 140737488388096
-            },
-            {
-              "id": "6866dc68b5403b7e28f148fd",
-              "name": "100%",
-              "state": "incomplete",
-              "pos": 140737488404480
-            }
-          ]
-        }
-      ],
-      "attachments": [
-        {
-          "id": "68628191ac2baf1b9626b5b1",
-          "name": "https://www.overleaf.com/project/63e3f40938e3891c12e7f374",
-          "url": "https://www.overleaf.com/project/63e3f40938e3891c12e7f374",
-          "date": "2025-06-30T12:22:41.185Z"
-        },
-        {
-          "id": "686281a3d07181a6e8f90a80",
-          "name": "https://new.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation",
-          "url": "https://new.nsf.gov/funding/opportunities/che-drpndp-division-chemistry-disciplinary-research-programs-no/nsf22-606/solicitation",
-          "date": "2025-06-30T12:22:59.122Z"
-        }
-      ]
-    },
-    "68627f77766038b473d59079": {
-      "id": "68627f77766038b473d59079",
-      "board_id": "6862042608fdc9ecc66f793b",
-      "board_name": "Proposals",
-      "name": "2D-Genome (2D-HUB)",
+      "name": "Pressure effect on Materials / Bands",
       "desc": "",
-      "list_id": "6866a9904ae6d53f5ccbfe1d",
-      "list_name": "Priority 0",
-      "pos": 140737488322560,
-      "due": "2025-07-28T09:19:27.026Z",
+      "list_id": "6866a98c6c7b510fa7b04767",
+      "list_name": "Priority I",
+      "pos": 140737488470016,
+      "due": "2025-07-28T21:52:50.879Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T12:21:08.008Z",
+      "date_last_activity": "2025-07-28T20:27:41.267Z",
       "labels": [
         {
           "id": "6866b18e446bb7de1ac524fe",
@@ -8412,17 +8400,22 @@
           "color": "yellow_dark"
         },
         {
-          "id": "6866acf4a1aa5785f595c2fd",
-          "name": "Daniel",
-          "color": "blue"
+          "id": "6866ae9cf95868e74d106cbb",
+          "name": "Ehsan",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6866daf3c3f892d57b8a5caa",
+          "name": "William",
+          "color": "purple_dark"
         }
       ],
       "members": [],
       "comments": [
         {
-          "id": "686282254bb0e5601bf14124",
-          "text": "[danimaldonadolopez@gmail.com](mailto:danimaldonadolopez@gmail.com \"\u200c\")\n\n[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")\n\n [linyuhs7@msu.edu](mailto:linyuhs7@msu.edu \"\u200c\")",
-          "date": "2025-06-30T12:25:09.628Z",
+          "id": "6862876555f8bea192e03a81",
+          "text": "[ehsan gowdini](mailto:ehsangowdini@gmail.com \"\u200c\")\n\n[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:47:33.642Z",
           "author": {
             "full_name": "Mr_Lewis16",
             "username": "lewis0770"
@@ -8431,32 +8424,32 @@
       ],
       "checklists": [
         {
-          "id": "6866dc82c9787b3c79c1b141",
+          "id": "6866dadebc34da2a7b4239a4",
           "name": "In-Progress",
           "pos": 140737488355328,
           "items": [
             {
-              "id": "6866dc82c9787b3c79c1b142",
+              "id": "6866dadebc34da2a7b4239a5",
               "name": "25%",
-              "state": "complete",
+              "state": "incomplete",
               "pos": 140737488355328
             },
             {
-              "id": "6866dc82c9787b3c79c1b143",
+              "id": "6866dadebc34da2a7b4239a6",
               "name": "50%",
-              "state": "complete",
+              "state": "incomplete",
               "pos": 140737488371712
             },
             {
-              "id": "6866dc82c9787b3c79c1b144",
+              "id": "6866dadebc34da2a7b4239a7",
               "name": "75%",
-              "state": "complete",
+              "state": "incomplete",
               "pos": 140737488388096
             },
             {
-              "id": "6866dc82c9787b3c79c1b145",
+              "id": "6866dadebc34da2a7b4239a8",
               "name": "100%",
-              "state": "complete",
+              "state": "incomplete",
               "pos": 140737488404480
             }
           ]
@@ -8464,74 +8457,53 @@
       ],
       "attachments": [
         {
-          "id": "68628238a75c0d98cf7aefb9",
-          "name": "https://www.overleaf.com/project/63e25c5221be677380e31bc4",
-          "url": "https://www.overleaf.com/project/63e25c5221be677380e31bc4",
-          "date": "2025-06-30T12:25:28.903Z"
-        },
-        {
-          "id": "68628241245d3d03feddae75",
-          "name": "https://grants.gov/search-results-detail/356730",
-          "url": "https://grants.gov/search-results-detail/356730",
-          "date": "2025-06-30T12:25:37.393Z"
-        },
-        {
-          "id": "68628253f2ca7174503fa243",
-          "name": "https://new.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory/nsf23-611/solicitation",
-          "url": "https://new.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory/nsf23-611/solicitation",
-          "date": "2025-06-30T12:25:55.440Z"
-        },
-        {
-          "id": "686282706c0200d569e4fdec",
-          "name": "https://grants.gov/search-results-detail/347326",
-          "url": "https://grants.gov/search-results-detail/347326",
-          "date": "2025-06-30T12:26:24.342Z"
-        },
-        {
-          "id": "686282750a678231e3fddcfa",
-          "name": "https://grants.gov/search-results-detail/349655",
-          "url": "https://grants.gov/search-results-detail/349655",
-          "date": "2025-06-30T12:26:29.872Z"
-        },
-        {
-          "id": "6862827c63dd622398e87a4b",
-          "name": "https://new.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory/nsf23-611/solicitation",
-          "url": "https://new.nsf.gov/funding/opportunities/cmmt-condensed-matter-materials-theory/nsf23-611/solicitation",
-          "date": "2025-06-30T12:26:36.391Z"
+          "id": "6862876c2df1e71d2fad78ab",
+          "name": "https://www.overleaf.com/project/67d836a7fde871f988b9eaf0",
+          "url": "https://www.overleaf.com/project/67d836a7fde871f988b9eaf0",
+          "date": "2025-06-30T12:47:40.775Z"
         }
       ]
     },
-    "68627f7a24bd62e9b167fc29": {
-      "id": "68627f7a24bd62e9b167fc29",
+    "68627faa3f57673afa66fa89": {
+      "id": "68627faa3f57673afa66fa89",
       "board_id": "6862042608fdc9ecc66f793b",
       "board_name": "Proposals",
-      "name": "PFGP for Separation",
-      "desc": "Resubmit beyond LOI",
-      "list_id": "6866a9904ae6d53f5ccbfe1d",
-      "list_name": "Priority 0",
-      "pos": 140737488338944,
-      "due": "2025-08-04T09:00:00.000Z",
+      "name": "Mathematical Foundations of Artificial Intelligence",
+      "desc": "",
+      "list_id": "6866a98c6c7b510fa7b04767",
+      "list_name": "Priority I",
+      "pos": 140737488617472,
+      "due": "2025-07-28T21:52:48.956Z",
       "due_complete": false,
       "closed": false,
-      "date_last_activity": "2025-07-28T09:22:38.295Z",
+      "date_last_activity": "2025-07-28T20:27:57.655Z",
       "labels": [
+        {
+          "id": "6866affc37aa108fd8390e0d",
+          "name": "Eric",
+          "color": "sky_dark"
+        },
         {
           "id": "6866b18e446bb7de1ac524fe",
           "name": "IN-PROGRESS",
           "color": "yellow_dark"
-        },
-        {
-          "id": "6862042608fdc9ecc66f797f",
-          "name": "Marcus",
-          "color": "purple"
         }
       ],
       "members": [],
       "comments": [
         {
-          "id": "686283e47af27cdf391fadb1",
-          "text": "[Marcus Djokic](mailto:marcus.djokic@gmail.com \"\u200c\")",
-          "date": "2025-06-30T12:32:36.857Z",
+          "id": "6875538f9a2b8120eafd1fca",
+          "text": "This might a possible Call to submit this proposal:\n[https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath](https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath \"\u200c\")",
+          "date": "2025-07-14T18:59:27.877Z",
+          "author": {
+            "full_name": "Jose L. Mendoza-Cortes",
+            "username": "jlmendozacortes"
+          }
+        },
+        {
+          "id": "68628a562dff571733352e8a",
+          "text": "[Eric Dolores](mailto:eric.rubiel@u.northwestern.edu \"\u200c\")",
+          "date": "2025-06-30T13:00:06.907Z",
           "author": {
             "full_name": "Mr_Lewis16",
             "username": "lewis0770"
@@ -8540,30 +8512,30 @@
       ],
       "checklists": [
         {
-          "id": "6866dc9e9ee7542ecea36240",
+          "id": "6866b6b97c3126ed32cf26cf",
           "name": "In-Progress",
           "pos": 140737488355328,
           "items": [
             {
-              "id": "6866dc9e9ee7542ecea36241",
+              "id": "6866b6b97c3126ed32cf26d0",
               "name": "25%",
-              "state": "complete",
+              "state": "incomplete",
               "pos": 140737488355328
             },
             {
-              "id": "6866dc9e9ee7542ecea36242",
+              "id": "6866b6b97c3126ed32cf26d1",
               "name": "50%",
               "state": "incomplete",
               "pos": 140737488371712
             },
             {
-              "id": "6866dc9e9ee7542ecea36243",
+              "id": "6866b6b97c3126ed32cf26d2",
               "name": "75%",
               "state": "incomplete",
               "pos": 140737488388096
             },
             {
-              "id": "6866dc9e9ee7542ecea36244",
+              "id": "6866b6b97c3126ed32cf26d3",
               "name": "100%",
               "state": "incomplete",
               "pos": 140737488404480
@@ -8573,10 +8545,89 @@
       ],
       "attachments": [
         {
-          "id": "686283f6d4b702647945c1e4",
-          "name": "https://www.overleaf.com/project/63e25faaa3daf5653d865b64",
-          "url": "https://www.overleaf.com/project/63e25faaa3daf5653d865b64",
-          "date": "2025-06-30T12:32:54.077Z"
+          "id": "687552da9b84ca4489492037",
+          "name": "https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath",
+          "url": "https://trello.com/c/nIcJoZXW/1126-exponentiating-mathematics-expmath",
+          "date": "2025-07-14T18:56:26.425Z"
+        }
+      ]
+    },
+    "68627f854c4ca8108630e06c": {
+      "id": "68627f854c4ca8108630e06c",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Solar Radiation Absorption from First Principles",
+      "desc": "LOI, Find a Call",
+      "list_id": "6866a98c6c7b510fa7b04767",
+      "list_name": "Priority I",
+      "pos": 140737488633856,
+      "due": "2025-07-28T21:52:45.826Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:28:09.856Z",
+      "labels": [
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686285386490cad9a45f3789",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:38:16.349Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866b655ec055bd57368048e",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b655ec055bd57368048f",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b655ec055bd573680490",
+              "name": "50%",
+              "state": "incomplete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b655ec055bd573680491",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b655ec055bd573680492",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686285968c88e1370cd9555a",
+          "name": "https://www.overleaf.com/project/66e47cab7be07f92af87ec91",
+          "url": "https://www.overleaf.com/project/66e47cab7be07f92af87ec91",
+          "date": "2025-06-30T12:39:50.335Z"
         }
       ]
     },
@@ -8665,6 +8716,97 @@
         }
       ]
     },
+    "68627f86282942029420c640": {
+      "id": "68627f86282942029420c640",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Quantum Computing /Collab with Berkeley",
+      "desc": "Waiting Decision",
+      "list_id": "6866a9904ae6d53f5ccbfe1d",
+      "list_name": "Priority 0",
+      "pos": 140737488363520,
+      "due": "2025-07-28T09:19:26.760Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:27:23.388Z",
+      "labels": [
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        },
+        {
+          "id": "6866daf3c3f892d57b8a5caa",
+          "name": "William",
+          "color": "purple_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "686285ed474dcfa9ef7f472c",
+          "text": "[William Comaskey](mailto:williamcomaskey@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:41:17.216Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866dc2a35e0c1f37b90a4af",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866dc2a35e0c1f37b90a4b0",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866dc2a35e0c1f37b90a4b1",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866dc2a35e0c1f37b90a4b2",
+              "name": "75%",
+              "state": "complete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866dc2a35e0c1f37b90a4b3",
+              "name": "100%",
+              "state": "complete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "686285faa2a8040d777562e7",
+          "name": "https://www.overleaf.com/project/6711700b99a4d6a62e148bdf",
+          "url": "https://www.overleaf.com/project/6711700b99a4d6a62e148bdf",
+          "date": "2025-06-30T12:41:30.464Z"
+        },
+        {
+          "id": "686285ff6f9298220bfb8bc1",
+          "name": "https://www.dropbox.com/scl/fo/qw2fhepodho1ivs5szl5z/AILr9orhWoxNolf2nJ7ZoGU?rlkey=hawcl4q36hwfjuid22l0rscwp&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/qw2fhepodho1ivs5szl5z/AILr9orhWoxNolf2nJ7ZoGU?rlkey=hawcl4q36hwfjuid22l0rscwp&dl=0",
+          "date": "2025-06-30T12:41:35.803Z"
+        },
+        {
+          "id": "68628607e85ed5ef1e05b701",
+          "name": "https://docs.google.com/document/u/0/d/1-IZgusMYZ2sqFJkfyzqwAxhgsef3evZjr4L4qIoes28/edit",
+          "url": "https://docs.google.com/document/u/0/d/1-IZgusMYZ2sqFJkfyzqwAxhgsef3evZjr4L4qIoes28/edit",
+          "date": "2025-06-30T12:41:43.380Z"
+        }
+      ]
+    },
     "68627f816e3e7457a5313bef": {
       "id": "68627f816e3e7457a5313bef",
       "board_id": "6862042608fdc9ecc66f793b",
@@ -8741,6 +8883,176 @@
           "name": "https://www.overleaf.com/project/63e2cbe28d229a00123e9000",
           "url": "https://www.overleaf.com/project/63e2cbe28d229a00123e9000",
           "date": "2025-06-30T12:36:38.947Z"
+        }
+      ]
+    },
+    "68627f9b0b77dc748758dd9e": {
+      "id": "68627f9b0b77dc748758dd9e",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Sustainable Cement - Only Theory",
+      "desc": "Transfer to Overleaf\n\nFind the right call,",
+      "list_id": "6866a9904ae6d53f5ccbfe1d",
+      "list_name": "Priority 0",
+      "pos": 140737488519168,
+      "due": "2025-07-28T21:52:47.044Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:28:00.989Z",
+      "labels": [
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "68628813729c9e5eb83345fd",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:50:27.063Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866b6606c7b510fa7bf4b7b",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b6606c7b510fa7bf4b7c",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b6606c7b510fa7bf4b7d",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b6606c7b510fa7bf4b7e",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b6606c7b510fa7bf4b7f",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6862881a971070b3415720eb",
+          "name": "https://www.dropbox.com/scl/fi/h4pjlt95kplswac8mzdlg/20231221_preproposal_biocement_OnlyTheory.docx?rlkey=3dw6f8thonqz2ju7xp2v076sj&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/h4pjlt95kplswac8mzdlg/20231221_preproposal_biocement_OnlyTheory.docx?rlkey=3dw6f8thonqz2ju7xp2v076sj&dl=0",
+          "date": "2025-06-30T12:50:34.986Z"
+        },
+        {
+          "id": "68628c22fbcee631054d9087",
+          "name": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
+          "date": "2025-06-30T13:07:46.996Z"
+        }
+      ]
+    },
+    "68627f9c4f5441cf61c0734b": {
+      "id": "68627f9c4f5441cf61c0734b",
+      "board_id": "6862042608fdc9ecc66f793b",
+      "board_name": "Proposals",
+      "name": "Sustainable Cement - Experiment and Theory",
+      "desc": "Transfer to Overleaf\n\nFind the exp. collaborator.",
+      "list_id": "6866a9904ae6d53f5ccbfe1d",
+      "list_name": "Priority 0",
+      "pos": 140737488535552,
+      "due": "2025-07-28T21:52:46.767Z",
+      "due_complete": false,
+      "closed": false,
+      "date_last_activity": "2025-07-28T20:28:02.860Z",
+      "labels": [
+        {
+          "id": "6866aea460f32bcffdded7f9",
+          "name": "Jose",
+          "color": "blue_dark"
+        },
+        {
+          "id": "6866b18e446bb7de1ac524fe",
+          "name": "IN-PROGRESS",
+          "color": "yellow_dark"
+        }
+      ],
+      "members": [],
+      "comments": [
+        {
+          "id": "68628826c148fadac43ca1d4",
+          "text": "[Jose L. Mendoza-Cortes](mailto:mendozajoseluis@gmail.com \"\u200c\")",
+          "date": "2025-06-30T12:50:46.465Z",
+          "author": {
+            "full_name": "Mr_Lewis16",
+            "username": "lewis0770"
+          }
+        }
+      ],
+      "checklists": [
+        {
+          "id": "6866b65e483fbce69e3a5c1e",
+          "name": "In-Progress",
+          "pos": 140737488355328,
+          "items": [
+            {
+              "id": "6866b65e483fbce69e3a5c1f",
+              "name": "25%",
+              "state": "complete",
+              "pos": 140737488355328
+            },
+            {
+              "id": "6866b65e483fbce69e3a5c20",
+              "name": "50%",
+              "state": "complete",
+              "pos": 140737488371712
+            },
+            {
+              "id": "6866b65e483fbce69e3a5c21",
+              "name": "75%",
+              "state": "incomplete",
+              "pos": 140737488388096
+            },
+            {
+              "id": "6866b65e483fbce69e3a5c22",
+              "name": "100%",
+              "state": "incomplete",
+              "pos": 140737488404480
+            }
+          ]
+        }
+      ],
+      "attachments": [
+        {
+          "id": "6862882dc12b27510a3cb3d4",
+          "name": "https://www.dropbox.com/scl/fi/mombtbo5d8dz03a4gklar/20231221_preproposal_biocement_ExpAndTheory.docx?rlkey=a4sjgbvxjoi9tmdpw1ri3fedc&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/mombtbo5d8dz03a4gklar/20231221_preproposal_biocement_ExpAndTheory.docx?rlkey=a4sjgbvxjoi9tmdpw1ri3fedc&dl=0",
+          "date": "2025-06-30T12:50:53.882Z"
+        },
+        {
+          "id": "68628c12cab38c5fce969afc",
+          "name": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
+          "url": "https://www.dropbox.com/scl/fo/b47j4102x0cgy5c91a15e/AKWm61WPeGvo6ugcx4BG_AM?rlkey=myj1v3zzc3qy6c4slkhdf8uhz&dl=0",
+          "date": "2025-06-30T13:07:30.489Z"
         }
       ]
     }
